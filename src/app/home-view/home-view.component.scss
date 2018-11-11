@@ -1,0 +1,228 @@
+h2, h3, p {
+  font-family: 'Product Sans';
+}
+
+.introHome {
+  background-image: url("../../assets/images/elec.jpg");
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.introHome .container {
+  padding-top: 20% !important;
+  z-index: 1;
+}
+
+.introHome .container {
+  h1, h2, h3, h4 {
+      font-family: 'Product Sans';
+      color: white;
+      font-weight: 200;
+  }
+}
+
+.arrow a {
+  cursor: pointer;
+  z-index: 100;
+  left: 49%;
+  font-size: 250%;
+  bottom: 15px;
+  position: absolute;
+  color: white;
+  animation-name: floating;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+  &:hover {
+      color: gray;
+  }
+}
+@keyframes floating {
+  from { transform: translate(0,  0px); }
+  65%  { transform: translate(0, 5px); }
+  to   { transform: translate(0, -0px); }    
+}
+
+h3, h4 {
+  font-variant: small-caps;
+}
+
+@media (min-width: 768px) {
+  .line-1 {
+      float: left;
+      width: 24em;
+      border-right: 2px solid rgba(255,255,255,.75);
+      white-space: nowrap;
+      overflow: hidden;
+      transform: translateY(-50%);    
+  }
+
+  /* Animation */
+  .anim-typewriter {
+    animation: typewriter 3s steps(44) 750ms 1 normal both,
+              blinkTextCursor 750ms steps(44) infinite normal;
+    }
+
+  @keyframes typewriter {
+    from { width: 0; }
+    to { width: 24em; }
+  }
+  @keyframes blinkTextCursor {
+    from { border-right-color: rgba(255,255,255,.75); }
+    to { border-right-color: transparent;}
+  }
+}
+
+.marketing .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.hello {
+  color: #0082b9;
+  font-weight: bold;
+  font-size: 150%; 
+}
+.intro-text {
+  margin-bottom: 50px;
+  font-weight: 350;
+  font-size: 130%; 
+  color: rgb(90, 90, 90);
+}
+
+.skills {
+  margin-top: 50px;
+}
+
+.description {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+
+.section-title hr {
+  background-color: #1e2c32;
+  border: 0 none;
+  height: 6px;
+  width: 70px;
+  margin: 30px auto !important;
+}
+
+.section-title.light {
+  h2 {
+      color: white;
+  }
+  hr {
+      background-color: white;
+  }
+}
+
+.wrap {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1); 
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1); 
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+
+.wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.wrap:after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 20%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  background: rgba(255, 255, 255, 0.13);
+  background: linear-gradient(
+  to right,
+  rgba(255, 255, 255, 0.13) 0%,
+  rgba(255, 255, 255, 0.13) 77%,
+  rgba(255, 255, 255, 0.5) 92%,
+  rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+/* Hover state - trigger effect */
+.wrap:hover:after {
+  opacity: 1;
+  left: 130%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+.wrap:hover {
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.05);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.05);   
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.05);
+  transition: all 200ms ease-in;
+  transform: scale(1.05);
+}
+
+/* Active state */
+.wrap:active:after {
+  opacity: 0;
+}
+
+.btn-secondary {
+  background-color: #1e2c32;
+}
+
+.whileone {
+  background-color: #00638d;
+  background-image: url("../../assets/images/white_background.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.portfolio {
+  height: 40em;
+  background-color: white;
+}
+
+.transparent-top {
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height: 3em;
+  background-color: transparent !important;
+}
+.empty-top {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: white;
+}
+.transparent-bottom {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  height: 3em;
+  background-color: transparent;
+}
+.empty-bottom {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: white;
+}

@@ -1,0 +1,22 @@
+@import "../../assets/variables.scss";
+
+.navbar {
+  font-family: 'Product Sans';
+  background-color: $theme-color;
+}
+
+app-sub-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right : 0;
+}
+
+.nav-link {
+  font-size: 1.2em;
+  font-variant: small-caps;
+}
+
+.hidden {
+  display: none;
+}

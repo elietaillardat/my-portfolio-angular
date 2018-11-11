@@ -1,0 +1,33 @@
+h2 {
+  font-variant: small-caps;
+}
+
+.profile-head {
+  background-color: #cbe7ff;
+}
+
+li {
+  list-style: none;
+}
+
+.border-left {
+  position: relative;
+  border-left: solid 1px gray !important;
+}
+
+.dot {
+  left: -5px;
+  top: 8px;
+  position: absolute;
+  background-color: #1e2c32;
+  width: 10px;
+  height: 10px;
+}
+
+.gray {
+  filter: grayscale(100%);
+}
+
+.date {
+  font-weight: 200;
+}

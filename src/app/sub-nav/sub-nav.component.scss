@@ -1,0 +1,17 @@
+@import "../../assets/variables.scss";
+
+.navbar {
+  font-family: 'Product Sans';
+  background-color: #cbe7ff;
+}
+
+.nav-link {
+  color: $theme-color !important;
+  font-size: 1.2em;
+  font-variant: small-caps;
+  cursor: pointer;
+
+  &:hover {
+    font-size: 115%;
+  }
+}
