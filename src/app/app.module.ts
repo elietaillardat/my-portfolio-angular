@@ -33,7 +33,6 @@ import { SubNavComponent } from './sub-nav/sub-nav.component';
   declarations: [
     AppComponent,
     AppareilComponent,
-    AuthComponent,
     AppareilViewComponent,
     SingleAppareilComponent,
     FourOhFourComponent,
