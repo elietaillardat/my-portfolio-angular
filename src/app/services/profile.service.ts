@@ -4,6 +4,7 @@ export class ProfileService {
 
   experienceSubject = new Subject<any[]>();
   educationSubject = new Subject<any[]>();
+  skillSubject = new Subject<any[]>();
 
   emitExperienceSubject() {
     this.experienceSubject.next(this.experiences.slice());
@@ -11,6 +12,10 @@ export class ProfileService {
 
   emitEducationSubject() {
       this.educationSubject.next(this.educations.slice());
+  }
+
+  emitSkillSubject() {
+    this.skillSubject.next(this.skills.slice());
   }
 
 	getExperienceById(id: number) {
@@ -72,5 +77,34 @@ export class ProfileService {
 			title: 'Diplôme du Baccalauréat Général Série S',
 			description: 'Sciences de l’Ingénieur - Spécialité Mathématiques - Mention Très Bien - 19.31/20 (31 - Muret)'
 		}
-	];
+  ];
+  
+  private skills = [
+    {
+      language: [
+        {
+          name: 'Anglais',
+          writing_reading_level: 'C1',
+          speaking_level: 'B2+'
+        },
+        {
+          name: 'Espagnol',
+          writing_reading_level: 'B2',
+          speaking_level: 'B2'
+        }
+      ]
+    },
+    {
+      software: [
+        {
+          name: 'C/C++',
+          level: 7,
+          example: '- Mini-jeu « Simon » en C++'
+        }
+      ]
+    },
+    {
+      aptitude: 'Autonome'
+    }
+  ];
 }

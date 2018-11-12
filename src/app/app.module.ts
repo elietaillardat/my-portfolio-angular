@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { AuthGuard } from './services/auth-guard.service';
 import { AuthService } from './services/auth.service';
 import { AppareilService } from './services/appareil.service';
+import { ProfileService } from './services/profile.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -21,17 +22,20 @@ import { SingleAppareilComponent } from './single-appareil/single-appareil.compo
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 
 import { HeaderComponent } from './header/header.component';
+import { SubNavComponent } from './header/sub-nav/sub-nav.component';
 
-import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { HomeViewComponent } from './home-view/home-view.component';
-import { EducationComponent } from './profile-view/education/education.component';
-import { ProfileService } from './services/profile.service';
+import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { ExperienceComponent } from './profile-view/experience/experience.component';
-import { SubNavComponent } from './sub-nav/sub-nav.component';
+import { EducationComponent } from './profile-view/education/education.component';
+import { SkillsComponent } from './profile-view/skills/skills.component';
+import { LanguageComponent } from './profile-view/skills/language/language.component';
+import { SoftwareComponent } from './profile-view/skills/software/software.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AuthComponent,
     AppareilComponent,
     AppareilViewComponent,
     SingleAppareilComponent,
@@ -42,6 +46,9 @@ import { SubNavComponent } from './sub-nav/sub-nav.component';
     EducationComponent,
     ExperienceComponent,
     SubNavComponent,
+    SkillsComponent,
+    LanguageComponent,
+    SoftwareComponent,
   ],
   imports: [
     BrowserModule,

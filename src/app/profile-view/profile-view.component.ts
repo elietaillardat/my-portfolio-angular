@@ -15,6 +15,9 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
   educations: any[];
   educationSubscription: Subscription;
 
+  skills: any[];
+  skillSubscription: Subscription;
+
   constructor(private profileService: ProfileService) { }
 
   ngOnInit() {
@@ -31,11 +34,19 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
       }
     );
     this.profileService.emitEducationSubject();
+
+    this.skillSubscription = this.profileService.skillSubject.subscribe(
+      (skills: any[]) => {
+        this.skills = skills;
+      }
+    );
+    this.profileService.emitSkillSubject();
   }
 
   ngOnDestroy() {
     this.experienceSubscription.unsubscribe();
     this.educationSubscription.unsubscribe();
+    this.skillSubscription.unsubscribe();
   }
 
 }
