@@ -33,7 +33,8 @@ export class ProfileService {
       img: 'beenetic.png',
 			date: 'Juin-Septembre 2018',
 			title: "Stage chez Beenetic Systems (Toulouse - 31)",
-			description: "Projet IoT ‘iBO HOME’ : Développement logiciel d’un produit  embarqué destiné au monde de l’habitat intelligent"
+			description: "Projet IoT ‘iBO HOME’ : Développement logiciel d’un produit  embarqué destiné au monde de l’habitat intelligent",
+      gallery: ''
     },
     {
       id: 2,

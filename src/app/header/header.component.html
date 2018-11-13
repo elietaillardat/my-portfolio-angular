@@ -44,5 +44,5 @@
       </ul>
     </div>
   </div>
-  <app-sub-nav id="sub-nav" [ngClass]="{'hidden': router.url === '/home'}"></app-sub-nav>
+  <app-sub-nav id="sub-nav" [ngClass]="{'hidden': router.url !== '/profile'}"></app-sub-nav>
 </nav>

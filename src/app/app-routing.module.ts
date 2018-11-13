@@ -8,6 +8,7 @@ import { SingleAppareilComponent } from './single-appareil/single-appareil.compo
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HomeViewComponent } from './home-view/home-view.component';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
+import { SingleProjectComponent } from './single-project/single-project.component';
 
 const routes: Routes = [
   { path: 'appareils', canActivate: [AuthGuard], component: AppareilViewComponent },
@@ -17,6 +18,8 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeViewComponent },
   { path: 'profile', component: ProfileViewComponent },
+  { path: 'profile/:id', redirectTo: 'profile/experiences/:id', pathMatch: 'full' },
+  { path: 'profile/experiences/:id', component: SingleProjectComponent },
   { path: 'not-found', component: FourOhFourComponent },
   { path: '**', redirectTo: 'not-found' }
 ];

@@ -31,6 +31,8 @@ import { EducationComponent } from './profile-view/education/education.component
 import { SkillsComponent } from './profile-view/skills/skills.component';
 import { LanguageComponent } from './profile-view/skills/language/language.component';
 import { SoftwareComponent } from './profile-view/skills/software/software.component';
+import { SingleProjectComponent } from './single-project/single-project.component';
+import { GalleryItemComponent } from './single-project/gallery-item/gallery-item.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,8 @@ import { SoftwareComponent } from './profile-view/skills/software/software.compo
     SkillsComponent,
     LanguageComponent,
     SoftwareComponent,
+    SingleProjectComponent,
+    GalleryItemComponent,
   ],
   imports: [
     BrowserModule,
