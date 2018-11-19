@@ -15,7 +15,7 @@ $(document).ready(function() {
   };
   
   $(window).resize(onResize);
-  window.onclick = onResize;
+  $(window).click(onResize);
   $('html').css('overflow-y', 'scroll');
   onResize();
 });

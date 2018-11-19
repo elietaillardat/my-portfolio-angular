@@ -4,18 +4,18 @@ export class ProfileService {
 
   experienceSubject = new Subject<any[]>();
   educationSubject = new Subject<any[]>();
-  skillSubject = new Subject<any[]>();
+  softwareSubject = new Subject<any[]>();
 
   emitExperienceSubject() {
     this.experienceSubject.next(this.experiences.slice());
   }
 
   emitEducationSubject() {
-      this.educationSubject.next(this.educations.slice());
+    this.educationSubject.next(this.educations.slice());
   }
 
-  emitSkillSubject() {
-    this.skillSubject.next(this.skills.slice());
+  emitSoftwareSubject() {
+    this.softwareSubject.next(this.softwares.slice());
   }
 
 	getExperienceById(id: number) {
@@ -80,32 +80,32 @@ export class ProfileService {
 		}
   ];
   
-  private skills = [
+  private languages = [
     {
-      language: [
-        {
-          name: 'Anglais',
-          writing_reading_level: 'C1',
-          speaking_level: 'B2+'
-        },
-        {
-          name: 'Espagnol',
-          writing_reading_level: 'B2',
-          speaking_level: 'B2'
-        }
-      ]
+      name: 'Anglais',
+      writing_reading_level: 'C1',
+      speaking_level: 'B2+'
     },
     {
-      software: [
-        {
-          name: 'C/C++',
-          level: 7,
-          example: '- Mini-jeu « Simon » en C++'
-        }
-      ]
-    },
-    {
-      aptitude: 'Autonome'
+      name: 'Espagnol',
+      writing_reading_level: 'B2',
+      speaking_level: 'B2'
     }
   ];
+    
+  private softwares = [
+    {
+      id: 1,
+      name: 'C/C++',
+      level: '65%',
+      examples: 'Mini-jeu Simon C++'
+    },
+    {
+      id: 2,
+      name: 'Swift/Java',
+      level: '75%',
+      examples: 'Appli iOS'
+    }
+  ];
+
 }

@@ -1,4 +1,4 @@
-h2 {
+h2, h3 {
   font-variant: small-caps;
 }
 
@@ -10,13 +10,17 @@ li {
   list-style: none;
 }
 
+span.mini-project {
+  font-size: 75%;
+}
+
 .border-left {
   position: relative;
   border-left: solid 1px gray !important;
 }
 
 .dot {
-  left: -5px;
+  left: -6px;
   top: 8px;
   position: absolute;
   background-color: #1e2c32;
