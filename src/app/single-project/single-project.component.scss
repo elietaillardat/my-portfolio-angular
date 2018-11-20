@@ -8,6 +8,9 @@
 }
 .arrow-back {
   color: #1e2c32;
+  &:hover {
+    color: gray;
+  }
 }
 .gallery .pics {
   -webkit-transition: all 350ms ease;

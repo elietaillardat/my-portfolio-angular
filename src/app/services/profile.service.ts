@@ -76,7 +76,7 @@ export class ProfileService {
       img: 'cdg.png',
 			date: '2014',
 			title: 'Diplôme du Baccalauréat Général Série S',
-			description: 'Sciences de l’Ingénieur - Spécialité Mathématiques - Mention Très Bien - 19.31/20 (31 - Muret)'
+			description: 'Sciences de l’Ingénieur - Spécialité Mathématiques - Mention Très Bien - 19.31/20'
 		}
   ];
   
@@ -94,17 +94,110 @@ export class ProfileService {
   ];
     
   private softwares = [
+    // Programmation Objet
     {
       id: 1,
-      name: 'C/C++',
-      level: '65%',
-      examples: 'Mini-jeu Simon C++'
+      color: '#6395cc',
+      name: 'C',
+      level: '75%',
+      examples: 'Simulation du jeu de ‘UNO’ dans un terminal linux - Communication TCP/UDP entre 2 machines'
     },
     {
       id: 2,
-      name: 'Swift/Java',
+      color: '#00427e',
+      name: 'C++',
+      level: '70%',
+      examples: 'Mini-jeu Simon via carte Edison et GPIO - Projet ‘Pulpito’ lors du Hackathon de Banyuls'
+    },
+    {
+      id: 3,
+      color: '#f73f29',
+      name: 'Swift',
+      level: '85%',
+      examples: 'Application iOS ‘iBo Home’ lors du stage à Beenetic Systems'
+    },
+    {
+      id: 4,
+      color: '#0097a3',
+      name: 'Java',
       level: '75%',
-      examples: 'Appli iOS'
+      examples: 'Jeux Android développés chez WhileOne Studios: Lord of Yams, MasterCode, Crunch it!'
+    },
+    {
+      id: 5,
+      color: '#f6c83c',
+      name: 'Python',
+      level: '65%',
+      examples: ''
+    },
+    {
+      id: 102,
+      color: '#111111',
+      name: 'ADA'
+    },
+    {
+      id: 103,
+      color: '#008cc3',
+      name: 'R'
+    },
+
+    // Programmation Web
+    {
+      id: 6,
+      color: '#dd4b25',
+      name: 'HTML',
+      level: '95%',
+      examples: ''
+    },
+    {
+      id: 7,
+      color: '#006cb4',
+      name: 'CSS',
+      level: '95%',
+      examples: ''
+    },
+    {
+      id: 8,
+      color: '#e09e27',
+      name: 'Javascript',
+      level: '95%',
+      examples: ''
+    },
+    {
+      id: 9,
+      color: '#bd002e',
+      name: 'Angular',
+      level: '75%',
+      examples: ''
+    },
+    {
+      id: 10,
+      color: '#563d7c',
+      name: 'Bootstrap',
+      level: '80%',
+      examples: ''
+    },
+    {
+      id: 11,
+      color: '#4c89ef',
+      name: 'Ionic',
+      level: '75%',
+      examples: ''
+    },
+    {
+      id: 201,
+      color: '#777bb3',
+      name: 'PHP'
+    },
+    {
+      id: 202,
+      color: '#027C00',
+      name: 'XSLT'
+    },
+    {
+      id: 203,
+      color: '#0F3C2D',
+      name: 'Django'
     }
   ];
 

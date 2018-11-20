@@ -2,8 +2,26 @@ h2, h3 {
   font-variant: small-caps;
 }
 
+h5 {
+  font-weight: bold;
+}
+
+.tag {
+  height: 20px;
+  font-family: 'Product Sans';
+}
+.tag-content {
+  color: white !important;
+  padding: 8px 6px 0px;
+  text-align: left;
+}
+
 .profile-head {
-  background-color: #cbe7ff;
+  background-color: #dfe8f1;
+}
+
+.bg-progress {
+  background-color: #386b8d;
 }
 
 li {
@@ -12,6 +30,13 @@ li {
 
 span.mini-project {
   font-size: 75%;
+}
+
+a.arrow {
+  cursor: pointer;
+  &:hover {
+    color: gray !important;
+  };
 }
 
 .border-left {

@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SoftwareComponent implements OnInit {
 
   @Input() id: number;
+  @Input() color: string;
   @Input() softwareName: string;
   @Input() softwareLevel: string;
   @Input() softwareExamples: string;

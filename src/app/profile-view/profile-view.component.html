@@ -1,23 +1,22 @@
 <div class="profile-head shadow-sm">
   <div class="container pt-2 pb-2">
     <div class="row align-items-center">
-      <div class="col-lg-2 col-md-1 col-xs-12 p-3">
+      <div class="col-lg-1 col-md-1 col-xs-12 p-3">
         <img src="./assets/images/boss.png" class="rounded-circle img-fluid img-thumbnail">
       </div>
       <div class="col-10">
-        <h1 class="page-title d-inline">Profil - CV</h1>
-        <h3><b>Ingénieur Formation Automatique Électronique</b> - Bac+5</h3>
-        <h4>Développeur Systèmes Embarqués & Innovative Smart Systems - INSA Toulouse</h4>
+        <h3><b>Ingénieur Automatique Électronique</b> -- INSA Toulouse</h3>
+        <h4>Développeur Systèmes Embarqués & Internet of Things</h4>
       </div>
     </div>
   </div>
 </div>
 <br>
 
-<div class="container pt-3">
+<div class="container">
   <div class="row">
-    <section id="experience" class="col-lg-8">
-      <h2><fa name="briefcase"></fa>&nbsp; Expériences</h2>
+    <section class="col-lg-8">
+      <h2 id="experience" class="pt-3"><fa name="briefcase"></fa>&nbsp; Expériences</h2>
       <ul class="list-group mt-3 mb-3">
         <app-experience *ngFor="let experience of experiences;"
                         [id]="experience.id"
@@ -27,24 +26,8 @@
                         [experienceDescription]="experience.description">
         </app-experience>
       </ul>
-    </section>
-    <section id="skills" class="col-lg-4">
-      <h3><fa name="code-fork"></fa>&nbsp; Compétences</h3>
-      <h5>Software</h5>
-      <ul class="list-group mt-3 mb-3">
-        <app-software *ngFor="let software of softwares;"
-                      [id]="software.id"
-                      [softwareName]="software.name"
-                      [softwareLevel]="software.level"
-                      [softwareExamples]="software.examples">
-        </app-software>
-      </ul>
-    </section>
-  </div>
-  <hr>
-  <div class="row">
-    <section id="education" class="col-lg-8">
-      <h2><fa name="graduation-cap"></fa>&nbsp; Formation</h2>
+      <hr>
+      <h2 id="education"><fa name="graduation-cap"></fa>&nbsp; Formation</h2>
       <ul class="list-group mt-3 mb-3">
         <app-education  *ngFor="let education of educations;"
                         [educationImg]="education.img"
@@ -53,6 +36,20 @@
                         [educationDescription]="education.description">
         </app-education>
       </ul>
+    </section>
+    <section id="skills" class="col-lg-4 pt-3">
+      <h3><fa name="code-fork"></fa>&nbsp; Compétences</h3>
+      <div class="pl-3 border-left">
+        <ul class="list-group mt-3 mb-3">
+          <app-software *ngFor="let software of softwares;"
+                        [id]="software.id"
+                        [color]="software.color"
+                        [softwareName]="software.name"
+                        [softwareLevel]="software.level"
+                        [softwareExamples]="software.examples">
+          </app-software>
+        </ul>
+      </div>
     </section>
   </div>
   <hr>
