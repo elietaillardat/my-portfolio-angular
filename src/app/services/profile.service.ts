@@ -5,6 +5,8 @@ export class ProfileService {
   experienceSubject = new Subject<any[]>();
   educationSubject = new Subject<any[]>();
   softwareSubject = new Subject<any[]>();
+  devTagSubject = new Subject<any[]>();
+  otherTagSubject = new Subject<any[]>();
 
   emitExperienceSubject() {
     this.experienceSubject.next(this.experiences.slice());
@@ -16,6 +18,14 @@ export class ProfileService {
 
   emitSoftwareSubject() {
     this.softwareSubject.next(this.softwares.slice());
+  }
+
+  emitDevTagSubject() {
+    this.devTagSubject.next(this.dev_tags.slice());
+  }
+
+  emitOtherTagSubject() {
+    this.otherTagSubject.next(this.other_tags.slice());
   }
 
 	getExperienceById(id: number) {
@@ -130,17 +140,6 @@ export class ProfileService {
       level: '65%',
       examples: ''
     },
-    {
-      id: 102,
-      color: '#111111',
-      name: 'ADA'
-    },
-    {
-      id: 103,
-      color: '#008cc3',
-      name: 'R'
-    },
-
     // Programmation Web
     {
       id: 6,
@@ -153,14 +152,14 @@ export class ProfileService {
       id: 7,
       color: '#006cb4',
       name: 'CSS',
-      level: '95%',
+      level: '90%',
       examples: ''
     },
     {
       id: 8,
       color: '#e09e27',
       name: 'Javascript',
-      level: '95%',
+      level: '90%',
       examples: ''
     },
     {
@@ -183,21 +182,72 @@ export class ProfileService {
       name: 'Ionic',
       level: '75%',
       examples: ''
+    }
+  ];
+
+  private dev_tags = [
+    {
+      color: '#8DC054',
+      name: 'Android Studio'
     },
     {
-      id: 201,
+      color: '#009FEB',
+      name: 'Xcode'
+    },
+    {
+      color: '#2E2456',
+      name: 'Eclipse'
+    },
+    {
+      color: '#0F9DA9',
+      name: 'Arduino'
+    },
+    {
+      color: '#CA0907',
+      name: 'Matlab/Simulink'
+    },
+    {
+      color: '#999999',
+      name: 'LTSpice'
+    },
+    {
+      color: '#185015',
+      name: 'KiCad'
+    }
+  ];
+
+  private other_tags = [
+    {
+      color: '#008cc3',
+      name: 'R'
+    },
+    {
       color: '#777bb3',
       name: 'PHP'
     },
     {
-      id: 202,
       color: '#027C00',
       name: 'XSLT'
     },
     {
-      id: 203,
+      color: '#EE8910',
+      name: 'AWS'
+    },
+    {
       color: '#0F3C2D',
       name: 'Django'
+    },
+    {
+      color: '#432D7B',
+      name: 'UML'
+    },
+    {
+      color: '#3CB8AA',
+      name: 'SQL'
+    },
+    {
+      color: '#111111',
+      name: 'ADA'
     }
   ];
 

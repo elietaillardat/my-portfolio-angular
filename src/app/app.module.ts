@@ -21,6 +21,8 @@ import { ExperienceComponent } from './profile-view/experience/experience.compon
 import { EducationComponent } from './profile-view/education/education.component';
 import { LanguageComponent } from './profile-view/language/language.component';
 import { SoftwareComponent } from './profile-view/software/software.component';
+import { SkillTagComponent } from './profile-view/skill-tag/skill-tag.component';
+
 import { SingleProjectComponent } from './single-project/single-project.component';
 import { GalleryItemComponent } from './single-project/gallery-item/gallery-item.component';
 
@@ -38,6 +40,7 @@ import { GalleryItemComponent } from './single-project/gallery-item/gallery-item
     SoftwareComponent,
     SingleProjectComponent,
     GalleryItemComponent,
+    SkillTagComponent,
   ],
   imports: [
     BrowserModule,

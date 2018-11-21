@@ -39,7 +39,7 @@
     </section>
     <section id="skills" class="col-lg-4 pt-3">
       <h3><fa name="code-fork"></fa>&nbsp; Compétences</h3>
-      <div class="pl-3 border-left">
+      <div class="pl-3 border-left skills">
         <ul class="list-group mt-3 mb-3">
           <app-software *ngFor="let software of softwares;"
                         [id]="software.id"
@@ -49,6 +49,16 @@
                         [softwareExamples]="software.examples">
           </app-software>
         </ul>
+        <h5><fa name="wrench"></fa>&nbsp; IDE & Développement</h5>
+        <app-skill-tag  *ngFor="let devTag of devTags;"
+                        [color]="devTag.color"
+                        [skillName]="devTag.name">
+        </app-skill-tag>
+        <h5 class="pt-3"><fa name="cog"></fa>&nbsp; Autres</h5>
+        <app-skill-tag  *ngFor="let otherTag of otherTags;"
+                        [color]="otherTag.color"
+                        [skillName]="otherTag.name">
+        </app-skill-tag>
       </div>
     </section>
   </div>

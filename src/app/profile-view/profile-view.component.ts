@@ -18,35 +18,43 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
   softwares: any[];
   softwareSubscription: Subscription;
 
+  devTags: any[];
+  devTagSubscription: Subscription;
+  otherTags: any[];
+  otherTagSubscription: Subscription;
+
   constructor(private profileService: ProfileService) { }
 
   ngOnInit() {
-    this.experienceSubscription = this.profileService.experienceSubject.subscribe(
-      (experiences: any[]) => {
-        this.experiences = experiences;
-      }
-    );
+    this.experienceSubscription = this.profileService.experienceSubject.subscribe((experiences: any[]) => {
+      this.experiences = experiences;
+    });
+    this.educationSubscription = this.profileService.educationSubject.subscribe((educations: any[]) => {
+      this.educations = educations;
+    });
+    this.softwareSubscription = this.profileService.softwareSubject.subscribe((softwares: any[]) => {
+      this.softwares = softwares;
+    });
+    this.devTagSubscription = this.profileService.devTagSubject.subscribe((devTags: any[]) => {
+      this.devTags = devTags;
+      console.log(this.devTags);
+    });
+    this.otherTagSubscription = this.profileService.otherTagSubject.subscribe((otherTags: any[]) => {
+      this.otherTags = otherTags;
+    });
     this.profileService.emitExperienceSubject();
-
-    this.educationSubscription = this.profileService.educationSubject.subscribe(
-      (educations: any[]) => {
-        this.educations = educations;
-      }
-    );
     this.profileService.emitEducationSubject();
-
-    this.softwareSubscription = this.profileService.softwareSubject.subscribe(
-      (softwares: any[]) => {
-        this.softwares = softwares;
-      }
-    );
     this.profileService.emitSoftwareSubject();
+    this.profileService.emitDevTagSubject();
+    this.profileService.emitOtherTagSubject();
   }
 
   ngOnDestroy() {
     this.experienceSubscription.unsubscribe();
     this.educationSubscription.unsubscribe();
     this.softwareSubscription.unsubscribe();
+    this.devTagSubscription.unsubscribe();
+    this.otherTagSubscription.unsubscribe();
   }
 
 }
