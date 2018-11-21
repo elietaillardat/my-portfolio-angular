@@ -4,6 +4,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ParticlesModule } from 'angular-particle';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 // Services
 import { ProfileService } from './services/profile.service';
@@ -50,7 +51,8 @@ import { GalleryItemComponent } from './single-project/gallery-item/gallery-item
     FormsModule
   ],
   providers: [
-    ProfileService
+    ProfileService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
