@@ -44,7 +44,7 @@ export class ProfileService {
 			date: 'Février-Juillet 2019',
 			title: "Stage chez Wiifor (Toulouse - 31)",
 			description: "À venir : Stage développeur software objets connectés",
-      gallery: ''
+      gallery: ['1.png', '2.png']
     },
 		{
       id: 4,
@@ -52,7 +52,7 @@ export class ProfileService {
 			date: 'Juin-Septembre 2018',
 			title: "Stage chez Beenetic Systems (Toulouse - 31)",
 			description: "Projet IoT ‘iBO HOME’ : Développement logiciel d’un produit  embarqué destiné au monde de l’habitat intelligent",
-      gallery: ''
+      gallery: ['1.png', '2.png']
     },
     {
       id: 3,
