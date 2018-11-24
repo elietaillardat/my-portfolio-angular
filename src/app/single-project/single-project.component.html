@@ -1,12 +1,22 @@
 <div class="container">
-  <h2 class="mt-4"><a class="arrow-back" routerLink="/profile"><fa name="arrow-left"></fa></a>&nbsp; {{ title }}</h2>
+  <div class="row mt-4 mb-4 align-items-center">
+    <div class="col-auto text-center">
+      <h2 class="mb-0"><a class="arrow-back" routerLink="/profile"><fa name="arrow-left"></fa></a></h2>
+    </div>
+    <div class="col-2 pl-0">
+      <img class="d-flex flex-wrap img-fluid" src="./assets/images/{{img}}">
+    </div>
+    <div class="col-auto pl-0 border-left">
+      <h2 class="mb-0">&nbsp; {{ title }}</h2>
+    </div>
+  </div>
+
   <p><b>Description :</b> {{ description }}</p>
-  <div class="gallery" id="gallery">
-    <!--
+  <p>À venir</p>
+  <!--<div class="gallery" id="gallery">
       <app-gallery-item *ngFor="let img of images;"
                       [projectImg]="img.img">
       </app-gallery-item>
-    -->
     <figure class="mb-3">
       <img class="click-to-expand img-fluid" src="./assets/images/beenetic/1.png" alt="Card image cap">
     </figure>
@@ -37,5 +47,7 @@
     <figure class="mb-3">
       <img class="img-fluid border" src="./assets/images/beenetic/10.png" alt="Card image cap">
     </figure>
-  </div>
+  </div>-->
+
+
 </div>

@@ -14,6 +14,9 @@ $(document).ready(function() {
     $('body').css('padding-top', headerOffset);
   };
   
+  $('#navbarToggler').on('hidden.bs.collapse', function () {
+    onResize();
+  });
   $(window).resize(onResize);
   $(window).click(onResize);
   $('html').css('overflow-y', 'scroll');

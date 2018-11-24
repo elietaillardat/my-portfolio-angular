@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SingleProjectComponent implements OnInit {
 
+  img: string;
   title: string = 'Expérience';
   description: string = 'Description';
 
@@ -17,6 +18,7 @@ export class SingleProjectComponent implements OnInit {
 
   ngOnInit() {
     const id = this.route.snapshot.params['id'];
+    this.img = this.profileService.getExperienceById(+id).img;
     this.title = this.profileService.getExperienceById(+id).title;
     this.description = this.profileService.getExperienceById(+id).description;
   }

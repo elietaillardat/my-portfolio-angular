@@ -38,8 +38,16 @@ export class ProfileService {
 	}
 
   private experiences = [
+    {
+      id: 5,
+      img: 'wiifor.png',
+			date: 'Février-Juillet 2019',
+			title: "Stage chez Wiifor (Toulouse - 31)",
+			description: "À venir : Stage développeur software objets connectés",
+      gallery: ''
+    },
 		{
-      id: 1,
+      id: 4,
       img: 'beenetic.png',
 			date: 'Juin-Septembre 2018',
 			title: "Stage chez Beenetic Systems (Toulouse - 31)",
@@ -47,21 +55,21 @@ export class ProfileService {
       gallery: ''
     },
     {
-      id: 2,
+      id: 3,
       img: 'nxp.png',
 			date: '2017 - 2018',
 			title: "Participation à la NXP Cup (Toulouse/Grenoble)",
 			description: 'Compétition de voitures autonomes sur circuit'
     },
     {
-      id: 3,
+      id: 2,
       img: 'allette.png',
 			date: 'Juillet - Août 2017',
 			title: "Stage chez Allette Systems (Sydney - Australie)",
 			description: "Développement d'une application web de gestion de documents"
     },
     {
-      id: 4,
+      id: 1,
       img: 'thales.png',
 			date: 'Juin 2015',
 			title: "Stage Ouvrier chez Thales Alenia Space (Toulouse - 31)",

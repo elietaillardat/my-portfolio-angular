@@ -26,6 +26,7 @@ import { SkillTagComponent } from './profile-view/skill-tag/skill-tag.component'
 
 import { SingleProjectComponent } from './single-project/single-project.component';
 import { GalleryItemComponent } from './single-project/gallery-item/gallery-item.component';
+import { PortfolioViewComponent } from './portfolio-view/portfolio-view.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { GalleryItemComponent } from './single-project/gallery-item/gallery-item
     SingleProjectComponent,
     GalleryItemComponent,
     SkillTagComponent,
+    PortfolioViewComponent,
   ],
   imports: [
     BrowserModule,
