@@ -43,8 +43,9 @@ export class ProfileService {
       img: 'wiifor.png',
 			date: 'Février-Juillet 2019',
 			title: "Stage chez Wiifor (Toulouse - 31)",
-			description: "À venir : Stage développeur software objets connectés",
-      gallery: ['1.png', '2.png']
+      description: "Conception Plateforme SW IoT (Embarqué + Cloud)",
+      content: "",
+      gallery: []
     },
 		{
       id: 4,
@@ -52,7 +53,11 @@ export class ProfileService {
 			date: 'Juin-Septembre 2018',
 			title: "Stage chez Beenetic Systems (Toulouse - 31)",
 			description: "Projet IoT ‘iBO HOME’ : Développement logiciel d’un produit  embarqué destiné au monde de l’habitat intelligent",
-      gallery: ['1.png', '2.png']
+      content_1: "Le projet consiste en un système de capteurs intelligents (wattmètre, humidité, température...) connectés sur différentes prises électriques d'une maison. Les cartes électroniques composées des capteurs ont déjà été développées par l'entreprise. L’objectif du stage était de reprendre ce projet en standby, avec la mise en place d’une solution permettant de stocker et gérer les données sur un cloud, tout en développant une application iOS associée capable d’afficher de manière lisible pour l’utilisateur toutes ces informations. La solution choisie a été d’utiliser une carte électronique conçue par DIGI (traitant les données reçues) envoyant les données des différentes cartes sur AWS (Amazon Web Services), qui sont ensuite récupérer par des requêtes ‘GET’ via l’application.",
+      content_2: "J’ai fait de même en sorte que cette dernière soit capable d’interagir avec les différentes cartes de la maison, en allumant/éteignant les torches intégrées par exemple, ou bien en programmant la coupure d’une prise d’une pièce à un certain horaire. L’utilisateur peut de même choisir ses préférences grâce à des seuils (de température par exemple), et si des valeurs hors cadres sont récupérées, un script sur Amazon Lambda génère un message pour l’utilisateur sous forme de « push notification » le prévenant de la situation. J’ai pu enfin un peu côtoyer le fonctionnement des « skills » Alexa d’Amazon (assistant vocal).",
+      content_3: "Par conséquent, j’ai pu découvrir le langage Swift de développement Apple sous Xcode, ainsi que de très nombreux services d’AWS, ce qui sera très utile pour la suite de mes projets dans le monde des IoT. Enfin, j’ai pu de nouveau acquérir une grande autonomie de travail dans cette petite entreprise, avec un projet très intéressant et formateur.",
+      gallery: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'],
+      skills: ['Xcode', 'AWS']
     },
     {
       id: 3,
@@ -111,7 +116,7 @@ export class ProfileService {
     }
   ];
     
-  private softwares = [
+  public softwares = [
     // Programmation Objet
     {
       id: 1,
@@ -193,7 +198,7 @@ export class ProfileService {
     }
   ];
 
-  private dev_tags = [
+  public dev_tags = [
     {
       color: '#8DC054',
       name: 'Android Studio'
@@ -224,7 +229,7 @@ export class ProfileService {
     }
   ];
 
-  private other_tags = [
+  public other_tags = [
     {
       color: '#008cc3',
       name: 'R'

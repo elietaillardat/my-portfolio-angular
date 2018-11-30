@@ -5,6 +5,7 @@ import { ParticlesModule } from 'angular-particle';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { NgxMdModule } from 'ngx-md';
 
 // Services
 import { ProfileService } from './services/profile.service';
@@ -47,6 +48,7 @@ import { PortfolioViewComponent } from './portfolio-view/portfolio-view.componen
   ],
   imports: [
     BrowserModule,
+    NgxMdModule.forRoot(),
     AngularFontAwesomeModule,
     ParticlesModule,
     AppRoutingModule,
