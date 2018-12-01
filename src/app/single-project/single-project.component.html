@@ -13,17 +13,14 @@
   <h5 class="exp-description"><b>Intitulé :&nbsp;</b></h5>
   <h5 class="exp-description">{{ description }}</h5>
   <p *ngIf="img == 'wiifor.png'">À venir</p>
-
   <hr>
   <h5 class="exp-description"><b>Notions clefs :&nbsp;</b></h5>
-  <app-skill-tag  *ngFor="let skill of skills;"
-                  [color]="tags[0].color"
-                  [skillName]="tags[0].name">
+  <app-skill-tag  *ngFor="let i of indexes;"
+                  [color]="tags[i].color"
+                  [skillName]="tags[i].name">
   </app-skill-tag>
-  <hr>
-  <div NgxMd [path]="'./assets/md/README.md'"></div> 
-  <hr>
-  <div class="gallery mt-5" id="gallery">
+  <div class="rounded border p-4 mt-2" NgxMd path="./assets/md/{{md_file}}"></div> 
+  <div class="gallery mt-4" id="gallery">
     <figure class="mb-3 border"  *ngFor="let img of gallery;">
       <img class="click-to-expand img-fluid" src="./assets/images/experiences/{{img}}" alt="Card image cap">
     </figure>

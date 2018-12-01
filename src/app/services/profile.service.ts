@@ -44,8 +44,9 @@ export class ProfileService {
 			date: 'Février-Juillet 2019',
 			title: "Stage chez Wiifor (Toulouse - 31)",
       description: "Conception Plateforme SW IoT (Embarqué + Cloud)",
-      content: "",
-      gallery: []
+      gallery: [],
+      skills: [],
+      md_file: ''
     },
 		{
       id: 4,
@@ -53,32 +54,39 @@ export class ProfileService {
 			date: 'Juin-Septembre 2018',
 			title: "Stage chez Beenetic Systems (Toulouse - 31)",
 			description: "Projet IoT ‘iBO HOME’ : Développement logiciel d’un produit  embarqué destiné au monde de l’habitat intelligent",
-      content_1: "Le projet consiste en un système de capteurs intelligents (wattmètre, humidité, température...) connectés sur différentes prises électriques d'une maison. Les cartes électroniques composées des capteurs ont déjà été développées par l'entreprise. L’objectif du stage était de reprendre ce projet en standby, avec la mise en place d’une solution permettant de stocker et gérer les données sur un cloud, tout en développant une application iOS associée capable d’afficher de manière lisible pour l’utilisateur toutes ces informations. La solution choisie a été d’utiliser une carte électronique conçue par DIGI (traitant les données reçues) envoyant les données des différentes cartes sur AWS (Amazon Web Services), qui sont ensuite récupérer par des requêtes ‘GET’ via l’application.",
-      content_2: "J’ai fait de même en sorte que cette dernière soit capable d’interagir avec les différentes cartes de la maison, en allumant/éteignant les torches intégrées par exemple, ou bien en programmant la coupure d’une prise d’une pièce à un certain horaire. L’utilisateur peut de même choisir ses préférences grâce à des seuils (de température par exemple), et si des valeurs hors cadres sont récupérées, un script sur Amazon Lambda génère un message pour l’utilisateur sous forme de « push notification » le prévenant de la situation. J’ai pu enfin un peu côtoyer le fonctionnement des « skills » Alexa d’Amazon (assistant vocal).",
-      content_3: "Par conséquent, j’ai pu découvrir le langage Swift de développement Apple sous Xcode, ainsi que de très nombreux services d’AWS, ce qui sera très utile pour la suite de mes projets dans le monde des IoT. Enfin, j’ai pu de nouveau acquérir une grande autonomie de travail dans cette petite entreprise, avec un projet très intéressant et formateur.",
       gallery: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'],
-      skills: ['Xcode', 'AWS']
+      skills: ['AWS', 'Swift', 'Xcode', 'Python', 'Javascript'],
+      md_file: 'beenetic_internship.md'
     },
     {
       id: 3,
       img: 'nxp.png',
 			date: '2017 - 2018',
 			title: "Participation à la NXP Cup (Toulouse/Grenoble)",
-			description: 'Compétition de voitures autonomes sur circuit'
+      description: 'Compétition de voitures autonomes sur circuit',
+      gallery: [],
+      skills: ['C', 'Prog. périphérique'],
+      md_file: 'nxp_cup.md'
     },
     {
       id: 2,
       img: 'allette.png',
 			date: 'Juillet - Août 2017',
 			title: "Stage chez Allette Systems (Sydney - Australie)",
-			description: "Développement d'une application web de gestion de documents"
+      description: "Développement d'une application web de gestion de documents",
+      gallery: [],
+      skills: ['Javascript', 'HTML', 'CSS', 'Foundation', 'XSLT', 'XPath', 'Java'],
+      md_file: 'allette_internship.md'
     },
     {
       id: 1,
       img: 'thales.png',
 			date: 'Juin 2015',
 			title: "Stage Ouvrier chez Thales Alenia Space (Toulouse - 31)",
-			description: 'Transfert de données vers une base de gestion informatique'
+      description: 'Transfert de données vers une base de gestion informatique',
+      gallery: [],
+      skills: ['Excel'],
+      md_file: 'thales_internship.md'
 		}
   ];
   
@@ -261,6 +269,22 @@ export class ProfileService {
     {
       color: '#111111',
       name: 'ADA'
+    },
+    {
+      color: '#026E39',
+      name: 'Excel'
+    },
+    {
+      color: '#00A1C2',
+      name: 'Foundation'
+    },
+    {
+      color: '#F70505',
+      name: 'XPath'
+    },
+    {
+      color: '#C66200',
+      name: 'Prog. périphérique'
     }
   ];
 

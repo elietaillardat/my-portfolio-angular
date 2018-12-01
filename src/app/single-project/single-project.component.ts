@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../services/profile.service';
 import { ActivatedRoute } from '@angular/router';
+import { stringify } from '@angular/core/src/render3/util';
 
 @Component({
   selector: 'app-single-project',
@@ -12,12 +13,10 @@ export class SingleProjectComponent implements OnInit {
   img: string;
   title: string = 'Expérience';
   description: string = 'Description';
-  content_1: string = 'Content';
-  content_2: string = 'Content';
-  content_3: string = 'Content';
+  md_file: string = 'Content';
   gallery: string[];
-  skills: string[];
   tags;
+  indexes: number[];
 
   constructor(private profileService: ProfileService,
               private route: ActivatedRoute) { }
@@ -27,13 +26,17 @@ export class SingleProjectComponent implements OnInit {
     this.img = this.profileService.getExperienceById(+id).img;
     this.title = this.profileService.getExperienceById(+id).title;
     this.description = this.profileService.getExperienceById(+id).description;
-    this.content_1 = this.profileService.getExperienceById(+id).content_1;
-    this.content_2 = this.profileService.getExperienceById(+id).content_2;
-    this.content_3 = this.profileService.getExperienceById(+id).content_3;
+    this.md_file = this.profileService.getExperienceById(+id).md_file;
     this.gallery = this.profileService.getExperienceById(+id).gallery;
-    this.skills = this.profileService.getExperienceById(+id).skills;
-    this.tags = this.profileService.dev_tags.concat(this.profileService.other_tags);
-    console.log(this.tags.findIndex(s => s.name === 'AWS'));
+    this.tags = (this.profileService.dev_tags.concat(this.profileService.other_tags)).concat(this.profileService.softwares);
+    const skills = this.profileService.getExperienceById(+id).skills;
+    const tags_tmp = this.tags;
+    var indexes_tmp = [];
+    skills.forEach(function(skill) {
+      var i = tags_tmp.findIndex(s => s.name === skill);
+      indexes_tmp.push(i);
+    });
+    this.indexes = indexes_tmp;
   }
 
 }
