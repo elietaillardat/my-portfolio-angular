@@ -55,7 +55,7 @@ export class ProfileService {
 			title: "Stage chez Beenetic Systems (Toulouse - 31)",
 			description: "Projet IoT ‘iBO HOME’ : Développement logiciel d’un produit  embarqué destiné au monde de l’habitat intelligent",
       gallery: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'],
-      skills: ['AWS', 'Swift', 'Xcode', 'Python', 'Javascript'],
+      skills: ['AWS', 'Swift', 'Xcode', 'Python', 'Javascript', 'JSON'],
       md_file: 'beenetic_internship.md'
     },
     {
@@ -75,7 +75,7 @@ export class ProfileService {
 			title: "Stage chez Allette Systems (Sydney - Australie)",
       description: "Développement d'une application web de gestion de documents",
       gallery: [],
-      skills: ['Javascript', 'HTML', 'CSS', 'Foundation', 'XSLT', 'XPath', 'Java'],
+      skills: ['Javascript', 'HTML', 'CSS', 'Foundation', 'XSLT', 'XPath', 'Java', 'JSON'],
       md_file: 'allette_internship.md'
     },
     {
@@ -285,6 +285,10 @@ export class ProfileService {
     {
       color: '#C66200',
       name: 'Prog. périphérique'
+    },
+    {
+      color: '#737373',
+      name: 'JSON'
     }
   ];
 
