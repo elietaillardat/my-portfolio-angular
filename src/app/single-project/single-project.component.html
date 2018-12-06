@@ -19,7 +19,7 @@
                   [color]="tags[i].color"
                   [skillName]="tags[i].name">
   </app-skill-tag>
-  <div class="rounded border p-4 mt-2" NgxMd path="./assets/md/{{md_file}}"></div> 
+  <div id="md-content" class="rounded border p-4 mt-2" NgxMd path="./assets/md/{{md_file}}"></div> 
   <div class="gallery mt-4" id="gallery">
     <figure class="mb-3 border"  *ngFor="let img of gallery;">
       <img class="click-to-expand img-fluid" src="./assets/images/experiences/{{img}}" alt="Card image cap">

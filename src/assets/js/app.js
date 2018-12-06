@@ -6,7 +6,11 @@ $(document).ready(function() {
   $('a.scroll').click(function() {
     var id = $(this).attr("link");
     $('html, body').animate({scrollTop: $(id).offset().top - headerOffset}, 800);
-	});
+  });
+  
+  $(window).scroll(function() {
+    $('.gallery').show();
+  });
 
   var onResize = function() {
     if (!$('#sub-nav').hasClass('hidden')) headerOffset = $('nav').outerHeight() + $('#sub-nav').outerHeight();
