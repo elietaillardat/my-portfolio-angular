@@ -19,6 +19,9 @@ $(document).ready(function() {
   });
   $(window).resize(onResize);
   $(window).click(onResize);
+  window.onhashchange = function() {
+    onResize();
+  }
   $('html').css('overflow-y', 'scroll');
   onResize();
 });
