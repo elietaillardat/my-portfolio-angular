@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryItemComponent implements OnInit {
 
+  img: string;
+  
   constructor() { }
 
   ngOnInit() {
