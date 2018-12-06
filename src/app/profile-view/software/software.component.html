@@ -4,7 +4,7 @@
 <li class="mb-3">
   <div class="row align-items-center">
     <div class="col-1">
-      <a class="arrow" [ngStyle]="{'color': color}" data-toggle="collapse" attr.data-target="#more-{{ id }}"><fa name="chevron-circle-down"></fa></a>
+      <a class="arrow" [ngStyle]="{'color': color}" data-toggle="collapse" attr.data-target="#more-s{{ id }}"><fa name="chevron-circle-down"></fa></a>
     </div>
     <div class="col">
       <div class="progress tag">
@@ -14,7 +14,7 @@
       </div>
     </div>
   </div>
-  <div attr.id="more-{{ id }}" class="row collapse">
+  <div attr.id="more-s{{ id }}" class="row collapse">
     <div class="col">
       <span class="mini-project">{{ softwareExamples }}</span><br>
       <span class="mini-project"><a [routerLink]="[]">Voir projets »</a></span>

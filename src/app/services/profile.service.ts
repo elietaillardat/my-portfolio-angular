@@ -4,6 +4,7 @@ export class ProfileService {
 
   experienceSubject = new Subject<any[]>();
   educationSubject = new Subject<any[]>();
+  languageSubject = new Subject<any[]>();
   softwareSubject = new Subject<any[]>();
   devTagSubject = new Subject<any[]>();
   otherTagSubject = new Subject<any[]>();
@@ -14,6 +15,10 @@ export class ProfileService {
 
   emitEducationSubject() {
     this.educationSubject.next(this.educations.slice());
+  }
+
+  emitLanguageSubject() {
+    this.languageSubject.next(this.languages.slice());
   }
 
   emitSoftwareSubject() {
@@ -55,7 +60,7 @@ export class ProfileService {
 			title: "Stage chez Beenetic Systems (Toulouse - 31)",
 			description: "Projet IoT ‘iBO HOME’ : Développement logiciel d’un produit  embarqué destiné au monde de l’habitat intelligent",
       gallery: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'],
-      skills: ['AWS', 'Swift', 'Xcode', 'Python', 'Javascript', 'JSON'],
+      skills: ['Amazon Web Services', 'Swift', 'Xcode', 'Python', 'Javascript', 'JSON'],
       md_file: 'beenetic_internship.md'
     },
     {
@@ -113,14 +118,26 @@ export class ProfileService {
   
   private languages = [
     {
+      id: 1,
       name: 'Anglais',
-      writing_reading_level: 'C1',
-      speaking_level: 'B2+'
+      wr_level: 'C1',
+      s_level: 'C1',
+      level: '90%',
+      degree: 'TOEIC: 910/990',
+      color: '#00427e',
+      icon: 'united-kingdom',
+      examples: "Semestre d'études à Limerick (Irlande) - Stage de 10 semaines à Sydney (Australie) - PTP ISS dispensé en Anglais"
     },
     {
+      id: 2,
       name: 'Espagnol',
-      writing_reading_level: 'B2',
-      speaking_level: 'B2'
+      wr_level: 'B2',
+      s_level: 'B2',
+      level: '65%',
+      degree: '',
+      color: '#CA0907',
+      icon: 'spain',
+      examples: "Mini séjours en Espagne - 20/20 au Baccalauréat Général Série S"
     }
   ];
     
@@ -252,7 +269,7 @@ export class ProfileService {
     },
     {
       color: '#EE8910',
-      name: 'AWS'
+      name: 'Amazon Web Services'
     },
     {
       color: '#0F3C2D',

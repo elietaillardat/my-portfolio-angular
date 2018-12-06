@@ -1,3 +1,24 @@
-<p>
-  language works!
-</p>
+<h5>
+  <img src="./assets/images/{{ icon }}.svg" width='25'>
+  &nbsp; {{ languageName }}
+</h5>
+
+<li class="mb-3">
+  <div class="row align-items-center">
+    <div class="col-1">
+      <a class="arrow" [ngStyle]="{'color': color}" data-toggle="collapse" attr.data-target="#more-l{{ id }}"><fa name="chevron-circle-down"></fa></a>
+    </div>
+    <div class="col">
+      <div class="progress tag">
+        <div class="progress-bar" role="progressbar" [ngStyle]="{'width': languageLevel, 'background-color': color}">
+          <h6 class="tag-content">Écrit/Lu/Parlé : {{ languageWRLevel }} - <b>{{ languageDegree }}</b></h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div attr.id="more-l{{ id }}" class="row collapse">
+    <div class="col">
+      <span class="mini-project">{{ languageExamples }}</span><br>
+    </div>
+  </div>
+</li>
