@@ -13,10 +13,10 @@
           <a class="nav-link" routerLink="home">Home</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="profile">Profil - CV</a>
+          <a class="nav-link" routerLink="profile">Profile - CV</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link">Portfolio</a>
+          <a class="nav-link" routerLink="portfolio">Portfolio</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
           <a target="_blank" class="nav-link" href="http://www.whileone-studios.com">WhileOne Studios</a>
@@ -45,4 +45,5 @@
     </div>
   </div>
   <app-sub-nav id="sub-nav" [ngClass]="{'hidden': router.url !== '/profile'}"></app-sub-nav>
+  <app-sub-nav-iss id="sub-nav" [ngClass]="{'hidden': router.url !== '/portfolio/ptp-iss'}"></app-sub-nav-iss>
 </nav>

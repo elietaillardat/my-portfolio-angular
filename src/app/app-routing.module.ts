@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HomeViewComponent } from './home-view/home-view.component';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
+import { PortfolioViewComponent } from './portfolio-view/portfolio-view.component';
+import { PtpIssComponent } from './portfolio-view/ptp-iss/ptp-iss.component';
 import { SingleProjectComponent } from './single-project/single-project.component';
 
 const routes: Routes = [
@@ -11,6 +13,8 @@ const routes: Routes = [
   { path: 'profile', component: ProfileViewComponent },
   { path: 'profile/experiences/:id', component: SingleProjectComponent },
   { path: 'profile/:id', redirectTo: 'profile/experiences/:id', pathMatch: 'full' },
+  { path: 'portfolio', component: PortfolioViewComponent },
+  { path: 'portfolio/ptp-iss', component: PtpIssComponent },
   { path: 'not-found', component: FourOhFourComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'not-found' }

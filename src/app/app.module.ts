@@ -28,6 +28,8 @@ import { SkillTagComponent } from './profile-view/skill-tag/skill-tag.component'
 import { SingleProjectComponent } from './single-project/single-project.component';
 import { GalleryItemComponent } from './single-project/gallery-item/gallery-item.component';
 import { PortfolioViewComponent } from './portfolio-view/portfolio-view.component';
+import { PtpIssComponent } from './portfolio-view/ptp-iss/ptp-iss.component';
+import { SubNavIssComponent } from './header/sub-nav-iss/sub-nav-iss.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { PortfolioViewComponent } from './portfolio-view/portfolio-view.componen
     GalleryItemComponent,
     SkillTagComponent,
     PortfolioViewComponent,
+    PtpIssComponent,
+    SubNavIssComponent,
   ],
   imports: [
     BrowserModule,
