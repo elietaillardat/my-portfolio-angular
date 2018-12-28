@@ -43,7 +43,6 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
     });
     this.devTagSubscription = this.profileService.devTagSubject.subscribe((devTags: any[]) => {
       this.devTags = devTags;
-      console.log(this.devTags);
     });
     this.otherTagSubscription = this.profileService.otherTagSubject.subscribe((otherTags: any[]) => {
       this.otherTags = otherTags;
