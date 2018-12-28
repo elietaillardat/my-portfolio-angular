@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ParticlesModule } from 'angular-particle';
+import { DataTablesModule } from 'angular-datatables';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
@@ -30,6 +31,12 @@ import { GalleryItemComponent } from './single-project/gallery-item/gallery-item
 import { PortfolioViewComponent } from './portfolio-view/portfolio-view.component';
 import { PtpIssComponent } from './portfolio-view/ptp-iss/ptp-iss.component';
 import { SubNavIssComponent } from './header/sub-nav-iss/sub-nav-iss.component';
+import { SmartDevicesComponent } from './portfolio-view/ptp-iss/smart-devices/smart-devices.component';
+import { CommunicationComponent } from './portfolio-view/ptp-iss/communication/communication.component';
+import { MdwareServicesComponent } from './portfolio-view/ptp-iss/mdware-services/mdware-services.component';
+import { AnalysisDataComponent } from './portfolio-view/ptp-iss/analysis-data/analysis-data.component';
+import { InnovativeProjectComponent } from './portfolio-view/ptp-iss/innovative-project/innovative-project.component';
+import { InnovationHumanityComponent } from './portfolio-view/ptp-iss/innovation-humanity/innovation-humanity.component';
 
 @NgModule({
   declarations: [
@@ -49,11 +56,18 @@ import { SubNavIssComponent } from './header/sub-nav-iss/sub-nav-iss.component';
     PortfolioViewComponent,
     PtpIssComponent,
     SubNavIssComponent,
+    SmartDevicesComponent,
+    CommunicationComponent,
+    MdwareServicesComponent,
+    AnalysisDataComponent,
+    InnovativeProjectComponent,
+    InnovationHumanityComponent,
   ],
   imports: [
     BrowserModule,
     NgxMdModule.forRoot(),
     AngularFontAwesomeModule,
+    DataTablesModule,
     ParticlesModule,
     AppRoutingModule,
     FormsModule

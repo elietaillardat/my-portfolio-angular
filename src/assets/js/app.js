@@ -14,6 +14,7 @@ $(document).ready(function() {
 
   var onResize = function() {
     if (!$('#sub-nav').hasClass('hidden')) headerOffset = $('nav').outerHeight() + $('#sub-nav').outerHeight();
+    else if (!$('#sub-nav-iss').hasClass('hidden')) headerOffset = $('nav').outerHeight() + $('#sub-nav-iss').outerHeight();
     else headerOffset = $('nav').outerHeight();
     $('body').css('padding-top', headerOffset);
   };

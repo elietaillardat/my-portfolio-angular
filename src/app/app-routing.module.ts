@@ -1,3 +1,6 @@
+import { AnalysisDataComponent } from './portfolio-view/ptp-iss/analysis-data/analysis-data.component';
+import { CommunicationComponent } from './portfolio-view/ptp-iss/communication/communication.component';
+import { SmartDevicesComponent } from './portfolio-view/ptp-iss/smart-devices/smart-devices.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -7,6 +10,9 @@ import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { PortfolioViewComponent } from './portfolio-view/portfolio-view.component';
 import { PtpIssComponent } from './portfolio-view/ptp-iss/ptp-iss.component';
 import { SingleProjectComponent } from './single-project/single-project.component';
+import { MdwareServicesComponent } from './portfolio-view/ptp-iss/mdware-services/mdware-services.component';
+import { InnovativeProjectComponent } from './portfolio-view/ptp-iss/innovative-project/innovative-project.component';
+import { InnovationHumanityComponent } from './portfolio-view/ptp-iss/innovation-humanity/innovation-humanity.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeViewComponent },
@@ -15,6 +21,13 @@ const routes: Routes = [
   { path: 'profile/:id', redirectTo: 'profile/experiences/:id', pathMatch: 'full' },
   { path: 'portfolio', component: PortfolioViewComponent },
   { path: 'portfolio/ptp-iss', component: PtpIssComponent },
+  { path: 'portfolio/ptp-iss/smart-devices', component: SmartDevicesComponent },
+  { path: 'portfolio/ptp-iss/communication', component: CommunicationComponent },
+  { path: 'portfolio/ptp-iss/mdware-services', component: MdwareServicesComponent },
+  { path: 'portfolio/ptp-iss/analysis-data', component: AnalysisDataComponent },
+  { path: 'portfolio/ptp-iss/innovative-project', component: InnovativeProjectComponent },
+  { path: 'portfolio/ptp-iss/innovation-humanity', component: InnovationHumanityComponent },
+
   { path: 'not-found', component: FourOhFourComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'not-found' }
