@@ -12,6 +12,20 @@ $(document).ready(function() {
     $('.gallery').show();
   });
 
+  $(".nav-link").click(function() {
+    $(".nav-link").each(function() {
+      $(this).removeClass("active");
+    });
+    $(this).addClass("active");
+  });
+
+  $("#skills").hover(function() {
+    $(".nav-link").each(function() {
+      $(this).removeClass("active");
+    });
+    $(".nav-link[link='#skills']").addClass("active");
+  });
+
   var onResize = function() {
     if (!$('#sub-nav').hasClass('hidden')) headerOffset = $('nav').outerHeight() + $('#sub-nav').outerHeight();
     else if (!$('#sub-nav-iss').hasClass('hidden')) headerOffset = $('nav').outerHeight() + $('#sub-nav-iss').outerHeight();

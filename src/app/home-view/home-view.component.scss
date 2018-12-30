@@ -47,14 +47,14 @@ h2, h3, p {
   to   { transform: translate(0, -0px); }    
 }
 
-h3, h4 {
+h4 {
   font-variant: small-caps;
 }
 
 @media (min-width: 768px) {
   .line-1 {
       float: left;
-      width: 24em;
+      width: 25em;
       border-right: 2px solid rgba(255,255,255,.75);
       white-space: nowrap;
       overflow: hidden;
@@ -63,13 +63,13 @@ h3, h4 {
 
   /* Animation */
   .anim-typewriter {
-    animation: typewriter 3s steps(44) 750ms 1 normal both,
-              blinkTextCursor 750ms steps(44) infinite normal;
+    animation: typewriter 3s steps(56) 750ms 1 normal both,
+              blinkTextCursor 750ms steps(56) infinite normal;
     }
 
   @keyframes typewriter {
     from { width: 0; }
-    to { width: 24em; }
+    to { width: 25em; }
   }
   @keyframes blinkTextCursor {
     from { border-right-color: rgba(255,255,255,.75); }

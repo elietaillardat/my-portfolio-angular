@@ -46,9 +46,9 @@ export class ProfileService {
     {
       id: 5,
       img: 'wiifor.png',
-			date: 'Février-Juillet 2019',
+			date: 'February-July 2019',
 			title: "Internship at Wiifor (Toulouse - 31)",
-      description: "Conception Plateforme SW IoT (Embarqué + Cloud)",
+      description: "IoT Platform Software Design (Embedded + Cloud)",
       gallery: [],
       skills: [],
       md_file: ''
@@ -56,9 +56,9 @@ export class ProfileService {
 		{
       id: 4,
       img: 'beenetic.png',
-			date: 'Juin-Septembre 2018',
+			date: 'June-September 2018',
 			title: "Internship at Beenetic Systems (Toulouse - 31)",
-			description: "Projet IoT ‘iBO HOME’ : Développement logiciel d’un produit  embarqué destiné au monde de l’habitat intelligent",
+			description: "IoT Project ‘iBO HOME’ : Software development of an embedded product designed for the Smart Home area",
       gallery: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'],
       skills: ['Amazon Web Services', 'Swift', 'Xcode', 'Python', 'Javascript', 'JSON'],
       md_file: 'beenetic_internship.md'
@@ -67,18 +67,18 @@ export class ProfileService {
       id: 3,
       img: 'nxp.png',
 			date: '2017 - 2018',
-			title: "Participation à la NXP Cup (Toulouse/Grenoble)",
-      description: 'Compétition de voitures autonomes sur circuit',
+			title: "Participation in the NXP Cup (Toulouse/Grenoble)",
+      description: 'Autonomous car competition on track',
       gallery: [],
-      skills: ['C', 'Prog. périphérique'],
+      skills: ['C', 'Peripheral prog.'],
       md_file: 'nxp_cup.md'
     },
     {
       id: 2,
       img: 'allette.png',
-			date: 'Juillet - Août 2017',
+			date: 'July - August 2017',
 			title: "Internship at Allette Systems (Sydney - Australie)",
-      description: "Développement d'une application web de gestion de documents",
+      description: "Design of a Web application for documents management",
       gallery: [],
       skills: ['Javascript', 'HTML', 'CSS', 'Foundation', 'XSLT', 'XPath', 'Java', 'JSON'],
       md_file: 'allette_internship.md'
@@ -86,9 +86,9 @@ export class ProfileService {
     {
       id: 1,
       img: 'thales.png',
-			date: 'Juin 2015',
-			title: "Internship Ouvrier at Thales Alenia Space (Toulouse - 31)",
-      description: 'Transfert de données vers une base de gestion informatique',
+			date: 'June 2015',
+			title: "Worker internship at Thales Alenia Space (Toulouse - 31)",
+      description: 'Data transfer to a new management database',
       gallery: [],
       skills: ['Excel'],
       md_file: 'thales_internship.md'
@@ -99,20 +99,20 @@ export class ProfileService {
 		{
       img: 'insa.png',
 			date: '2014 - 2018',
-			title: "Élève Ingénieur en 5ème année à l'INSA de Toulouse",
-			description: 'Génie Automatique et Électronique - Systèmes Embarqués - Option Innovative Smart System (domaine de l’IoT)'
+			title: "Engineering student in 5th year at INSA de Toulouse",
+			description: 'Automation & Electronic Engineering - Embedded Systems - Speciality Innovative Smart System (IoT domain)'
 		},
 		{
       img: 'ul.png',
 			date: '2016',
-			title: "Semestre d'étude à Limerick (Irlande)",
-			description: 'Enrichissement de la langue anglaise et ouverture culturelle'
+			title: "Erasmus exchange semester in Limerick (Ireland)",
+			description: 'Enrichment of the English language and cultural opening'
 		},
 		{
       img: 'cdg.png',
 			date: '2014',
-			title: 'Diplôme du Baccalauréat Général Série S',
-			description: 'Sciences de l’Ingénieur - Spécialité Mathématiques - Mention Très Bien - 19.31/20'
+			title: "General Bachelor's Degree Serie S",
+			description: "Engineering Science (SI) - Speciality Mathematics - with Highest honour and Jury's congratulations - 19.31/20"
 		}
   ];
   
@@ -301,7 +301,7 @@ export class ProfileService {
     },
     {
       color: '#C66200',
-      name: 'Prog. périphérique'
+      name: 'Peripheral prog.'
     },
     {
       color: '#737373',
