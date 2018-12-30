@@ -4,6 +4,7 @@ export class ProfileService {
 
   experienceSubject = new Subject<any[]>();
   educationSubject = new Subject<any[]>();
+  hobbySubject = new Subject<any[]>();
   languageSubject = new Subject<any[]>();
   softwareSubject = new Subject<any[]>();
   devTagSubject = new Subject<any[]>();
@@ -15,6 +16,10 @@ export class ProfileService {
 
   emitEducationSubject() {
     this.educationSubject.next(this.educations.slice());
+  }
+
+  emitHobbySubject() {
+    this.hobbySubject.next(this.hobbies.slice());
   }
 
   emitLanguageSubject() {
@@ -114,6 +119,19 @@ export class ProfileService {
 			title: "General Bachelor's Degree Serie S",
 			description: "Engineering Science (SI) - Speciality Mathematics - with Highest honour and Jury's congratulations - 19.31/20"
 		}
+  ];
+
+  private hobbies = [
+    {
+      id: 1,      
+      img: 'play_logo.png',
+			date: '2014 - 2018',
+			title: "Android games development at WhileOne Studios",
+      description: 'Automation & Electronic Engineering - Embedded Systems - Speciality Innovative Smart System (IoT domain)',
+      gallery: [],
+      skills: ['C', 'Peripheral prog.'],
+      md_file: 'nxp_cup.md'
+		},
   ];
   
   private languages = [

@@ -6,10 +6,10 @@
 }
 
 .nav-link {
-  font-size: 1.2em;
-  font-variant: small-caps;
+  font-size: 1.1em;
   cursor: pointer;
 
-  &:hover {
+  &.bar {
+    cursor: default;
   }
 }

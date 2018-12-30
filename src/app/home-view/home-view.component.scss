@@ -18,9 +18,9 @@ h2, h3, p {
 
 .introHome .container {
   h1, h2, h3, h4 {
-      font-family: 'Product Sans';
-      color: white;
-      font-weight: 200;
+    font-family: 'Product Sans';
+    color: white;
+    font-weight: 200;
   }
 }
 
@@ -47,7 +47,7 @@ h2, h3, p {
   to   { transform: translate(0, -0px); }    
 }
 
-h4 {
+h3, h4 {
   font-variant: small-caps;
 }
 

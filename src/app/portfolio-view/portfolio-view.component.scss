@@ -7,5 +7,14 @@ p {
 
   b {
     font-size: 115%;
+    font-variant: small-caps;
   }
+}
+
+.section-title hr {
+  background-color: #1e2c32;
+  border: 0 none;
+  height: 6px;
+  width: 70px;
+  margin: 30px auto !important;
 }

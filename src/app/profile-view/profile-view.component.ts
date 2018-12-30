@@ -15,6 +15,9 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
   educations: any[];
   educationSubscription: Subscription;
 
+  hobbies: any[];
+  hobbySubscription: Subscription;
+
   languages: any[];
   languageSubscription: Subscription;
 
@@ -28,12 +31,15 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
 
   constructor(private profileService: ProfileService) { }
 
-  ngOnInit() {
+  ngOnInit() {    
     this.experienceSubscription = this.profileService.experienceSubject.subscribe((experiences: any[]) => {
       this.experiences = experiences;
     });
     this.educationSubscription = this.profileService.educationSubject.subscribe((educations: any[]) => {
       this.educations = educations;
+    });
+    this.hobbySubscription = this.profileService.hobbySubject.subscribe((hobbies: any[]) => {
+      this.hobbies = hobbies;
     });
     this.languageSubscription = this.profileService.languageSubject.subscribe((languages: any[]) => {
       this.languages = languages;
@@ -49,6 +55,7 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
     });
     this.profileService.emitExperienceSubject();
     this.profileService.emitEducationSubject();
+    this.profileService.emitHobbySubject();
     this.profileService.emitLanguageSubject();
     this.profileService.emitSoftwareSubject();
     this.profileService.emitDevTagSubject();
@@ -58,6 +65,7 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.experienceSubscription.unsubscribe();
     this.educationSubscription.unsubscribe();
+    this.hobbySubscription.unsubscribe();
     this.languageSubscription.unsubscribe();
     this.softwareSubscription.unsubscribe();
     this.devTagSubscription.unsubscribe();
