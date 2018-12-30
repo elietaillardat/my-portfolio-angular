@@ -15,36 +15,10 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-8 pt-3">
-      <section id="experience">
-        <h2><fa name="briefcase"></fa>&nbsp; Experiences</h2>
-        <ul class="list-group mt-3 mb-3">
-          <app-experience *ngFor="let experience of experiences;"
-                          [id]="experience.id"
-                          [experienceImg]="experience.img"
-                          [experienceTitle]="experience.title"
-                          [experienceDate]="experience.date"
-                          [experienceDescription]="experience.description">
-          </app-experience>
-        </ul>
-      </section>
-      <hr>
-      <section id="education">
-        <h2><fa name="graduation-cap"></fa>&nbsp; Education</h2>
-        <ul class="list-group mt-3 mb-3">
-          <app-education  *ngFor="let education of educations;"
-                          [educationImg]="education.img"
-                          [educationTitle]="education.title"
-                          [educationDate]="education.date"
-                          [educationDescription]="education.description">
-          </app-education>
-        </ul>
-      </section>
-    </div>
-    <div class="col-lg-4 pt-3">
-      <section id="skills">
+    <div class="col-lg-3 pt-3 border-right">
+      <section id="skills" class="pb-3">
         <h2><fa name="compass" animation="spin"></fa>&nbsp; Skills</h2>
-        <div class="pl-3 mb-3 border-left skills">
+        <div class="skills pr-3">
           <ul class="list-group mt-3 mb-3">
             <app-software *ngFor="let software of softwares;"
                           [id]="software.id"
@@ -66,9 +40,10 @@
           </app-skill-tag>
         </div>
       </section>
-      <section id="languages" class="pt-4">
+      <hr>
+      <section id="languages" class="pt-2">
         <h2><fa name="globe" animation="spin"></fa>&nbsp; Languages</h2>
-        <div class="pl-3 border-left skills">
+        <div class="pr-3 skills">
           <ul class="list-group mt-3 mb-3">
             <app-language *ngFor="let language of languages;"
                           [id]="language.id"
@@ -84,13 +59,55 @@
           </ul>
         </div>
       </section>
+      <hr>
+      <section id="aptitudes" class="pt-2">
+        <h2><fa name="crosshairs" animation="spin"></fa>&nbsp; Aptitudes</h2>
+        <div class="pr-3 skills">
+          <ul class="list-group mt-3 mb-3">
+            <app-language *ngFor="let language of languages;"
+                          [id]="language.id"
+                          [icon]="language.icon"
+                          [color]="language.color"
+                          [languageName]="language.name"
+                          [languageWRLevel]="language.wr_level"
+                          [languageSLevel]="language.s_level"
+                          [languageDegree]="language.degree"
+                          [languageLevel]="language.level"
+                          [languageExamples]="language.examples">
+            </app-language>
+          </ul>
+        </div>
+      </section>
+      <hr>
     </div>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="col-lg-8">
-      <section id="hobbies">
-        <h2><fa name="android"></fa>&nbsp; Hobbies</h2>
+    <div class="col-lg-9 pt-3">
+      <section id="experience" class="pl-3">
+        <h2><fa name="briefcase"></fa>&nbsp; Experiences</h2>
+        <ul class="list-group mt-3 mb-3">
+          <app-experience *ngFor="let experience of experiences;"
+                          [id]="experience.id"
+                          [experienceImg]="experience.img"
+                          [experienceTitle]="experience.title"
+                          [experienceDate]="experience.date"
+                          [experienceDescription]="experience.description">
+          </app-experience>
+        </ul>
+      </section>
+      <hr>
+      <section id="education" class="pl-3 pt-2">
+        <h2><fa name="graduation-cap"></fa>&nbsp; Education</h2>
+        <ul class="list-group mt-3 mb-3">
+          <app-education  *ngFor="let education of educations;"
+                          [educationImg]="education.img"
+                          [educationTitle]="education.title"
+                          [educationDate]="education.date"
+                          [educationDescription]="education.description">
+          </app-education>
+        </ul>
+      </section>
+      <hr>
+      <section id="hobbies" class="pl-3 pt-2">
+        <h2><fa name="android"></fa>&nbsp; Hobbies & Volunteering</h2>
         <ul class="list-group mt-3 mb-3">
           <app-experience *ngFor="let hobby of hobbies;"
                           [id]="hobby.id"
