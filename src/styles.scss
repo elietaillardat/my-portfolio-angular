@@ -5,8 +5,14 @@ h1, h2, h3, h4, h5, p, table {
   font-family: 'Product Sans';
 }
 
-table a {
-  color: $theme-color;
+table {
+  a {
+    color: $theme-color;
+  }
+  tr.sub-title td {
+    font-weight: bold;
+    background: rgb(236, 239, 243);
+  }
 }
 
 .page-title {

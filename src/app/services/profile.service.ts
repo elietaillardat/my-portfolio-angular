@@ -47,7 +47,7 @@ export class ProfileService {
       id: 5,
       img: 'wiifor.png',
 			date: 'Février-Juillet 2019',
-			title: "Stage chez Wiifor (Toulouse - 31)",
+			title: "Internship at Wiifor (Toulouse - 31)",
       description: "Conception Plateforme SW IoT (Embarqué + Cloud)",
       gallery: [],
       skills: [],
@@ -57,7 +57,7 @@ export class ProfileService {
       id: 4,
       img: 'beenetic.png',
 			date: 'Juin-Septembre 2018',
-			title: "Stage chez Beenetic Systems (Toulouse - 31)",
+			title: "Internship at Beenetic Systems (Toulouse - 31)",
 			description: "Projet IoT ‘iBO HOME’ : Développement logiciel d’un produit  embarqué destiné au monde de l’habitat intelligent",
       gallery: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'],
       skills: ['Amazon Web Services', 'Swift', 'Xcode', 'Python', 'Javascript', 'JSON'],
@@ -77,7 +77,7 @@ export class ProfileService {
       id: 2,
       img: 'allette.png',
 			date: 'Juillet - Août 2017',
-			title: "Stage chez Allette Systems (Sydney - Australie)",
+			title: "Internship at Allette Systems (Sydney - Australie)",
       description: "Développement d'une application web de gestion de documents",
       gallery: [],
       skills: ['Javascript', 'HTML', 'CSS', 'Foundation', 'XSLT', 'XPath', 'Java', 'JSON'],
@@ -87,7 +87,7 @@ export class ProfileService {
       id: 1,
       img: 'thales.png',
 			date: 'Juin 2015',
-			title: "Stage Ouvrier chez Thales Alenia Space (Toulouse - 31)",
+			title: "Internship Ouvrier at Thales Alenia Space (Toulouse - 31)",
       description: 'Transfert de données vers une base de gestion informatique',
       gallery: [],
       skills: ['Excel'],
@@ -119,18 +119,18 @@ export class ProfileService {
   private languages = [
     {
       id: 1,
-      name: 'Anglais',
+      name: 'English',
       wr_level: 'C1',
       s_level: 'C1',
       level: '90%',
       degree: 'TOEIC: 910/990',
       color: '#00427e',
       icon: 'united-kingdom',
-      examples: "Semestre d'études à Limerick (Irlande) - Stage de 10 semaines à Sydney (Australie) - PTP ISS dispensé en Anglais"
+      examples: "Semestre d'études à Limerick (Irlande) - Internship de 10 semaines à Sydney (Australie) - PTP ISS dispensé en Anglais"
     },
     {
       id: 2,
-      name: 'Espagnol',
+      name: 'Spanish',
       wr_level: 'B2',
       s_level: 'B2',
       level: '65%',
@@ -162,14 +162,14 @@ export class ProfileService {
       color: '#f73f29',
       name: 'Swift',
       level: '85%',
-      examples: 'Application iOS ‘iBo Home’ lors du stage à Beenetic Systems'
+      examples: 'Application iOS ‘iBo Home’ lors du Internship à Beenetic Systems'
     },
     {
       id: 4,
       color: '#0097a3',
       name: 'Java',
       level: '75%',
-      examples: 'Jeux Android développés chez WhileOne Studios: Lord of Yams, MasterCode, Crunch it!'
+      examples: 'Jeux Android développés at WhileOne Studios: Lord of Yams, MasterCode, Crunch it!'
     },
     {
       id: 5,
