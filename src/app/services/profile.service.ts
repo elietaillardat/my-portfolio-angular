@@ -125,12 +125,42 @@ export class ProfileService {
     {
       id: 1,      
       img: 'play_logo.png',
-			date: '2014 - 2018',
-			title: "Android games development at WhileOne Studios",
-      description: 'Automation & Electronic Engineering - Embedded Systems - Speciality Innovative Smart System (IoT domain)',
+			date: '2015 - Today',
+			title: "Android Games development at WhileOne Studios",
+      description: '3 games published on the Google PlayStore (+7000 downloads): Lord of Yams • Master Code • O.B.I. • Crunch it! (bêta) - Website creation : www.whileone-studios.com',
       gallery: [],
-      skills: ['C', 'Peripheral prog.'],
-      md_file: 'nxp_cup.md'
+      skills: ['Android Studio', 'Java'],
+      md_file: ''
+    },
+    {
+      id: 2,      
+      img: 'logo_forum.png',
+			date: '2018',
+			title: "Volunteer in Web development for Forum by INSA",
+      description: 'Responsible for the update, creation and management of the new features for the 2018 edition',
+      gallery: [],
+      skills: ['SailsJS', 'Bootstrap', 'HTML', 'CSS', 'Javascript'],
+      md_file: ''
+    },
+    {
+      id: 3,      
+      img: 'logo_amicale.png',
+			date: '2018',
+			title: "Volunteer at Amicale INSA Toulouse as 'Technic' manager",
+      description: "Weekly meetings and creation of a Web platform for club's equipments sharing",
+      gallery: [],
+      skills: ['PHP', 'SQL', 'Bootstrap', 'HTML', 'CSS', 'Javascript'],
+      md_file: ''
+    },
+    {
+      id: 3,      
+      img: 'soccer_player.png',
+			date: '2003/2006 - Today',
+			title: "Football Player - Center Midfielder",
+      description: 'High Level Athlete equivalent status (2015) - Experience as a captain',
+      gallery: [],
+      skills: [],
+      md_file: ''
 		},
   ];
   
