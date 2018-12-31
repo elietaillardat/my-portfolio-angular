@@ -37,6 +37,7 @@ import { MdwareServicesComponent } from './portfolio-view/ptp-iss/mdware-service
 import { AnalysisDataComponent } from './portfolio-view/ptp-iss/analysis-data/analysis-data.component';
 import { InnovativeProjectComponent } from './portfolio-view/ptp-iss/innovative-project/innovative-project.component';
 import { InnovationHumanityComponent } from './portfolio-view/ptp-iss/innovation-humanity/innovation-humanity.component';
+import { InterestComponent } from './profile-view/interest/interest.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { InnovationHumanityComponent } from './portfolio-view/ptp-iss/innovation
     AnalysisDataComponent,
     InnovativeProjectComponent,
     InnovationHumanityComponent,
+    InterestComponent,
   ],
   imports: [
     BrowserModule,

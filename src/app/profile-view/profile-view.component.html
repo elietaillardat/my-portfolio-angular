@@ -42,16 +42,16 @@
         </ul>
       </section>
       <hr>
-      <section id="hobbies" class="pr-3 pt-2">
-        <h2><fa name="android"></fa>&nbsp; Hobbies & Volunteering</h2>
+      <section id="interests" class="pr-3 pt-2">
+        <h2><fa name="android"></fa>&nbsp; Interests</h2>
         <ul class="list-group mt-3 mb-3">
-          <app-experience *ngFor="let hobby of hobbies;"
-                          [id]="hobby.id"
-                          [experienceImg]="hobby.img"
-                          [experienceTitle]="hobby.title"
-                          [experienceDate]="hobby.date"
-                          [experienceDescription]="hobby.description">
-          </app-experience>
+          <app-interest *ngFor="let interest of interests;"
+                          [iid]="interest.iid"
+                          [interestImg]="interest.img"
+                          [interestTitle]="interest.title"
+                          [interestDate]="interest.date"
+                          [interestDescription]="interest.description">
+          </app-interest>
         </ul>
       </section>
     </div>
@@ -104,21 +104,12 @@
         <h2><fa name="crosshairs" animation="spin"></fa>&nbsp; Aptitudes</h2>
         <div class="pl-3 skills">
           <ul class="list-group mt-3 mb-3">
-            <app-language *ngFor="let language of languages;"
-                          [id]="language.id"
-                          [icon]="language.icon"
-                          [color]="language.color"
-                          [languageName]="language.name"
-                          [languageWRLevel]="language.wr_level"
-                          [languageSLevel]="language.s_level"
-                          [languageDegree]="language.degree"
-                          [languageLevel]="language.level"
-                          [languageExamples]="language.examples">
-            </app-language>
+            <li class="tag apt text-center mb-2" *ngFor="let aptitude of aptitudes;">
+              {{ aptitude }} 
+            </li>
           </ul>
         </div>
       </section>
-      <hr>
     </div>
   </div>
 </div>

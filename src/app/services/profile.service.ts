@@ -4,7 +4,7 @@ export class ProfileService {
 
   experienceSubject = new Subject<any[]>();
   educationSubject = new Subject<any[]>();
-  hobbySubject = new Subject<any[]>();
+  interestSubject = new Subject<any[]>();
   languageSubject = new Subject<any[]>();
   softwareSubject = new Subject<any[]>();
   devTagSubject = new Subject<any[]>();
@@ -18,8 +18,8 @@ export class ProfileService {
     this.educationSubject.next(this.educations.slice());
   }
 
-  emitHobbySubject() {
-    this.hobbySubject.next(this.hobbies.slice());
+  emitinterestSubject() {
+    this.interestSubject.next(this.interests.slice());
   }
 
   emitLanguageSubject() {
@@ -45,6 +45,15 @@ export class ProfileService {
 			}
 		);
 		return experience;
+  }
+  
+  getInterestById(iid: number) {
+		const interest = this.interests.find(
+			(e) => {
+				return e.iid === iid;
+			}
+		);
+		return interest;
 	}
 
   private experiences = [
@@ -121,9 +130,9 @@ export class ProfileService {
 		}
   ];
 
-  private hobbies = [
+  private interests = [
     {
-      id: 1,      
+      iid: 1,      
       img: 'play_logo.png',
 			date: '2015 - Today',
 			title: "Android Games development at WhileOne Studios",
@@ -133,27 +142,27 @@ export class ProfileService {
       md_file: ''
     },
     {
-      id: 2,      
+      iid: 2,      
       img: 'logo_forum.png',
 			date: '2018',
 			title: "Volunteer in Web development for Forum by INSA",
-      description: 'Responsible for the update, creation and management of the new features for the 2018 edition',
+      description: 'Responsible for the creation and management of the new features for this edition',
       gallery: [],
-      skills: ['SailsJS', 'Bootstrap', 'HTML', 'CSS', 'Javascript/JQuery'],
+      skills: ['Bootstrap', 'HTML', 'CSS', 'Javascript/JQuery'],
       md_file: ''
     },
     {
-      id: 3,      
+      iid: 3,      
       img: 'logo_amicale.png',
 			date: '2017 - 2018',
 			title: "Volunteer at Amicale INSA Toulouse as 'Technic' manager",
-      description: "Weekly meetings and creation of a Web platform for club's equipments sharing",
+      description: "Creation of a Web platform for club's equipments sharing",
       gallery: [],
       skills: ['PHP', 'SQL', 'Bootstrap', 'HTML', 'CSS', 'Javascript/JQuery'],
       md_file: ''
     },
     {
-      id: 3,      
+      iid: 4,      
       img: 'soccer_player.png',
 			date: '2003/2006 - Today',
 			title: "Football Player - Center Midfielder",
@@ -188,6 +197,8 @@ export class ProfileService {
       examples: "Mini séjours en Espagne - 20/20 au Baccalauréat Général Série S"
     }
   ];
+
+  public aptitudes = ["Self-learning", "Meticulous", "Organized", "Autonomous"];
     
   public softwares = [
     // Programmation Objet

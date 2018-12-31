@@ -17,8 +17,11 @@ import { InnovationHumanityComponent } from './portfolio-view/ptp-iss/innovation
 const routes: Routes = [
   { path: 'home', component: HomeViewComponent },
   { path: 'profile', component: ProfileViewComponent },
+  { path: 'profile/interests/:iid', component: SingleProjectComponent },
   { path: 'profile/experiences/:id', component: SingleProjectComponent },
+  { path: 'profile/i/:iid', redirectTo: 'profile/interests/:iid', pathMatch: 'full' },
   { path: 'profile/:id', redirectTo: 'profile/experiences/:id', pathMatch: 'full' },
+
   { path: 'portfolio', component: PortfolioViewComponent },
   { path: 'portfolio/ptp-iss', component: PtpIssComponent },
   { path: 'portfolio/ptp-iss/smart-devices', component: SmartDevicesComponent },

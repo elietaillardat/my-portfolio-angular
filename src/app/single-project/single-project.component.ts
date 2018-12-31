@@ -22,14 +22,27 @@ export class SingleProjectComponent implements OnInit {
               private route: ActivatedRoute) { }
 
   ngOnInit() {
-    const id = this.route.snapshot.params['id'];
-    this.img = this.profileService.getExperienceById(+id).img;
-    this.title = this.profileService.getExperienceById(+id).title;
-    this.description = this.profileService.getExperienceById(+id).description;
-    this.md_file = this.profileService.getExperienceById(+id).md_file;
-    this.gallery = this.profileService.getExperienceById(+id).gallery;
+    let id: number = this.route.snapshot.params['id'];
+    let skills: any;
+    console.log(id);
+    if (typeof id !== 'undefined') {
+      this.img = this.profileService.getExperienceById(+id).img;
+      this.title = this.profileService.getExperienceById(+id).title;
+      this.description = this.profileService.getExperienceById(+id).description;
+      this.md_file = this.profileService.getExperienceById(+id).md_file;
+      this.gallery = this.profileService.getExperienceById(+id).gallery;
+      skills = this.profileService.getExperienceById(+id).skills;
+    } else {
+      id = this.route.snapshot.params['iid'];
+      this.img = this.profileService.getInterestById(+id).img;
+      this.title = this.profileService.getInterestById(+id).title;
+      this.description = this.profileService.getInterestById(+id).description;
+      this.md_file = this.profileService.getInterestById(+id).md_file;
+      this.gallery = this.profileService.getInterestById(+id).gallery;
+      skills = this.profileService.getInterestById(+id).skills;
+    }
+    
     this.tags = (this.profileService.dev_tags.concat(this.profileService.other_tags)).concat(this.profileService.softwares);
-    const skills = this.profileService.getExperienceById(+id).skills;
     const tags_tmp = this.tags;
     var indexes_tmp = [];
     skills.forEach(function(skill) {

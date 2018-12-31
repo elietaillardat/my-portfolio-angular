@@ -15,8 +15,8 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
   educations: any[];
   educationSubscription: Subscription;
 
-  hobbies: any[];
-  hobbySubscription: Subscription;
+  interests: any[];
+  interestSubscription: Subscription;
 
   languages: any[];
   languageSubscription: Subscription;
@@ -24,6 +24,7 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
   softwares: any[];
   softwareSubscription: Subscription;
 
+  aptitudes: string[];
   devTags: any[];
   devTagSubscription: Subscription;
   otherTags: any[];
@@ -38,8 +39,8 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
     this.educationSubscription = this.profileService.educationSubject.subscribe((educations: any[]) => {
       this.educations = educations;
     });
-    this.hobbySubscription = this.profileService.hobbySubject.subscribe((hobbies: any[]) => {
-      this.hobbies = hobbies;
+    this.interestSubscription = this.profileService.interestSubject.subscribe((interests: any[]) => {
+      this.interests = interests;
     });
     this.languageSubscription = this.profileService.languageSubject.subscribe((languages: any[]) => {
       this.languages = languages;
@@ -53,9 +54,10 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
     this.otherTagSubscription = this.profileService.otherTagSubject.subscribe((otherTags: any[]) => {
       this.otherTags = otherTags;
     });
+    this.aptitudes = this.profileService.aptitudes;
     this.profileService.emitExperienceSubject();
     this.profileService.emitEducationSubject();
-    this.profileService.emitHobbySubject();
+    this.profileService.emitinterestSubject();
     this.profileService.emitLanguageSubject();
     this.profileService.emitSoftwareSubject();
     this.profileService.emitDevTagSubject();
@@ -65,7 +67,7 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.experienceSubscription.unsubscribe();
     this.educationSubscription.unsubscribe();
-    this.hobbySubscription.unsubscribe();
+    this.interestSubscription.unsubscribe();
     this.languageSubscription.unsubscribe();
     this.softwareSubscription.unsubscribe();
     this.devTagSubscription.unsubscribe();

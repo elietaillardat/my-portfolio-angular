@@ -10,11 +10,11 @@
       <h2 class="mb-0">&nbsp; {{ title }}</h2>
     </div>
   </div>
-  <h5 class="exp-description"><b>Intitulé :&nbsp;</b></h5>
+  <h5 class="exp-description"><b>Title :&nbsp;</b></h5>
   <h5 class="exp-description">{{ description }}</h5>
-  <p *ngIf="img == 'wiifor.png'">À venir</p>
+  <p *ngIf="img == 'wiifor.png'">Coming soon</p>
   <hr>
-  <h5 class="exp-description"><b>Notions clefs :&nbsp;</b></h5>
+  <h5 class="exp-description"><b>Key notions :&nbsp;</b></h5>
   <app-skill-tag  *ngFor="let i of indexes;"
                   [color]="tags[i].color"
                   [skillName]="tags[i].name">

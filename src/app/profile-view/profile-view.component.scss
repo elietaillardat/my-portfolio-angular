@@ -9,6 +9,10 @@ h5 {
 .tag {
   height: 20px;
   font-family: 'Product Sans';
+
+  &.apt {
+    font-size: 130%;
+  }
 }
 .tag-content {
   color: white !important;
@@ -47,7 +51,7 @@ a.arrow {
 
 .border-left.skills {
   position: relative;
-  border-left: solid 1px lightgray !important;
+  border-left: solid 1px #e6e6e6 !important;
 }
 
 .dot {
