@@ -65,7 +65,7 @@ export class ProfileService {
 			title: "Internship at Beenetic Systems (Toulouse - 31)",
 			description: "IoT Project ‘iBO HOME’ : Software development of an embedded product designed for the Smart Home area",
       gallery: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'],
-      skills: ['Amazon Web Services', 'Swift', 'Xcode', 'Python', 'Javascript', 'JSON'],
+      skills: ['Amazon Web Services', 'Swift', 'Xcode', 'Python', 'Javascript/JQuery', 'JSON'],
       md_file: 'beenetic_internship.md'
     },
     {
@@ -85,7 +85,7 @@ export class ProfileService {
 			title: "Internship at Allette Systems (Sydney - Australie)",
       description: "Design of a Web application for documents management",
       gallery: [],
-      skills: ['Javascript', 'HTML', 'CSS', 'Foundation', 'XSLT', 'XPath', 'Java', 'JSON'],
+      skills: ['Javascript/JQuery', 'HTML', 'CSS', 'Foundation', 'XSLT', 'XPath', 'Java', 'JSON'],
       md_file: 'allette_internship.md'
     },
     {
@@ -139,17 +139,17 @@ export class ProfileService {
 			title: "Volunteer in Web development for Forum by INSA",
       description: 'Responsible for the update, creation and management of the new features for the 2018 edition',
       gallery: [],
-      skills: ['SailsJS', 'Bootstrap', 'HTML', 'CSS', 'Javascript'],
+      skills: ['SailsJS', 'Bootstrap', 'HTML', 'CSS', 'Javascript/JQuery'],
       md_file: ''
     },
     {
       id: 3,      
       img: 'logo_amicale.png',
-			date: '2018',
+			date: '2017 - 2018',
 			title: "Volunteer at Amicale INSA Toulouse as 'Technic' manager",
       description: "Weekly meetings and creation of a Web platform for club's equipments sharing",
       gallery: [],
-      skills: ['PHP', 'SQL', 'Bootstrap', 'HTML', 'CSS', 'Javascript'],
+      skills: ['PHP', 'SQL', 'Bootstrap', 'HTML', 'CSS', 'Javascript/JQuery'],
       md_file: ''
     },
     {
@@ -244,7 +244,7 @@ export class ProfileService {
     {
       id: 8,
       color: '#e09e27',
-      name: 'Javascript',
+      name: 'Javascript/JQuery',
       level: '90%',
       examples: ''
     },

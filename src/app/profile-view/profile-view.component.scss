@@ -14,10 +14,6 @@ h5 {
   color: white !important;
   padding: 8px 6px 0px;
   text-align: left;
-
-  &.language {
-    font-size: 95%;
-  }
 }
 
 .profile-head {
@@ -49,9 +45,9 @@ a.arrow {
   border-left: solid 1px gray !important;
 }
 
-.border-right.skills {
+.border-left.skills {
   position: relative;
-  border-right: solid 1px lightgray !important;
+  border-left: solid 1px lightgray !important;
 }
 
 .dot {
