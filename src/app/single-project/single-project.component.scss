@@ -16,9 +16,18 @@
     color: #A50000;
   }
   &:hover {
-    font-weight: bold;
+    color: #A50000;
   }
   
+}
+
+a {
+  text-decoration: none;
+  img {
+    &:hover {
+      box-shadow: 1px 1px 12px #555;
+    }
+  }
 }
 
 .border {
