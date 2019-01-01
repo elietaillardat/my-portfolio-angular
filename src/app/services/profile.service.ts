@@ -77,7 +77,7 @@ export class ProfileService {
       gallery: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'],
       skills: ['Amazon Web Services', 'Swift', 'Xcode', 'Python', 'Javascript/JQuery', 'JSON'],
       documents: ['2018-Taillardat-Elie-BilanStage4A-18', '2018-Taillardat-Elie-PosterStage4A_2018'],
-      md_file: 'beenetic_internship'
+      md_file: 'beenetic_internship',
     },
     {
       id: 3,
