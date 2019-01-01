@@ -15,6 +15,7 @@ export class SingleProjectComponent implements OnInit {
   description: string = 'Description';
   md_file: string = 'Content';
   gallery: string[];
+  documents: string[];
   tags;
   indexes: number[];
 
@@ -30,6 +31,7 @@ export class SingleProjectComponent implements OnInit {
       this.title = this.profileService.getExperienceById(+id).title;
       this.description = this.profileService.getExperienceById(+id).description;
       this.md_file = this.profileService.getExperienceById(+id).md_file;
+      this.documents = this.profileService.getExperienceById(+id).documents;
       this.gallery = this.profileService.getExperienceById(+id).gallery;
       skills = this.profileService.getExperienceById(+id).skills;
     } else {
@@ -38,6 +40,7 @@ export class SingleProjectComponent implements OnInit {
       this.title = this.profileService.getInterestById(+id).title;
       this.description = this.profileService.getInterestById(+id).description;
       this.md_file = this.profileService.getInterestById(+id).md_file;
+      this.documents = this.profileService.getInterestById(+id).documents;
       this.gallery = this.profileService.getInterestById(+id).gallery;
       skills = this.profileService.getInterestById(+id).skills;
     }

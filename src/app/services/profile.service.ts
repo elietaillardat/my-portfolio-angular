@@ -65,6 +65,7 @@ export class ProfileService {
       description: "IoT Platform Software Design (Embedded + Cloud)",
       gallery: [],
       skills: [],
+      documents: [],
       md_file: ''
     },
 		{
@@ -75,7 +76,8 @@ export class ProfileService {
 			description: "IoT Project ‘iBO HOME’ : Software development of an embedded product designed for the Smart Home area",
       gallery: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'],
       skills: ['Amazon Web Services', 'Swift', 'Xcode', 'Python', 'Javascript/JQuery', 'JSON'],
-      md_file: 'beenetic_internship.md'
+      documents: ['2018-Taillardat-Elie-BilanStage4A-18', '2018-Taillardat-Elie-PosterStage4A_2018'],
+      md_file: 'beenetic_internship'
     },
     {
       id: 3,
@@ -85,6 +87,7 @@ export class ProfileService {
       description: 'Autonomous car competition on track',
       gallery: [],
       skills: ['C', 'Peripheral prog.'],
+      documents: [],
       md_file: 'nxp_cup.md'
     },
     {
@@ -95,6 +98,7 @@ export class ProfileService {
       description: "Design of a Web application for documents management",
       gallery: [],
       skills: ['Javascript/JQuery', 'HTML', 'CSS', 'Foundation', 'XSLT', 'XPath', 'Java', 'JSON'],
+      documents: [],
       md_file: 'allette_internship.md'
     },
     {
@@ -105,6 +109,7 @@ export class ProfileService {
       description: 'Data transfer to a new management database',
       gallery: [],
       skills: ['Excel'],
+      documents: [],
       md_file: 'thales_internship.md'
 		}
   ];
@@ -139,6 +144,7 @@ export class ProfileService {
       description: '3 games published on the Google PlayStore (+7000 downloads): Lord of Yams • Master Code • O.B.I. • Crunch it! (bêta) - Website creation : www.whileone-studios.com',
       gallery: [],
       skills: ['Android Studio', 'Java'],
+      documents: [],
       md_file: ''
     },
     {
@@ -149,6 +155,7 @@ export class ProfileService {
       description: 'Responsible for the creation and management of the new features for this edition',
       gallery: [],
       skills: ['Bootstrap', 'HTML', 'CSS', 'Javascript/JQuery'],
+      documents: [],
       md_file: ''
     },
     {
@@ -159,6 +166,7 @@ export class ProfileService {
       description: "Creation of a Web platform for club's equipments sharing",
       gallery: [],
       skills: ['PHP', 'SQL', 'Bootstrap', 'HTML', 'CSS', 'Javascript/JQuery'],
+      documents: [],
       md_file: ''
     },
     {
@@ -169,6 +177,7 @@ export class ProfileService {
       description: 'High Level Athlete equivalent status (2015) - Experience as a captain',
       gallery: [],
       skills: [],
+      documents: [],
       md_file: ''
 		},
   ];

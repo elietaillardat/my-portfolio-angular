@@ -7,6 +7,20 @@
   text-align: justify;
 }
 
+.pdf {
+  font-family: 'Product Sans';
+  color: black;
+  text-decoration: none;
+  fa {
+    font-weight: bold;
+    color: #A50000;
+  }
+  &:hover {
+    font-weight: bold;
+  }
+  
+}
+
 .border {
   border: solid 1px #d1d5da !important;
 }

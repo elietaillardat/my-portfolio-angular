@@ -35,8 +35,10 @@
     "git": "^0.1.5",
     "jquery": "^3.3.1",
     "mdbootstrap": "^4.5.14",
+    "ngx-markdown": "^7.0.3",
     "ngx-md": "^7.0.0",
     "rxjs": "~6.3.3",
+    "save": "^2.3.3",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

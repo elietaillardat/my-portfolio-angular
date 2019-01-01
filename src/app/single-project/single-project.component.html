@@ -1,28 +1,34 @@
-<div class="container">
-  <div class="row mt-4 mb-4 align-items-center">
+<div class="container mt-5 mb-5">
+  <div class="row mb-4 align-items-center">
     <div class="col-auto text-center">
       <h2 class="mb-0"><a class="arrow-back" routerLink="/profile"><fa name="arrow-left"></fa></a></h2>
     </div>
     <div class="col-2 pl-0">
-      <img class="d-flex flex-wrap img-fluid" src="./assets/images/{{img}}">
+      <img class="d-flex flex-wrap img-fluid" src="./assets/images/{{ img }}">
     </div>
     <div class="col-auto pl-0 border-left">
       <h2 class="mb-0">&nbsp; {{ title }}</h2>
     </div>
   </div>
-  <h5 class="exp-description"><b>Title :&nbsp;</b></h5>
+  <h5 class="exp-description"><b>Title :&nbsp; </b></h5>
   <h5 class="exp-description">{{ description }}</h5>
   <p *ngIf="img == 'wiifor.png'">Coming soon</p>
   <hr>
-  <h5 class="exp-description"><b>Key notions :&nbsp;</b></h5>
+  <h5 class="exp-description"><b>Key notions:&nbsp; </b></h5>
   <app-skill-tag  *ngFor="let i of indexes;"
                   [color]="tags[i].color"
                   [skillName]="tags[i].name">
   </app-skill-tag>
-  <div id="md-content" class="rounded border p-4 mt-2" NgxMd path="./assets/md/{{md_file}}"></div> 
+  <br>
+  <h5 class="exp-description"><b>Linked documents:&nbsp; </b></h5>
+  <a *ngFor="let doc of documents;" href="./assets/files/{{ md_file }}/{{ doc }}.pdf" download class="pdf">
+    &nbsp;<fa name="file-pdf-o"></fa>&nbsp; {{ doc }}.pdf&nbsp; |
+  </a>
+
+  <div markdown id="md-content" class="rounded border p-4 mt-2" [src]="'./assets/md/'+ md_file + '.md'"></div> 
   <div class="gallery mt-4" id="gallery">
     <figure class="mb-3 border"  *ngFor="let img of gallery;">
-      <img class="click-to-expand img-fluid" src="./assets/images/experiences/{{img}}" alt="Card image cap">
+      <img class="click-to-expand img-fluid" src="./assets/images/experiences/{{ img }}" alt="Card image cap">
     </figure>
   </div>
 
