@@ -2,7 +2,7 @@
   <div class="container pt-2 pb-2">
     <div class="row align-items-center">
       <div class="col-lg-1 col-md-1 col-xs-12 p-2">
-        <img src="./assets/images/boss.svg" class="rounded-circle img-fluid img-thumbnail">
+        <img src="./assets/images/moi.jpg" class="rounded-circle img-fluid">
       </div>
       <div class="col-10 mt-2">
         <h3><b>Engineer in Automation, Electronics</b> -- <span class="insa">INSA</span> Toulouse</h3>
@@ -19,6 +19,10 @@
     <div class="col-lg-9 mt-3">
       <section id="experience" class="pr-3">
         <h2><fa name="briefcase"></fa>&nbsp; Experiences</h2>
+        <p>These experiences represents in particular all the <b>internships</b> I have done during my education at INSA,
+        but also the participation at the NXP Cup. It was always great moments, with a large amount of new knowledge and skills learnt.
+        You can view in more details each one of them, with the different <b>keys notions</b> related.
+        </p>
         <ul class="list-group mt-3 mb-3">
           <app-experience *ngFor="let experience of experiences;"
                           [id]="experience.id"
@@ -32,6 +36,10 @@
       <hr>
       <section id="education" class="pr-3 pt-2">
         <h2><fa name="graduation-cap"></fa>&nbsp; Education</h2>
+        <p>My entire education was turned towards <b>science and engineering</b>. I realized an Engineering Science course
+        in Highschool, with <b>2 majors projects</b> which gave me the 'taste' for embedded systems and coding. I realized then a complete
+        engineer degree at INSA, with an Erasmus semester in Ireland which gave me great skills in <b>English</b>.
+        </p>
         <ul class="list-group mt-3 mb-3">
           <app-education  *ngFor="let education of educations;"
                           [educationImg]="education.img"
@@ -44,6 +52,8 @@
       <hr>
       <section id="interests" class="pr-3 pt-2">
         <h2><fa name="android"></fa>&nbsp; Interests</h2>
+        <p>I chose to put in this section all the works I have done outside class, and something which is very important for me: f<b>ootball</b>.
+        The main works are <b>coding</b> ones, with the creation of <b>Android games</b> I have developed with my brother, and available on the Google Playstore.</p>
         <ul class="list-group mt-3 mb-3">
           <app-interest *ngFor="let interest of interests;"
                           [iid]="interest.iid"

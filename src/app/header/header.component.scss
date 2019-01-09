@@ -12,6 +12,15 @@ app-sub-nav, app-sub-nav-iss {
   right : 0;
 }
 
+
+.navbar-brand {
+  margin-right: 1.5rem;
+}
+#navbarToggler {
+  border-left: 2px solid gray !important;
+  padding-left: 1rem;
+}
+
 .nav-link {
   font-size: 1.2em;
   font-variant: small-caps;
@@ -19,4 +28,10 @@ app-sub-nav, app-sub-nav-iss {
 
 .hidden {
   display: none;
+}
+
+span.sub-brand {
+  font-size: 55%;
+  color: rgb(183, 207, 207);
+  display: block;
 }
