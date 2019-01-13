@@ -60,7 +60,8 @@ export class ProfileService {
     {
       id: 5,
       img: 'wiifor.png',
-			date: 'February-July 2019',
+      date: 'February - July 2019',
+      duration: '6 months',
 			title: "Internship at Wiifor (Toulouse - 31)",
       description: "IoT Platform Software Design (Embedded + Cloud)",
       gallery: [],
@@ -71,7 +72,8 @@ export class ProfileService {
 		{
       id: 4,
       img: 'beenetic.png',
-			date: 'June-September 2018',
+      date: 'June - September 2018',
+      duration: '3 months',
 			title: "Internship at Beenetic Systems (Toulouse - 31)",
 			description: "IoT Project ‘iBO HOME’ : Software development of an embedded product designed for the Smart Home area",
       gallery: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'],
@@ -82,7 +84,8 @@ export class ProfileService {
     {
       id: 3,
       img: 'nxp.png',
-			date: '2017 - 2018',
+      date: '2017 - 2018',
+      duration: '5 months',
 			title: "Participation in the NXP Cup (Toulouse/Grenoble)",
       description: 'Autonomous car competition on track',
       gallery: [],
@@ -93,7 +96,8 @@ export class ProfileService {
     {
       id: 2,
       img: 'allette.png',
-			date: 'July - August 2017',
+      date: 'July - August 2017',
+      duration: '10 weeks',
 			title: "Internship at Allette Systems (Sydney - Australie)",
       description: "Design of a Web application for documents management",
       gallery: [],
@@ -104,7 +108,8 @@ export class ProfileService {
     {
       id: 1,
       img: 'thales.png',
-			date: 'June 2015',
+      date: 'June 2015',
+      duration: '5 weeks',
 			title: "Worker internship at Thales Alenia Space (Toulouse - 31)",
       description: 'Data transfer to a new management database',
       gallery: [],

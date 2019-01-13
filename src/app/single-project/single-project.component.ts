@@ -9,10 +9,13 @@ import { stringify } from '@angular/core/src/render3/util';
   styleUrls: ['./single-project.component.scss']
 })
 export class SingleProjectComponent implements OnInit {
+  
 
   img: string;
-  title: string = 'Expérience';
+  title: string = 'Experience';
   description: string = 'Description';
+  date: string = 'Date';
+  duration: string = 'Duration';
   md_file: string = 'Content';
   gallery: string[];
   documents: string[];
@@ -30,6 +33,8 @@ export class SingleProjectComponent implements OnInit {
       this.img = this.profileService.getExperienceById(+id).img;
       this.title = this.profileService.getExperienceById(+id).title;
       this.description = this.profileService.getExperienceById(+id).description;
+      this.date = this.profileService.getExperienceById(+id).date;
+      this.duration = this.profileService.getExperienceById(+id).duration;
       this.md_file = this.profileService.getExperienceById(+id).md_file;
       this.documents = this.profileService.getExperienceById(+id).documents;
       this.gallery = this.profileService.getExperienceById(+id).gallery;
@@ -38,6 +43,8 @@ export class SingleProjectComponent implements OnInit {
       id = this.route.snapshot.params['iid'];
       this.img = this.profileService.getInterestById(+id).img;
       this.title = this.profileService.getInterestById(+id).title;
+      this.date = this.profileService.getInterestById(+id).date;
+      //this.duration = this.profileService.getInterestById(+id).duration;
       this.description = this.profileService.getInterestById(+id).description;
       this.md_file = this.profileService.getInterestById(+id).md_file;
       this.documents = this.profileService.getInterestById(+id).documents;
