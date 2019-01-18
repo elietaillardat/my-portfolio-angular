@@ -13,6 +13,7 @@ import { SingleProjectComponent } from './single-project/single-project.componen
 import { MdwareServicesComponent } from './portfolio-view/ptp-iss/mdware-services/mdware-services.component';
 import { InnovativeProjectComponent } from './portfolio-view/ptp-iss/innovative-project/innovative-project.component';
 import { InnovationHumanityComponent } from './portfolio-view/ptp-iss/innovation-humanity/innovation-humanity.component';
+import { RestProjectComponent } from './rest-project/rest-project.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeViewComponent },
@@ -30,6 +31,9 @@ const routes: Routes = [
   { path: 'portfolio/ptp-iss/analysis-data', component: AnalysisDataComponent },
   { path: 'portfolio/ptp-iss/innovative-project', component: InnovativeProjectComponent },
   { path: 'portfolio/ptp-iss/innovation-humanity', component: InnovationHumanityComponent },
+
+  { path: 'portfolio/ptp-iss/innovation-humanity', component: InnovationHumanityComponent },
+  { path: 'portfolio/ptp-iss/mdware-services/rest-project', component: RestProjectComponent },
 
   { path: 'not-found', component: FourOhFourComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },

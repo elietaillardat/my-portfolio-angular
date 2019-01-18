@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Services
 import { ProfileService } from './services/profile.service';
@@ -39,6 +40,7 @@ import { AnalysisDataComponent } from './portfolio-view/ptp-iss/analysis-data/an
 import { InnovativeProjectComponent } from './portfolio-view/ptp-iss/innovative-project/innovative-project.component';
 import { InnovationHumanityComponent } from './portfolio-view/ptp-iss/innovation-humanity/innovation-humanity.component';
 import { InterestComponent } from './profile-view/interest/interest.component';
+import { RestProjectComponent } from './rest-project/rest-project.component';
 
 // function that returns `MarkedOptions` with renderer override
 export function markedOptionsFactory(): MarkedOptions {
@@ -85,6 +87,7 @@ export function markedOptionsFactory(): MarkedOptions {
     InnovativeProjectComponent,
     InnovationHumanityComponent,
     InterestComponent,
+    RestProjectComponent,
   ],
   imports: [
     BrowserModule,
@@ -100,6 +103,7 @@ export function markedOptionsFactory(): MarkedOptions {
     DataTablesModule,
     ParticlesModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule
   ],
   providers: [
