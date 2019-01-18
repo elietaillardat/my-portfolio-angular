@@ -1,54 +1,52 @@
 <nav role="navigation" class="navbar fixed-top navbar-expand-lg navbar-dark bd-navbar shadow-sm">
-  <div class="container">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" routerLink="home">
-      <div class="row align-items-center">
-        <div class="col text-center p-0">
-          <img src="./assets/images/boss.svg" width="40" height="40" class="d-inline-block align-top rounded-circle" alt="">
-        </div>
-        <div class="col">
-          Elie <span class="family-name">Taillardat</span><span class="sub-brand"><b>INSA</b> Toulouse</span>
-        </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand pl-3" routerLink="home">
+    <div class="row align-items-center">
+      <div class="col text-center p-0">
+        <img src="./assets/images/boss.svg" width="40" height="40" class="d-inline-block align-top rounded-circle" alt="">
       </div>
-    </a>
-    <div class="collapse navbar-collapse" id="navbarToggler">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="home">Home</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="profile">Profile - CV</a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="portfolio">Portfol.<span class="io">io</span></a>
-        </li>
-        <li class="nav-item" routerLinkActive="active">
-          <a target="_blank" class="nav-link" href="http://www.whileone-studios.com">WhileOne Studios</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav my-2 my-lg-0">
-        <li class="nav-item">
-          <a target="_blank" class="nav-link" href="https://www.facebook.com/elie.taillardat"><fa name="facebook"></fa></a>
-        </li>
-        <li class="nav-item">
-          <a target="_blank" class="nav-link" href="https://www.linkedin.com/in/elie-taillardat"><fa name="linkedin"></fa></a>
-        </li>
-        <li class="nav-item">
-          <a target="_blank" class="nav-link" href="https://github.com/elietaillardat"><fa name="github"></fa></a>
-        </li>
-        <li class="nav-item">
-          <a target="_blank" class="nav-link" href="https://play.google.com/store/apps/dev?id=8879401364508732186"><fa name="play-circle-o"></fa></a>
-        </li>
-        <li class="nav-item">
-          <a target="_blank" class="nav-link" href="https://www.instagram.com/elietaillardat"><fa name="instagram"></fa></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="mailto:taillardat.elie@orange.fr"><fa name="envelope"></fa></a>
-        </li>
-      </ul>
+      <div class="col">
+        Elie <span class="family-name">Taillardat</span><span class="sub-brand"><b>INSA</b> Toulouse</span>
+      </div>
     </div>
+  </a>
+  <div class="collapse navbar-collapse" id="navbarToggler">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="home">Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="profile">Profile - CV</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" routerLink="portfolio">Portfol.<span class="io">io</span></a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a target="_blank" class="nav-link" href="http://www.whileone-studios.com">WhileOne Studios</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav my-2 my-lg-0 pr-2">
+      <li class="nav-item">
+        <a target="_blank" class="nav-link" href="https://www.facebook.com/elie.taillardat"><fa name="facebook"></fa></a>
+      </li>
+      <li class="nav-item">
+        <a target="_blank" class="nav-link" href="https://www.linkedin.com/in/elie-taillardat"><fa name="linkedin"></fa></a>
+      </li>
+      <li class="nav-item">
+        <a target="_blank" class="nav-link" href="https://github.com/elietaillardat"><fa name="github"></fa></a>
+      </li>
+      <li class="nav-item">
+        <a target="_blank" class="nav-link" href="https://play.google.com/store/apps/dev?id=8879401364508732186"><fa name="play-circle-o"></fa></a>
+      </li>
+      <li class="nav-item">
+        <a target="_blank" class="nav-link" href="https://www.instagram.com/elietaillardat"><fa name="instagram"></fa></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mailto:taillardat.elie@orange.fr"><fa name="envelope"></fa></a>
+      </li>
+    </ul>
   </div>
   <app-sub-nav id="sub-nav" [ngClass]="{'hidden': router.url !== '/profile'}"></app-sub-nav>
   <app-sub-nav-iss id="sub-nav-iss" [ngClass]="{'hidden': !router.url.includes('portfolio/ptp-iss') || router.url.includes('portfolio/ptp-iss/mdware-services/rest-project')}"></app-sub-nav-iss>
