@@ -1,3 +1,11 @@
 .form-control[readonly] {
   background-color: white;
 }
+
+.power-on span {
+  color: green;
+}
+
+.power-off span {
+  color: red;
+}

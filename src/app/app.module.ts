@@ -12,6 +12,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 // Services
 import { ProfileService } from './services/profile.service';
+import { RestService } from './rest-project/rest.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -108,6 +109,7 @@ export function markedOptionsFactory(): MarkedOptions {
   ],
   providers: [
     ProfileService,
+    RestService,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]

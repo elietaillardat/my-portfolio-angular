@@ -9,8 +9,8 @@
   </div>
   <hr class="mt-2">
   <div class="row">
-    <div class="col-4 border-right">
-      <div class="form-group row mx-1">
+    <div class="col-lg-4 border-right">
+      <div class="form-group mx-1">
         <img class="d-flex flex-wrap img-fluid" src="./assets/images/rest_om2m.png"/>
       </div>
       <div class="form-group row">
@@ -25,41 +25,50 @@
         </div>
       </div>
     </div>
-    <div class="col-4 border-right">
+    <div class="col-lg-4 border-right">
       <h3>Informations</h3>
       <h5>Temperature sensors</h5>
       <div class="form-group row">
-        <label for="tempExt" class="col-7 text-left col-form-label">Outside T°:</label>
-        <div class="input-group col-5 text-right">
+        <label for="tempExt" class="col-lg-6 text-left col-form-label">Outside T°:</label>
+        <div class="input-group col-lg-6 text-right">
+          <div class="input-group-prepend">
+            <span class="input-group-text">°C</span>
+          </div>
           <input type="text" readonly class="form-control text-center" id="tempExt" value="21">
           <div class="input-group-append">
-            <span class="input-group-text">°C</span>
+            <button type="button" class="btn btn-outline-info" (click)="getExtTemp()"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
       <div class="form-group row">
-        <label for="tempInt" class="col-7 text-left col-form-label">Inside T°:</label>
-        <div class="input-group col-5 text-right">
+        <label for="tempInt" class="col-lg-6 text-left col-form-label">Inside T°:</label>
+        <div class="input-group col-lg-6 text-right">
+          <div class="input-group-prepend">
+            <span class="input-group-text">°C</span>
+          </div>
           <input type="text" readonly class="form-control text-center" id="tempInt" value="14">
           <div class="input-group-append">
-            <span class="input-group-text">°C</span>
+            <button type="button" class="btn btn-outline-info"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
       <h5>Illuminance sensor</h5>
       <div class="form-group row">
-        <label for="tempExt" class="col-7 text-left col-form-label">Value in lux:</label>
-        <div class="input-group col-5 text-right">
+        <label for="tempExt" class="col-lg-6 text-left col-form-label">Value in lux:</label>
+        <div class="input-group col-lg-6 text-right">
+          <div class="input-group-prepend">
+            <span class="input-group-text">lx</span>
+          </div>
           <input type="text" readonly class="form-control text-center" id="tempExt" value="632">
           <div class="input-group-append">
-            <span class="input-group-text">lx</span>
+            <button type="button" class="btn btn-outline-info"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
       <h5>Presence caption</h5>
       <div class="form-group row">
-        <label for="presence" class="col-7 text-left col-form-label">Motion detected?</label>
-        <div class="input-group col-5 text-right">
+        <label for="presence" class="col-lg-7 text-left col-form-label">Motion detected?</label>
+        <div class="input-group col-lg-5 text-right">
           <input type="text" readonly class="form-control text-center" id="presence" value="TRUE">
           <div class="input-group-append">
             <span class="input-group-text"><fa name="user-secret"></fa></span>
@@ -68,58 +77,58 @@
       </div>
       <hr>
       <div class="form-group row">
-        <h6 for="heaterState" class="col-7 text-left col-form-label">Heater state:</h6>
-        <div class="input-group col-5 text-right">
+        <h6 for="heaterState" class="col-lg-7 text-left col-form-label">Heater state:</h6>
+        <div class="input-group col-lg-5 text-right">
           <input type="text" readonly class="form-control text-center" id="heaterState" value="ON">
-          <div class="input-group-append">
-            <span class="input-group-text"><fa color="green" name="fire"></fa></span>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <h6 for="lightState" class="col-7 text-left col-form-label">Lights state:</h6>
-        <div class="input-group col-5 text-right">
-          <input type="text" readonly class="form-control text-center" id="lightState" value="OFF">
-          <div class="input-group-append">
+          <div class="input-group-append power-on">
             <span class="input-group-text"><fa name="power-off"></fa></span>
           </div>
         </div>
       </div>
       <div class="form-group row">
-        <h6 for="doorsState" class="col-7 text-left col-form-label">Doors state:</h6>
-        <div class="input-group col-5 text-right">
+        <h6 for="lightState" class="col-lg-7 text-left col-form-label">Lights state:</h6>
+        <div class="input-group col-lg-5 text-right">
+          <input type="text" readonly class="form-control text-center" id="lightState" value="OFF">
+          <div class="input-group-append power-off">
+            <span class="input-group-text"><fa name="power-off"></fa></span>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <h6 for="doorsState" class="col-lg-7 text-left col-form-label">Doors state:</h6>
+        <div class="input-group col-lg-5 text-right">
           <input type="text" readonly class="form-control text-center" id="doorsState" value="OPEN">
-          <div class="input-group-append">
+          <div class="input-group-append power-on">
             <span class="input-group-text"><fa name="check"></fa></span>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-lg-4">
     <h3>Room settings</h3>
       <form class="mb-2">
         <h5>Day/Night hours</h5>
         <div class="form-group row">
-          <label for="openingHour" class="col-5 col-form-label">Opening hour:</label>
-          <div class="input-group col-7">
+          <label for="openingHour" class="col-lg-5 col-form-label">Opening hour:</label>
+          <div class="input-group col-lg-7">
             <div class="input-group-prepend">
               <span class="input-group-text"><fa name="sun-o"></fa></span>
             </div>
-            <input type="datetime-local" class="form-control text-center" id="openingHour" value="06:30:00">
+            <input type="time" class="form-control text-center" id="openingHour" value="06:30">
             <div class="input-group-append">
-              <button type="button" class="btn btn-outline-info"><fa name="check"></fa></button>
+              <button type="button" (click)="postOpeningHour()" class="btn btn-outline-success"><fa name="check"></fa></button>
             </div>
           </div>
         </div>
         <div class="form-group row">
-          <label for="closingHour" class="col-5 col-form-label">Closing hour:</label>
-          <div class="input-group col-7">
+          <label for="closingHour" class="col-lg-5 col-form-label">Closing hour:</label>
+          <div class="input-group col-lg-7">
             <div class="input-group-prepend">
               <span class="input-group-text"><fa name="moon-o"></fa></span>
             </div>
-            <input type="datetime-local" class="form-control text-center" id="closingHour" value="22:00:00">
+            <input type="time" class="form-control text-center" id="closingHour" value="22:00">
             <div class="input-group-append">
-              <button type="button" class="btn btn-outline-info"><fa name="check"></fa></button>
+              <button type="button" class="btn btn-outline-success"><fa name="check"></fa></button>
             </div>
           </div>
         </div>
@@ -128,14 +137,14 @@
       <form class="mb-3">
         <h5>Heater</h5>
         <div class="form-group row">
-          <label for="tempThreshold" class="col-5 col-form-label">T° threshold:</label>
-          <div class="input-group col-7">
+          <label for="tempThreshold" class="col-lg-5 col-form-label">T° threshold:</label>
+          <div class="input-group col-lg-7">
             <div class="input-group-prepend">
               <span class="input-group-text">°C</span>
             </div>
             <input type="number" class="form-control text-center" id="tempThreshold" value="12">
             <div class="input-group-append">
-              <button type="button" class="btn btn-outline-info"><fa name="check"></fa></button>
+              <button type="button" class="btn btn-outline-success"><fa name="check"></fa></button>
             </div>
           </div>
         </div>
@@ -144,14 +153,14 @@
       <form class="mb-3">
         <h5>Illuminance</h5>
         <div class="form-group row">
-          <label for="lightThreshold" class="col-5 col-form-label">Light threshold:</label>
-          <div class="input-group col-7">
+          <label for="lightThreshold" class="col-lg-5 col-form-label">Light threshold:</label>
+          <div class="input-group col-lg-7">
             <div class="input-group-prepend">
               <span class="input-group-text">lx</span>
             </div>
             <input type="number" class="form-control text-center" id="lightThreshold" value="500">
             <div class="input-group-append">
-              <button type="button" class="btn btn-outline-info"><fa name="check"></fa></button>
+              <button type="button" class="btn btn-outline-success"><fa name="check"></fa></button>
             </div>
           </div>
         </div>
