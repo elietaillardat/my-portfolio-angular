@@ -8,15 +8,27 @@ export class RestService {
 
   constructor(private http: HttpClient) { }
 
-  testGETUrl = 'https://api.github.com/users/seeschweiler';
-  testPOSTUrl = 'http://jsonplaceholder.typicode.com/posts';
-
-  getTest() {
-    return this.http.get<UserResponse>(this.testGETUrl);
+  Request_URLs = {
+    'ext_temp': 'https://api.github.com/users/seeschweiler',
+    'int_temp': 'https://api.github.com/users/seeschweiler',
+    'illumin': 'https://api.github.com/users/seeschweiler',
+    'presence': 'https://api.github.com/users/seeschweiler',
+    'opening_hour': 'http://jsonplaceholder.typicode.com/posts',
+    'closing_hour': 'http://jsonplaceholder.typicode.com/posts',
+    'heater_threshold': 'http://jsonplaceholder.typicode.com/posts',
+    'illumin_threshold': 'http://jsonplaceholder.typicode.com/posts',
+    'heater_state': 'http://jsonplaceholder.typicode.com/posts',
+    'lights_state': 'http://jsonplaceholder.typicode.com/posts',
+    'doors_state': 'http://jsonplaceholder.typicode.com/posts',
+    'alarm_state': 'http://jsonplaceholder.typicode.com/posts',
   }
 
-  postTest() {
-    return this.http.post(this.testPOSTUrl, {
+  GET(res: string) {
+    return this.http.get<UserResponse>(this.Request_URLs[res]);
+  }
+
+  POST(res: string) {
+    return this.http.post(this.Request_URLs[res], {
       title: 'foo',
       body: 'bar',
       userId: 1

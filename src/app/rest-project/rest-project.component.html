@@ -4,24 +4,19 @@
       <h3><b><fa name="angle-right"></fa> Room:</b> GEI_READING_ROOM</h3>
     </div>
     <div class="col text-right">
-      <h3>13:57</h3>
+      <h3>{{ currentTime }}</h3>
     </div>
   </div>
   <hr class="mt-2">
   <div class="row">
     <div class="col-lg-4 border-right">
       <div class="form-group mx-1">
-        <img class="d-flex flex-wrap img-fluid" src="./assets/images/rest_om2m.png"/>
+        <img class="d-flex flex-wrap img-fluid scenario" src="./assets/images/rest_om2m.png"/>
       </div>
       <div class="form-group row">
         <div class="col border rounded mx-3 p-3">
-        <h5>Dernières actions</h5>
-          <div><b>18/01 - 17:49</b>&nbsp;<fa name="angle-right"></fa> Heater switched ON</div>
-          <div><b>18/01 - 17:49</b>&nbsp;<fa name="angle-right"></fa> Heater switched ON</div>
-          <div><b>18/01 - 17:49</b>&nbsp;<fa name="angle-right"></fa> Heater switched ON</div>
-          <div><b>18/01 - 17:49</b>&nbsp;<fa name="angle-right"></fa> Heater switched ON</div>
-          <div><b>18/01 - 17:49</b>&nbsp;<fa name="angle-right"></fa> Heater switched ON</div>
-          <div><b>18/01 - 17:49</b>&nbsp;<fa name="angle-right"></fa> Heater switched ON</div>
+          <h5>Dernières actions</h5>
+          <div *ngFor="let log of consoleLogs;">{{ log }}</div>
         </div>
       </div>
     </div>
@@ -34,9 +29,9 @@
           <div class="input-group-prepend">
             <span class="input-group-text">°C</span>
           </div>
-          <input type="text" readonly class="form-control text-center" id="tempExt" value="21">
+          <input type="text" readonly class="form-control text-center" value="21">
           <div class="input-group-append">
-            <button type="button" class="btn btn-outline-info" (click)="getExtTemp()"><fa name="refresh"></fa></button>
+            <button type="button" class="btn btn-outline-info" data="ext_temp" (click)="getRequest($event)"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
@@ -46,9 +41,9 @@
           <div class="input-group-prepend">
             <span class="input-group-text">°C</span>
           </div>
-          <input type="text" readonly class="form-control text-center" id="tempInt" value="14">
+          <input type="text" readonly class="form-control text-center" value="14">
           <div class="input-group-append">
-            <button type="button" class="btn btn-outline-info"><fa name="refresh"></fa></button>
+            <button type="button" class="btn btn-outline-info" data="int_temp" (click)="getRequest($event)"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
@@ -59,9 +54,9 @@
           <div class="input-group-prepend">
             <span class="input-group-text">lx</span>
           </div>
-          <input type="text" readonly class="form-control text-center" id="tempExt" value="632">
+          <input type="text" readonly class="form-control text-center" value="632">
           <div class="input-group-append">
-            <button type="button" class="btn btn-outline-info"><fa name="refresh"></fa></button>
+            <button type="button" class="btn btn-outline-info" data="illumin" (click)="getRequest($event)"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
@@ -106,61 +101,63 @@
     </div>
     <div class="col-lg-4">
     <h3>Room settings</h3>
-      <form class="mb-2">
-        <h5>Day/Night hours</h5>
+      <h5>Day/Night hours</h5>
+      <form class="mb-2" data="opening_hour" (ngSubmit)="postRequest($event)">
         <div class="form-group row">
-          <label for="openingHour" class="col-lg-5 col-form-label">Opening hour:</label>
+          <label class="col-lg-5 col-form-label">Opening hour:</label>
           <div class="input-group col-lg-7">
             <div class="input-group-prepend">
               <span class="input-group-text"><fa name="sun-o"></fa></span>
             </div>
-            <input type="time" class="form-control text-center" id="openingHour" value="06:30">
+            <input type="time" class="form-control text-center" [formControl]="formValue">
             <div class="input-group-append">
-              <button type="button" (click)="postOpeningHour()" class="btn btn-outline-success"><fa name="check"></fa></button>
+              <button type="submit" class="btn btn-outline-success"><fa name="check"></fa></button>
             </div>
           </div>
         </div>
+      </form>
+      <form class="mb-2" data="closing_hour" (ngSubmit)="postRequest($event)">
         <div class="form-group row">
-          <label for="closingHour" class="col-lg-5 col-form-label">Closing hour:</label>
+          <label class="col-lg-5 col-form-label">Closing hour:</label>
           <div class="input-group col-lg-7">
             <div class="input-group-prepend">
               <span class="input-group-text"><fa name="moon-o"></fa></span>
             </div>
-            <input type="time" class="form-control text-center" id="closingHour" value="22:00">
+            <input type="time" class="form-control text-center" [formControl]="formValue">
             <div class="input-group-append">
-              <button type="button" class="btn btn-outline-success"><fa name="check"></fa></button>
+              <button type="submit" class="btn btn-outline-success"><fa name="check"></fa></button>
             </div>
           </div>
         </div>
       </form>
       <hr>
-      <form class="mb-3">
-        <h5>Heater</h5>
+      <h5>Heater</h5>
+      <form class="mb-3" data="heater_threshold" (ngSubmit)="postRequest($event)">
         <div class="form-group row">
-          <label for="tempThreshold" class="col-lg-5 col-form-label">T° threshold:</label>
+          <label class="col-lg-5 col-form-label">T° threshold:</label>
           <div class="input-group col-lg-7">
             <div class="input-group-prepend">
               <span class="input-group-text">°C</span>
             </div>
-            <input type="number" class="form-control text-center" id="tempThreshold" value="12">
+            <input type="number" class="form-control text-center" [formControl]="formValue">
             <div class="input-group-append">
-              <button type="button" class="btn btn-outline-success"><fa name="check"></fa></button>
+              <button type="submit" class="btn btn-outline-success"><fa name="check"></fa></button>
             </div>
           </div>
         </div>
       </form>
       <hr>
-      <form class="mb-3">
-        <h5>Illuminance</h5>
+      <h5>Illuminance</h5>
+      <form class="mb-3" data="illumin_threshold" (ngSubmit)="postRequest($event)">
         <div class="form-group row">
-          <label for="lightThreshold" class="col-lg-5 col-form-label">Light threshold:</label>
+          <label class="col-lg-5 col-form-label">Light threshold:</label>
           <div class="input-group col-lg-7">
             <div class="input-group-prepend">
               <span class="input-group-text">lx</span>
             </div>
-            <input type="number" class="form-control text-center" id="lightThreshold" value="500">
+            <input type="number" class="form-control text-center" [formControl]="formValue">
             <div class="input-group-append">
-              <button type="button" class="btn btn-outline-success"><fa name="check"></fa></button>
+              <button type="submit" data="illumin_threshold" class="btn btn-outline-success"><fa name="check"></fa></button>
             </div>
           </div>
         </div>
@@ -168,8 +165,9 @@
       <hr>
       <div class="row">
         <div class="col text-center">
-          <br><br>
-          <h4><fa name="exclamation-circle"></fa> Alarm ON</h4>
+          <br>
+          <img src="./assets/images/warning.png" width="40" height="40"/>
+          <h4>Alarm OFF</h4>
         </div>
       </div>
     </div>
