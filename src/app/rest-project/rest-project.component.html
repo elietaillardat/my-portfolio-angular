@@ -16,6 +16,7 @@
       <div class="form-group row">
         <div class="col border rounded logs mx-3 p-3">
           <h5>Dernières actions</h5>
+          <div class="spinner" [hidden]="!showSpinner"><fa name="spinner" size="2x" animation="spin"></fa></div>
           <div *ngFor="let log of consoleLogs;">{{ log }}</div>
         </div>
       </div>
@@ -29,7 +30,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">°C</span>
           </div>
-          <input type="text" readonly class="form-control text-center" value="21">
+          <input type="text" readonly class="form-control text-center" value="{{ extTemp }}">
           <div class="input-group-append">
             <button type="button" class="btn btn-outline-info" data="ext_temp" (click)="getRequest('ext_temp')"><fa name="refresh"></fa></button>
           </div>
@@ -175,13 +176,10 @@
         </div>
       </form>
       <hr>
-      <div class="row align-items-center mt-4">
-        <div class="col-lg-6 text-center">
+      <div class="row align-items-center mt-5">
+        <div class="col-lg-12 text-center">
           <img src="./assets/images/warning.png" width="40" height="40"/>
-          <h4>Alarm OFF</h4>
-        </div>
-        <div class="col-lg-6 text-center" [hidden]="!showSpinner">
-          <fa name="spinner" size="3x" animation="spin"></fa>
+          <h4>Alarm ON!</h4>
         </div>
       </div>
     </div>

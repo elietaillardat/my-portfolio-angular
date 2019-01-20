@@ -12,6 +12,7 @@ export class RestProjectComponent implements OnInit {
   consoleLogs: string[] = [];
   showSpinner: boolean;
 
+  extTemp: any;
   heaterState: any;
 
   formValue = new FormControl(null, Validators.required);
@@ -36,6 +37,7 @@ export class RestProjectComponent implements OnInit {
         this.showSpinner = false;
         this.addLog("GET", src, data.toString());
         this.heaterState = data;
+        this.extTemp = Number(data).toFixed(1);
       },
       err => {
         this.showSpinner = false;

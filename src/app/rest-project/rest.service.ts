@@ -24,14 +24,10 @@ export class RestService {
   }
 
   GET(res: string) {
-    return this.http.get(this.Request_URLs[res], {responseType: 'blob'});
+    return this.http.get(this.Request_URLs[res]);
   }
 
   POST(res: string, value: any) {
     return this.http.post(this.Request_URLs[res] + value, null);
   }
-}
-
-interface om2mResponse {
-  'obj': string;
 }
