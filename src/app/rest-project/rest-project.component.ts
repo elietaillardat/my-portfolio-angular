@@ -32,6 +32,7 @@ export class RestProjectComponent implements OnInit {
     this.restService.GET(src)
     .subscribe(
       data => {
+        console.log(data.toString())
         this.showSpinner = false;
         this.addLog("GET", src, data.toString());
         this.heaterState = data;
@@ -48,9 +49,9 @@ export class RestProjectComponent implements OnInit {
     const val = this.formValue.value;
     this.restService.POST(src, val)
     .subscribe(
-      data => {
+      () => {
         this.showSpinner = false;
-        this.addLog("POST", src, data.toString());
+        this.addLog("POST", src, val.toString());
       },
       err => {
         this.showSpinner = false;
@@ -65,7 +66,8 @@ export class RestProjectComponent implements OnInit {
 
   addLog(requestType: string, sensor: string, value: string) {
     const log = new Date().toLocaleDateString() + " " + this.currentTime + " > " + requestType + " " + sensor + ": " + value;
-    this.consoleLogs.push(log);
+    this.consoleLogs.unshift(log);
+    if (this.consoleLogs.length > 10) this.consoleLogs.pop();
   }
 
   getState(state: boolean): string {

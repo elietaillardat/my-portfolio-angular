@@ -19,12 +19,8 @@ export class MdwareServicesComponent implements OnInit {
       ordering: false,
       columnDefs: [
         {
-          targets: [1, 2],
-          className: 'dt-center'
-        },
-        {
           targets: [-1],
-          className: 'dt-right'
+          className: 'dt-center'
         }
       ]
     };

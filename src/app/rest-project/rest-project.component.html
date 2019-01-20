@@ -14,7 +14,7 @@
         <img class="d-flex flex-wrap img-fluid scenario" src="./assets/images/rest_om2m.png"/>
       </div>
       <div class="form-group row">
-        <div class="col border rounded mx-3 p-3">
+        <div class="col border rounded logs mx-3 p-3">
           <h5>Dernières actions</h5>
           <div *ngFor="let log of consoleLogs;">{{ log }}</div>
         </div>
@@ -31,7 +31,7 @@
           </div>
           <input type="text" readonly class="form-control text-center" value="21">
           <div class="input-group-append">
-            <button type="button" class="btn btn-outline-info" data="ext_temp" (click)="getRequest($event)"><fa name="refresh"></fa></button>
+            <button type="button" class="btn btn-outline-info" data="ext_temp" (click)="getRequest('ext_temp')"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>

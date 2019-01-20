@@ -11,7 +11,11 @@ table {
   }
   tr.sub-title td {
     font-weight: bold;
-    background: rgb(236, 239, 243);
+    background: rgb(240, 241, 243);
+
+    &:hover {
+      background: rgb(228, 230, 233);
+    }
   }
 }
 
