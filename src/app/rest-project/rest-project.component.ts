@@ -10,50 +10,70 @@ import { FormControl, Validators } from '@angular/forms';
 export class RestProjectComponent implements OnInit {
   currentTime: string;
   consoleLogs: string[] = [];
+  showSpinner: boolean;
+
+  heaterState: any;
 
   formValue = new FormControl(null, Validators.required);
 
   constructor(private restService: RestService) { 
+    this.showSpinner = false;
+    this.heaterState = false;
     setInterval(() => {
       this.currentTime = new Date().toLocaleTimeString();
-    }, 1);
+    }, 1000);
   }
 
   ngOnInit() {
   }
 
-  getRequest(data: any) {
-    const res = data.target.attributes.data.value;
-    this.restService.GET(res)
-    .subscribe(data => {
-      console.log("User Login: " + data.login);
-      this.addLog("GET", res, "26");
-    },
-    err => {
-      console.log("Error occured." + err.message)
-    });
-  }
-
-  postRequest(data: any) {
-    const val = this.formValue.value;
-    const src = data.target.attributes.data.value;
-    console.log(val);
-    console.log(src);
-    this.restService.POST(src)
+  getRequest(src: any) {
+    this.showSpinner = true;
+    this.restService.GET(src)
     .subscribe(
-      res => {
-        console.log(res);
-        this.addLog("POST", src, "06:30");
+      data => {
+        this.showSpinner = false;
+        this.addLog("GET", src, data.toString());
+        this.heaterState = data;
       },
       err => {
+        this.showSpinner = false;
+        console.log("Error occured." + err.message)
+      }
+    );
+  }
+
+  postRequest(src: any) {
+    this.showSpinner = true;
+    const val = this.formValue.value;
+    this.restService.POST(src, val)
+    .subscribe(
+      data => {
+        this.showSpinner = false;
+        this.addLog("POST", src, data.toString());
+      },
+      err => {
+        this.showSpinner = false;
         console.log("Error occured." + err.message);
       }
     );
   }
 
+  updateValue(data: any) {
+    
+  }
+
   addLog(requestType: string, sensor: string, value: string) {
     const log = new Date().toLocaleDateString() + " " + this.currentTime + " > " + requestType + " " + sensor + ": " + value;
     this.consoleLogs.push(log);
+  }
+
+  getState(state: boolean): string {
+    if (state) {
+      return "ON"
+    } else {
+      return "OFF";
+    }
   }
 
 }

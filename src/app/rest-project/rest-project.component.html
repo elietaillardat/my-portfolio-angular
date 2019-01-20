@@ -22,9 +22,9 @@
     </div>
     <div class="col-lg-4 border-right">
       <h3>Informations</h3>
-      <h5>Temperature sensors</h5>
+      <h5>Temp sensors</h5>
       <div class="form-group row">
-        <label for="tempExt" class="col-lg-6 text-left col-form-label">Outside T°:</label>
+        <label class="col-lg-6 text-left col-form-label">Outside T°:</label>
         <div class="input-group col-lg-6 text-right">
           <div class="input-group-prepend">
             <span class="input-group-text">°C</span>
@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="form-group row">
-        <label for="tempInt" class="col-lg-6 text-left col-form-label">Inside T°:</label>
+        <label class="col-lg-6 text-left col-form-label">Inside T°:</label>
         <div class="input-group col-lg-6 text-right">
           <div class="input-group-prepend">
             <span class="input-group-text">°C</span>
@@ -49,7 +49,7 @@
       </div>
       <h5>Illuminance sensor</h5>
       <div class="form-group row">
-        <label for="tempExt" class="col-lg-6 text-left col-form-label">Value in lux:</label>
+        <label class="col-lg-6 text-left col-form-label">Value in lux:</label>
         <div class="input-group col-lg-6 text-right">
           <div class="input-group-prepend">
             <span class="input-group-text">lx</span>
@@ -60,47 +60,59 @@
           </div>
         </div>
       </div>
-      <h5>Presence caption</h5>
+      <h5>Presence sensor</h5>
       <div class="form-group row">
-        <label for="presence" class="col-lg-7 text-left col-form-label">Motion detected?</label>
-        <div class="input-group col-lg-5 text-right">
-          <input type="text" readonly class="form-control text-center" id="presence" value="TRUE">
-          <div class="input-group-append">
+        <label for="presence" class="col-lg-6 text-left col-form-label">Motion?</label>
+        <div class="input-group col-lg-6 text-right">
+          <div class="input-group-prepend">
             <span class="input-group-text"><fa name="user-secret"></fa></span>
+          </div>
+          <input type="text" readonly class="form-control text-center" value="TRUE">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-outline-info" data="presence" (click)="getRequest($event)"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
       <hr>
       <div class="form-group row">
-        <h6 for="heaterState" class="col-lg-7 text-left col-form-label">Heater state:</h6>
-        <div class="input-group col-lg-5 text-right">
-          <input type="text" readonly class="form-control text-center" id="heaterState" value="ON">
-          <div class="input-group-append power-on">
+        <h6 for="heaterState" class="col-lg-6 text-left col-form-label">Heater state:</h6>
+        <div class="input-group col-lg-6 text-right">
+          <div class="input-group-prepend power-on">
             <span class="input-group-text"><fa name="power-off"></fa></span>
+          </div>
+          <input type="text" class="form-control text-center" [value]="getState(heaterState)">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-outline-info" data="heater_state" (click)="getRequest('heater_state')"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
       <div class="form-group row">
-        <h6 for="lightState" class="col-lg-7 text-left col-form-label">Lights state:</h6>
-        <div class="input-group col-lg-5 text-right">
-          <input type="text" readonly class="form-control text-center" id="lightState" value="OFF">
-          <div class="input-group-append power-off">
+        <h6 for="lightState" class="col-lg-6 text-left col-form-label">Lights state:</h6>
+        <div class="input-group col-lg-6 text-right">
+          <div class="input-group-prepend power-off">
             <span class="input-group-text"><fa name="power-off"></fa></span>
+          </div>
+          <input type="text" readonly class="form-control text-center" value="OFF">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-outline-info" data="lights_state" (click)="getRequest($event)"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
       <div class="form-group row">
-        <h6 for="doorsState" class="col-lg-7 text-left col-form-label">Doors state:</h6>
-        <div class="input-group col-lg-5 text-right">
-          <input type="text" readonly class="form-control text-center" id="doorsState" value="OPEN">
+        <h6 for="doorsState" class="col-lg-6 text-left col-form-label">Doors state:</h6>
+        <div class="input-group col-lg-6 text-right">
           <div class="input-group-append power-on">
             <span class="input-group-text"><fa name="check"></fa></span>
+          </div>
+          <input type="text" readonly class="form-control text-center" value="OPEN">
+          <div class="input-group-append">
+            <button type="button" class="btn btn-outline-info" data="doors_state" (click)="getRequest($event)"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
     </div>
     <div class="col-lg-4">
-    <h3>Room settings</h3>
+      <h3>Room settings</h3>
       <h5>Day/Night hours</h5>
       <form class="mb-2" data="opening_hour" (ngSubmit)="postRequest($event)">
         <div class="form-group row">
@@ -132,7 +144,7 @@
       </form>
       <hr>
       <h5>Heater</h5>
-      <form class="mb-3" data="heater_threshold" (ngSubmit)="postRequest($event)">
+      <form class="mb-3" (ngSubmit)="postRequest('heater_threshold')">
         <div class="form-group row">
           <label class="col-lg-5 col-form-label">T° threshold:</label>
           <div class="input-group col-lg-7">
@@ -163,11 +175,13 @@
         </div>
       </form>
       <hr>
-      <div class="row">
-        <div class="col text-center">
-          <br>
+      <div class="row align-items-center mt-4">
+        <div class="col-lg-6 text-center">
           <img src="./assets/images/warning.png" width="40" height="40"/>
           <h4>Alarm OFF</h4>
+        </div>
+        <div class="col-lg-6 text-center" [hidden]="!showSpinner">
+          <fa name="spinner" size="3x" animation="spin"></fa>
         </div>
       </div>
     </div>
