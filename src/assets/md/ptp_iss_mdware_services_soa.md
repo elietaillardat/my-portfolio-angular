@@ -1,6 +1,6 @@
 ### Contexte
 
-Ce module avait pour objectif de comprendre et d'implémenter nos propres architectures orientées services (**SOA** : Service Oriented Architecture), au travers de différents TDs de mise en place, avec l'installation des outils nécessaires (Eclipse et **Java EE**, serveur **Tomcat**, **Maven** Project...) et d'un projet final d'automatisation des salles de classes de l'INSA, grâce à des **API REST**, de services web que nous avons implémenter en **Java**, et de l'intergiciel **OM2M** qui nous servait de lien entre les technologies hardware remontant des données (capteurs simulés) et nos services utilisables via l'interface utilisateur dédiée et codée en **Angular**. Ce module comprenait aussi un thème méthodes de management de projet, et nous avons pu nous approprier la méthode Agile/Scrum à base de sprints via l'outils logiciel **Icescrum**.
+Ce module avait pour objectif de comprendre et d'implémenter nos propres architectures orientées services (**SOA** : Service Oriented Architecture), au travers de différents TDs de mise en place, avec l'installation des outils nécessaires (Eclipse et **Java EE**, serveur **Tomcat**, **Maven** Project...) et d'un projet final d'automatisation des salles de classes de l'INSA, grâce à des **API REST**, de services web que nous avons implémentés en **Java**, de l'intergiciel **OM2M** qui nous servait de lien entre les technologies hardware remontant des données (capteurs simulés) et nos services utilisables via l'interface utilisateur dédiée et codée en **Angular**. Ce module comprenait aussi un thème méthodes de management de projet, et nous avons pu nous approprier la méthode Agile/Scrum à base de sprints via l'outil logiciel **Icescrum**.
 
 ### Ma fonction
 
@@ -18,11 +18,11 @@ Durant le projet de simulation d'automatisation des salles de classes de l'INSA 
 
 ##### Résolution du problème
 
-Les premiers cours et TDs nous ont permis d'appréhender la notion d'architecture logicielle orientée service, et de développer nos premiers petits services web, ce qui nous a été très utile après avec mon binôme pour le projet final (documents attachés en haut de page). Durant ces Travaux Dirigés, nous avons en effet implémenté des services **SOAP (Simple Access Object Protocol)** dans les deux configurations possibles (top-down et bottum-up), puis **REST (Representational State Transfer)**, afin d'avoir une vision globale de ces deux méthodes. De même, il est important de rajouter que ces cours était présenté à cahque fois par des érudiants, et que nous devions préparer les cours, comme nous l'avons fait par exemple pour l'introduction auw Applications distribuées (cf. PDF attaché en haut de page).
+Les premiers cours et TDs nous ont permis d'appréhender la notion d'architecture logicielle orientée service, et de développer nos premiers petits services web, ce qui nous a été très utile après avec mon binôme pour le projet final (documents attachés en haut de page). Durant ces Travaux Dirigés, nous avons en effet implémenté des services **SOAP (Simple Access Object Protocol)** dans les deux configurations possibles (top-down et bottum-up), puis **REST (Representational State Transfer)**, afin d'avoir une vision globale de ces deux méthodes. De même, il est important de rajouter que ces cours étaient présentés à chaque fois par des étudiants, et que nous devions préparer les cours, comme nous l'avons fait par exemple pour l'introduction aux Applications distribuées (cf. PDF attaché en haut de page).
 
 ##### Compétences mobilisées
 
-La réalisation du projet m'a demandé de mobiliser mes compétences en Java, en architecture OM2M (que nous avions déjà solliciter pour le module Intergiciel pour l'IoT). J'ai de même pu me servir des notions que j'avais assimilées durant **[mon stage à Sydney en 2017 à Allette Systems](/#/profile/experiences/2)**, pour mieux implémenter nos services REST et le traitement des réponses en XML ou JSON. En outre, j'ai pu utiliser Angular et le module `HttpClient` pour coder notre interface utilisateur permettant de réaliser les fonctions `GET` et `POST` et dérouler nos scenarios de manière visuelle.
+La réalisation du projet m'a demandé de mobiliser mes compétences en Java, en architecture OM2M (que nous avions déjà sollicitées pour le module Intergiciel pour l'IoT). J'ai de même pu me servir des notions que j'avais assimilées durant **[mon stage à Sydney en 2017 à Allette Systems](/#/profile/experiences/2)**, pour mieux implémenter nos services REST et le traitement des réponses en XML ou JSON. En outre, j'ai pu utiliser Angular et le module `HttpClient` pour coder notre interface utilisateur permettant de réaliser les fonctions `GET` et `POST` et dérouler nos scénarios de manière visuelle.
 </br></br>
 L'IHM est disponible en suivant ce [lien](/#/portfolio/ptp-iss/mdware-services/rest-project).
 
@@ -34,7 +34,7 @@ L'IHM est disponible en suivant ce [lien](/#/portfolio/ptp-iss/mdware-services/r
 
 ##### Synthèse et bilan
 
-Ce module e été très bénéfique par l'implémentation de services REST et la nouvelle utilisation d'OM2M, qui nous a permis d'améliorer notre vision de cet outils puissant pour le secteur de l'IoT. Le projet était **très formateur**, par la première étape de création de l'architecture globale de notre système, puis par l'implémentation un à un de nos services et fonctions.
+Ce module a été très bénéfique par l'implémentation de services REST et la nouvelle utilisation d'OM2M, qui nous a permis d'améliorer notre vision de cet outil puissant pour le secteur de l'IoT. Le projet était **très formateur**, par la première étape de création de l'architecture globale de notre système, puis par l'implémentation un à un de nos services et fonctions.
 
 </br>
 
@@ -50,7 +50,7 @@ J'ai usé de ma force d'**organisation**, mais aussi de **leadership** (rôle qu
 
 ##### Synthèse et bilan
 
-L'utilisation d'outils de gestion de projet a permis de bien cerner les étapes en début de projet, et à du coup permis une **meilleure gestion du temps**, même si une séance de TP en plus n'aurait pas été de refus pour bien finir de gérer nos scenarios.
+L'utilisation d'outils de gestion de projet a permis de bien cerner les étapes en début de projet, et a du coup permis une **meilleure gestion du temps**, même si une séance de TP en plus n'aurait pas été de refus pour bien finir de gérer nos scénarios.
 
 </br>
 
@@ -58,4 +58,4 @@ L'utilisation d'outils de gestion de projet a permis de bien cerner les étapes 
 
 </br>
 
-<iframe src="./assets/files/ptp_iss_mdware_services_soa/SOA_REST_Project.pdf" style="width: 100%; height: 100vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_mdware_services/SOA_REST_Project.pdf" style="width: 100%; height: 95vh;"></iframe>

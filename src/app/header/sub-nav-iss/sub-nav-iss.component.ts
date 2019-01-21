@@ -8,9 +8,10 @@ import { Router } from '@angular/router';
 })
 export class SubNavIssComponent implements OnInit {
 
+  hide: boolean = false;
+
   constructor(public router: Router) { }
 
   ngOnInit() {
   }
-
 }

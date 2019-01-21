@@ -49,5 +49,9 @@
     </ul>
   </div>
   <app-sub-nav id="sub-nav" [ngClass]="{'hidden': router.url !== '/profile'}"></app-sub-nav>
-  <app-sub-nav-iss id="sub-nav-iss" [ngClass]="{'hidden': !router.url.includes('portfolio/ptp-iss') || router.url.includes('portfolio/ptp-iss/mdware-services/rest-project')}"></app-sub-nav-iss>
+  <!--<app-sub-nav-iss id="sub-nav-iss" (mouseover)="print()" 
+                   [ngClass]="{'hidden': 
+                   router.url != '/portfolio/ptp-iss' ||
+                   router.url.includes('portfolio/ptp-iss/mdware-services/rest-project')}">
+  </app-sub-nav-iss>-->
 </nav>

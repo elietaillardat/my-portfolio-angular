@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../services/profile.service';
 import { ActivatedRoute } from '@angular/router';
-import { stringify } from '@angular/core/src/render3/util';
 
 @Component({
   selector: 'app-single-project',

@@ -77,6 +77,30 @@ export class ProfileService {
       skills: ['SOA', 'API REST', 'OM2M', 'Java', 'XML', 'JSON' , 'Eclipse', 'Angular', 'Bootstrap', 'HTML', 'CSS'],
       documents: ['SOA_REST_Project', 'Distributed_Applications'],
       md_file: 'ptp_iss_mdware_services_soa'
+    },
+    {
+      id: 101,
+      img: '',
+      date: 'Décembre 2018 - Janvier 2019',
+      duration: '2 mois',
+			title: "Intergiciel pour l'IoT",
+      description: "Découvrir le standard OM2M et implémenter une architecture à base de service REST & IoT",
+      gallery: [],
+      skills: ['API REST', 'OM2M', 'Java', 'NodeRED', 'XML', 'JSON' , 'Eclipse'],
+      documents: ['Middleware_for_IOT'],
+      md_file: 'ptp_iss_mdware_services_iot'
+    },
+    {
+      id: 102,
+      img: '',
+      date: 'Décembre 2018 - Janvier 2019',
+      duration: '2 mois',
+			title: "Adaptabilité Cloud et gestion autonomique",
+      description: "Découvrir le standard OM2M et implémenter une architecture à base de service REST & IoT",
+      gallery: [],
+      skills: ['Java', 'Eclipse', 'Proxmox'],
+      documents: ['Cloud_computing_autonomic_management'],
+      md_file: 'ptp_iss_mdware_services_cloud'
     }
   ]
 
@@ -419,7 +443,15 @@ export class ProfileService {
     {
       color: '#96C237',
       name: 'SOA'
-    }
+    },
+    {
+      color: '#8F0000',
+      name: 'NodeRED'
+    },
+    {
+      color: '#27646C',
+      name: 'Proxmox'
+    },
   ];
 
 }
