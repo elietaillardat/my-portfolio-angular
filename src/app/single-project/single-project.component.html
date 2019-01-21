@@ -3,22 +3,22 @@
     <div class="col-auto text-center">
       <h2 class="mb-0"><a class="arrow-back" routerLink="/profile"><fa name="arrow-left"></fa></a></h2>
     </div>
-    <div class="col-2 pl-0">
+    <div class="col-2 pl-0" *ngIf="img != ''">
       <img class="d-flex flex-wrap img-fluid" src="./assets/images/{{ img }}">
     </div>
     <div class="col-auto pl-0 border-left">
       <h2 class="mb-0">&nbsp; {{ title }}</h2>
     </div>
   </div>
-  <h6><b>Title:&nbsp;</b> {{ description }}</h6>
-  <h6><b>Date:&nbsp;</b> {{ date }} / <b>Duration:&nbsp;</b> {{ duration }}</h6>
+  <h6><b>Description :&nbsp;</b> {{ description }}</h6>
+  <h6><b>Date :&nbsp;</b> {{ date }} / <b>Durée :&nbsp;</b> {{ duration }}</h6>
   <p *ngIf="img == 'wiifor.png'">Coming soon</p>
-  <h6 class="exp-description"><b>Linked documents:&nbsp; </b></h6>
+  <h6 class="exp-description"><b>Documents :&nbsp; </b></h6>
   <a *ngFor="let doc of documents;" href="./assets/files/{{ md_file }}/{{ doc }}.pdf" download class="pdf">
     &nbsp;<fa name="file-pdf-o"></fa>&nbsp; {{ doc }}.pdf&nbsp; |
   </a>
   <hr class="my-1">
-  <h6 class="exp-description mt-2 mb-3"><b>Key notions:&nbsp; </b></h6>
+  <h6 class="exp-description mt-2 mb-3"><b>Notions clefs :&nbsp; </b></h6>
   <app-skill-tag  *ngFor="let i of indexes;"
                   [color]="tags[i].color"
                   [skillName]="tags[i].name">

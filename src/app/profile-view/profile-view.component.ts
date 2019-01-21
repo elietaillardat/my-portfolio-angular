@@ -57,7 +57,7 @@ export class ProfileViewComponent implements OnInit, OnDestroy {
     this.aptitudes = this.profileService.aptitudes;
     this.profileService.emitExperienceSubject();
     this.profileService.emitEducationSubject();
-    this.profileService.emitinterestSubject();
+    this.profileService.emitInterestSubject();
     this.profileService.emitLanguageSubject();
     this.profileService.emitSoftwareSubject();
     this.profileService.emitDevTagSubject();

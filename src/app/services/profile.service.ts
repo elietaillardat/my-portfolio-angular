@@ -18,7 +18,7 @@ export class ProfileService {
     this.educationSubject.next(this.educations.slice());
   }
 
-  emitinterestSubject() {
+  emitInterestSubject() {
     this.interestSubject.next(this.interests.slice());
   }
 
@@ -54,7 +54,31 @@ export class ProfileService {
 			}
 		);
 		return interest;
+  }
+  
+  getPtpISSById(id: number) {
+		const ptp = this.ptp_iss.find(
+			(e) => {
+				return e.id === id;
+			}
+		);
+		return ptp;
 	}
+
+  public ptp_iss = [
+    {
+      id: 100,
+      img: '',
+      date: 'Décembre 2018 - Janvier 2019',
+      duration: '2 mois',
+			title: "Architecture Orientée Services",
+      description: "Apprendre à déployer et configurer une SOA en utilisant des API REST/SOAP → Projet Salles de classes autonomes",
+      gallery: [],
+      skills: ['SOA', 'API REST', 'OM2M', 'Java', 'XML', 'JSON' , 'Eclipse', 'Angular', 'Bootstrap', 'HTML', 'CSS'],
+      documents: ['SOA_REST_Project', 'Distributed_Applications'],
+      md_file: 'ptp_iss_mdware_services_soa'
+    }
+  ]
 
   private experiences = [
     {
@@ -379,6 +403,22 @@ export class ProfileService {
     {
       color: '#737373',
       name: 'JSON'
+    },
+    {
+      color: '#ED855A',
+      name: 'XML'
+    },
+    {
+      color: '#6295AC',
+      name: 'OM2M'
+    },
+    {
+      color: '#E89643',
+      name: 'API REST'
+    },
+    {
+      color: '#96C237',
+      name: 'SOA'
     }
   ];
 

@@ -30,15 +30,28 @@ export class SingleProjectComponent implements OnInit {
     let skills: any;
     console.log(id);
     if (typeof id !== 'undefined') {
-      this.img = this.profileService.getExperienceById(+id).img;
-      this.title = this.profileService.getExperienceById(+id).title;
-      this.description = this.profileService.getExperienceById(+id).description;
-      this.date = this.profileService.getExperienceById(+id).date;
-      this.duration = this.profileService.getExperienceById(+id).duration;
-      this.md_file = this.profileService.getExperienceById(+id).md_file;
-      this.documents = this.profileService.getExperienceById(+id).documents;
-      this.gallery = this.profileService.getExperienceById(+id).gallery;
-      skills = this.profileService.getExperienceById(+id).skills;
+      if (id < 100) {
+        this.img = this.profileService.getExperienceById(+id).img;
+        this.title = this.profileService.getExperienceById(+id).title;
+        this.description = this.profileService.getExperienceById(+id).description;
+        this.date = this.profileService.getExperienceById(+id).date;
+        this.duration = this.profileService.getExperienceById(+id).duration;
+        this.md_file = this.profileService.getExperienceById(+id).md_file;
+        this.documents = this.profileService.getExperienceById(+id).documents;
+        this.gallery = this.profileService.getExperienceById(+id).gallery;
+        skills = this.profileService.getExperienceById(+id).skills;
+      } else {
+        this.img = this.profileService.getPtpISSById(+id).img;
+        this.title = this.profileService.getPtpISSById(+id).title;
+        this.description = this.profileService.getPtpISSById(+id).description;
+        this.date = this.profileService.getPtpISSById(+id).date;
+        this.duration = this.profileService.getPtpISSById(+id).duration;
+        this.md_file = this.profileService.getPtpISSById(+id).md_file;
+        this.documents = this.profileService.getPtpISSById(+id).documents;
+        this.gallery = this.profileService.getPtpISSById(+id).gallery;
+        skills = this.profileService.getPtpISSById(+id).skills;
+      }
+      
     } else {
       id = this.route.snapshot.params['iid'];
       this.img = this.profileService.getInterestById(+id).img;

@@ -35,6 +35,8 @@ const routes: Routes = [
   { path: 'portfolio/ptp-iss/innovation-humanity', component: InnovationHumanityComponent },
   { path: 'portfolio/ptp-iss/mdware-services/rest-project', component: RestProjectComponent },
 
+  { path: 'portfolio/ptp-iss/mdware-services/:id', component: SingleProjectComponent },
+
   { path: 'not-found', component: FourOhFourComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'not-found' }
