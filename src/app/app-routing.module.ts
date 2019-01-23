@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'profile/i/:iid', redirectTo: 'profile/interests/:iid', pathMatch: 'full' },
   { path: 'profile/:id', redirectTo: 'profile/experiences/:id', pathMatch: 'full' },
 
-  { path: 'portfolio', component: PortfolioViewComponent },
+  { path: 'portfolio', redirectTo: 'portfolio/ptp-iss', pathMatch: 'full' },
   { path: 'portfolio/ptp-iss', component: PtpIssComponent },
   { path: 'portfolio/ptp-iss/smart-devices', component: SmartDevicesComponent },
   { path: 'portfolio/ptp-iss/communication', component: CommunicationComponent },

@@ -1,34 +1,28 @@
-#### Context
-I realized this internship with a friend from INSA, and we had to take over a project which was in standby within the company: **iBO Home**, related to the connected house domain. It consists in a system of smart sensors (wattmeter, humidity, temperature...) connected to various plug sockets in the house, in order to inform the user and allow a communication with actuators, depending on different domotic threshold parameters.
+### Contexte
 
-##### Objective
-The aim of this internship was to set up a solution allowing to store and manage the data in a cloud, while designing an associate iOS app able to display in a readable way all these informations for the user.
-> The electronic boards including the sensors were already developed by the company.
+Le projet consiste en un système de **capteurs intelligents** (wattmètre, humidité, température...) connectés sur différentes prises électriques d'une maison. 
+> Les cartes électroniques composées des capteurs ont déjà été développées par l'entreprise. 
 
-##### Solutions
-The retained solution was to use an electronic board from DIGI tech, processing the data retrieved by the different boards accross the house, store them on the Amazon Web Services (AWS) Cloud, and analyse them with an AI allowing to inform the user in different situations. These data are then recovered with the REST API of Amazon in Swift (programming language of Apple), with ```GET``` requests from the mobile application, or ```POST/UPDATE``` to schedule events or command actuators and plug sockets.
+L’objectif du stage était de reprendre ce projet en **standby**, avec la mise en place d’une solution permettant de stocker et gérer les données sur un **cloud**, tout en développant une **application** iOS associée capable d’afficher de manière lisible pour l’utilisateur toutes ces informations.
 
-#### My function
-My main role was to develop the AWS architecture (on the app services side) with my co-worker, Leo, who was in internship too, and build an iOS App in order to interact with this architecture.
+### Ma fonction
 
-##### Swift and Xcode tutorials
-I first learnt Swift programming language ans the XCode IDE, used to code Apple apps, with a lot of tutorials. I analysed also the Python script which was retrieving the data on the mother board (this part was then improved by Leo) to understand the principle. I analysed the source code for the app which was aborted, and started to implement new functionalities and improve the User Interface.
+La solution choisie a été d’utiliser une carte électronique conçue par DIGI (traitant les données reçues) envoyant les données des différentes cartes sur **AWS (Amazon Web Services)**, qui sont ensuite récupérer par des requêtes `GET` via l’application, que j'ai codé grâce au langage **Swift** et l'environnement de **Xcode**. J'avais consacré le début de mon stage à ala réalisation de nombreux tutoriels sur ces outils, et à l'analyse du code déjà présent.
 
-##### Amazon Web Services Cloud architecture
-Meanwhile, we were looking for the needed services for our Cloud architecture. We finally got this scheme:
+J’ai fait de même en sorte que cette dernière soit capable d’interagir avec les différentes cartes de la maison, en allumant/éteignant les torches intégrées par exemple (requêtes `POST`), ou bien en programmant la coupure d’une prise d’une pièce à un certain horaire. L’utilisateur peut de même choisir ses préférences grâce à des seuils (de température par exemple), et si des valeurs hors cadres sont récupérées, un script sur **Amazon Lambda** génère un message pour l’utilisateur sous forme de « push notification » le prévenant de la situation. J’ai pu enfin un peu côtoyer le fonctionnement des « skills » **Alexa** d’Amazon (assistant vocal). On pourra voir quelques screenshots de l'application iOS en bas de page.
+
+Nous avons conçu totalment l'architecure CLoud sur Amazon, avec la recherche des services dont nous pensions avoir besoin. Nous obtenons l'architecture suivante :
 
 <div class="row pb-3">
   <div class="col text-center">
-    <img src="./assets/images/md/beenetic/amazon_archi.png" alt="amazon architecture" width="50%"/>
+    <img src="./assets/images/md/beenetic/amazon_archi.png" alt="amazon architecture" width="40%"/>
   </div>
 </div>
 
-##### iOS App functionalities
-Then, I used all the services API in the code to access them in the app. I managed to get the data and disply them, and after interact with the plug sockets, etc...
+La **présentation pdf** en suivant résume un peu plus en détails le travail accompli en collaboration avec Léo, avec qui j'ai réalisé ce stage tout comme l'année d'avant à Sydney. Nous avons laissé à notre tuteur en fin de stage une **documentation complète** pour pouvoir reprendre nos travaux sans trop de difficultés.
 
-##### iOS App User Interface
-You can see below some pictures of the app.
+### Bilan
 
-##### Amazon Alexa skill
+Par conséquent, j’ai pu découvrir le langage **Swift de développement Apple sous Xcode**, ainsi que de très nombreux services d’AWS,ce qui sera très utile pour la suite de mes projets dans le monde des IoT. Enfin, j’ai pu de nouveau acquérir une grande autonomie de travail dans cette petite entreprise, avec un projet très intéressant et formateur.
 
-#### Conclusion
+<iframe src="./assets/files/beenetic_internship/presentation_concours_alumni.pdf" style="width: 100%; height: 95vh;"></iframe>

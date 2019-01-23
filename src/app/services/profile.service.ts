@@ -136,9 +136,9 @@ export class ProfileService {
       duration: '4 mois',
 			title: "Projet d'innovation Ultra Ordinaire (Toulouse - 31)",
       description: "Création d'une application cross-platform pour design de mobilier, et recherche de solutions pour créer une lampe auto-alimentée",
-      gallery: [],
-      skills: [],
-      documents: [''],
+      gallery: ['u1.jpg', 'u2.jpg', 'u3.jpg', 'u4.jpg', 'u12.jpg', 'u11.jpg', 'u5.jpg', 'u6.jpg', 'u7.jpg', 'u8.jpg', 'u9.jpg', 'u10.jpg'],
+      skills: ['Angular', 'Ionic', 'HTML', 'CSS', 'Typescript', 'Firebase'],
+      documents: ['Ultra_Ordinaire_Presentation', 'Ultra_Ordinaire_Project_Report'],
       md_file: 'ultra_ordinaire_project'
     },
     {
@@ -162,7 +162,7 @@ export class ProfileService {
 			description: "Projet IoT ‘iBO HOME’ : Développement Software d'un prduit embarqué destiné au monde de l'habitat intelligent",
       gallery: ['b1.png', 'b2.png', 'b3.png', 'b4.png', 'b5.png', 'b6.png', 'b7.png', 'b8.png', 'b9.png', 'b10.png'],
       skills: ['Amazon Web Services', 'Swift', 'Xcode', 'Python', 'Javascript/JQuery', 'JSON'],
-      documents: ['2018-Taillardat-Elie-BilanStage4A-18', '2018-Taillardat-Elie-PosterStage4A_2018'],
+      documents: ['2018-Taillardat-Elie-BilanStage4A-18', '2018-Taillardat-Elie-PosterStage4A_2018', 'convention_stage_beenetic', 'presentation_concours_alumni'],
       md_file: 'beenetic_internship',
     },
     {
@@ -174,7 +174,7 @@ export class ProfileService {
       description: 'Compétition de voiture autonome sur circuit',
       gallery: [],
       skills: ['C', 'Peripheral prog.'],
-      documents: [],
+      documents: ['rapport_projet_tut_nxp', 'Presentation_NXP', 'etat_de_l_art', 'abstract'],
       md_file: 'nxp_cup'
     },
     {
@@ -186,7 +186,6 @@ export class ProfileService {
       description: "Design d'une application web et de ses outils pour la gestion de documents",
       gallery: ['a1.jpg', 'a2.jpg', 'a3.jpg', 'a4.jpg', 'a5.jpg', 'a6.jpg', 'a7.jpg', 'a8.jpg', 'a9.jpg', 'a10.jpg'],
       skills: ['Javascript/JQuery', 'HTML', 'CSS', 'Foundation', 'XSLT', 'XPath', 'Java', 'JSON'],
-      documents: [],
       md_file: 'allette_internship'
     },
     {
@@ -484,6 +483,15 @@ export class ProfileService {
       color: '#27646C',
       name: 'Proxmox'
     },
+    {
+      color: '#007ACC',
+      name: 'Typescript'
+    },
+    {
+      color:'#EE7E0C',
+      name: 'Firebase'
+    },
+    
   ];
 
 }
