@@ -10,17 +10,17 @@ export class RestService {
 
   Request_URLs = {
     'ext_temp': 'http://192.168.43.234:4200/REST_Smart_Rooms_Project/webapi/GEI_READING_ROOM/temp-ext-sensor',
-    'int_temp': 'https://api.github.com/users/seeschweiler',
-    'illumin': 'https://api.github.com/users/seeschweiler',
-    'presence': 'https://api.github.com/users/seeschweiler',
-    'opening_hour': 'http://jsonplaceholder.typicode.com/posts',
-    'closing_hour': 'http://jsonplaceholder.typicode.com/posts',
+    'int_temp': 'http://192.168.43.234:4200/REST_Smart_Rooms_Project/webapi/GEI_READING_ROOM/temp-int-sensor',
+    'illumin': 'http://192.168.43.234:4200/REST_Smart_Rooms_Project/webapi/GEI_READING_ROOM/illuminance-sensor',
+    'presence': 'http://192.168.43.234:4200/REST_Smart_Rooms_Project/webapi/GEI_READING_ROOM/presence-sensor',
+    'opening_hour': 'http://192.168.43.234:4200/REST_Smart_Rooms_Project/webapi/GEI_READING_ROOM/hours/open/',
+    'closing_hour': 'http://192.168.43.234:4200/REST_Smart_Rooms_Project/webapi/GEI_READING_ROOM/hours/close/',
     'heater_threshold': 'http://192.168.43.234:4200/REST_Smart_Rooms_Project/webapi/GEI_READING_ROOM/heater-actuator/threshold/',
-    'illumin_threshold': 'http://jsonplaceholder.typicode.com/posts',
+    'illumin_threshold': 'http://192.168.43.234:4200/REST_Smart_Rooms_Project/webapi/GEI_READING_ROOM/lamp-actuator/threshold/',
     'heater_state': 'http://192.168.43.234:4200/REST_Smart_Rooms_Project/webapi/GEI_READING_ROOM/heater-actuator',
-    'lights_state': 'http://jsonplaceholder.typicode.com/posts',
-    'doors_state': 'http://jsonplaceholder.typicode.com/posts',
-    'alarm_state': 'http://jsonplaceholder.typicode.com/posts',
+    'lights_state': 'http://192.168.43.234:4200/REST_Smart_Rooms_Project/webapi/GEI_READING_ROOM/lamp-actuator',
+    'doors_state': 'http://192.168.43.234:4200/REST_Smart_Rooms_Project/webapi/GEI_READING_ROOM/doors-actuator',
+    'alarm_state': 'http://192.168.43.234:4200/REST_Smart_Rooms_Project/webapi/GEI_READING_ROOM/alarm-actuator',
   }
 
   GET(res: string) {

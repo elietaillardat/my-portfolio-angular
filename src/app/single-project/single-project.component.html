@@ -1,7 +1,11 @@
 <div class="container mt-5 mb-5">
   <div class="row mb-4 align-items-center">
     <div class="col-auto text-center">
-      <h2 class="mb-0"><a class="arrow-back" routerLink="/profile"><fa name="arrow-left"></fa></a></h2>
+      <h2 class="mb-0">
+        <a class="arrow-back" routerLink="{{ backLink }}">
+          <fa name="arrow-left"></fa>
+        </a>
+      </h2>
     </div>
     <div class="col-2 pl-0" *ngIf="img != ''">
       <img class="d-flex flex-wrap img-fluid" src="./assets/images/{{ img }}">
@@ -11,12 +15,13 @@
     </div>
   </div>
   <h6><b>Description :&nbsp;</b> {{ description }}</h6>
-  <h6><b>Date :&nbsp;</b> {{ date }} / <b>Durée :&nbsp;</b> {{ duration }}</h6>
-  <p *ngIf="img == 'wiifor.png'">Coming soon</p>
-  <h6 class="exp-description"><b>Documents :&nbsp; </b></h6>
-  <a *ngFor="let doc of documents;" href="./assets/files/{{ md_file }}/{{ doc }}.pdf" download class="pdf">
-    &nbsp;<fa name="file-pdf-o"></fa>&nbsp; {{ doc }}.pdf&nbsp; |
-  </a>
+  <h6><b>Date :&nbsp;</b> {{ date }} <span *ngIf="duration">/ <b>Durée :&nbsp;</b> {{ duration }}</span></h6>
+  <div *ngIf="documents">
+    <h6 class="exp-description"><b>Documents :&nbsp; </b></h6>
+    <a *ngFor="let doc of documents;" href="./assets/files/{{ md_file }}/{{ doc }}.pdf" download class="pdf">
+      &nbsp;<fa name="file-pdf-o"></fa>&nbsp; {{ doc }}.pdf&nbsp; |
+    </a>
+  </div>
   <hr class="my-1">
   <h6 class="exp-description mt-2 mb-3"><b>Notions clefs :&nbsp; </b></h6>
   <app-skill-tag  *ngFor="let i of indexes;"
@@ -27,7 +32,7 @@
   <div class="gallery mt-4" id="gallery">
     <figure class="mb-3 border"  *ngFor="let img of gallery;">
       <a target="_blank" href="./assets/images/experiences/{{ img }}">
-        <img class="click-to-expand img-fluid" src="./assets/images/experiences/{{ img }}" alt="Card image cap">
+        <img class="click-to-expand img-fluid" src="./assets/images/experiences/{{ img }}">
       </a>
     </figure>
   </div>

@@ -71,6 +71,18 @@ export class ProfileService {
       img: '',
       date: 'Décembre 2018 - Janvier 2019',
       duration: '2 mois',
+			title: "Microcontrôleurs et Open-Source Hardware",
+      description: "",
+      gallery: [],
+      skills: [],
+      documents: [],
+      md_file: 'ptp_iss_smart_devices_mosh'
+    },
+    {
+      id: 300,
+      img: '',
+      date: 'Décembre 2018 - Janvier 2019',
+      duration: '2 mois',
 			title: "Architecture Orientée Services",
       description: "Apprendre à déployer et configurer une SOA en utilisant des API REST/SOAP → Projet Salles de classes autonomes",
       gallery: [],
@@ -79,7 +91,7 @@ export class ProfileService {
       md_file: 'ptp_iss_mdware_services_soa'
     },
     {
-      id: 101,
+      id: 301,
       img: '',
       date: 'Décembre 2018 - Janvier 2019',
       duration: '2 mois',
@@ -91,7 +103,7 @@ export class ProfileService {
       md_file: 'ptp_iss_mdware_services_iot'
     },
     {
-      id: 102,
+      id: 302,
       img: '',
       date: 'Décembre 2018 - Janvier 2019',
       duration: '2 mois',
@@ -106,25 +118,49 @@ export class ProfileService {
 
   private experiences = [
     {
-      id: 5,
+      id: 7,
       img: 'wiifor.png',
-      date: 'February - July 2019',
-      duration: '6 months',
-			title: "Internship at Wiifor (Toulouse - 31)",
-      description: "IoT Platform Software Design (Embedded + Cloud)",
+      date: 'Février - Juillet 2019',
+      duration: '6 mois',
+			title: "Stage chez Wiifor (Toulouse - 31)",
+      description: "Conception plateforme Software IoT (Embarqué + Cloud)",
       gallery: [],
       skills: [],
-      documents: [],
-      md_file: ''
+      documents: ['convention_stage_wiifor'],
+      md_file: 'wiifor_internship'
+    },
+    {
+      id: 6,
+      img: 'uo.png',
+      date: 'Octobre - Janvier 2018',
+      duration: '4 mois',
+			title: "Projet d'innovation Ultra Ordinaire (Toulouse - 31)",
+      description: "Création d'une application cross-platform pour design de mobilier, et recherche de solutions pour créer une lampe auto-alimentée",
+      gallery: [],
+      skills: [],
+      documents: [''],
+      md_file: 'ultra_ordinaire_project'
+    },
+    {
+      id: 5,
+      img: 'pulpito.png',
+      date: 'Novembre 2018',
+      duration: '2 jours',
+			title: "Participation au Hackathon (Banyuls - 66)",
+      description: "Développement d'un système logiciel pour créer des visites ludiques de l'aquarium",
+      gallery: [],
+      skills: [],
+      documents: [''],
+      md_file: 'hackathon_banyuls'
     },
 		{
       id: 4,
       img: 'beenetic.png',
-      date: 'June - September 2018',
-      duration: '3 months',
-			title: "Internship at Beenetic Systems (Toulouse - 31)",
-			description: "IoT Project ‘iBO HOME’ : Software development of an embedded product designed for the Smart Home area",
-      gallery: ['1.png', '2.png', '3.png', '4.png', '5.png', '6.png', '7.png', '8.png', '9.png', '10.png'],
+      date: 'Juin - Septembre 2018',
+      duration: '3 mois',
+			title: "Stage chez Beenetic Systems (Toulouse - 31)",
+			description: "Projet IoT ‘iBO HOME’ : Développement Software d'un prduit embarqué destiné au monde de l'habitat intelligent",
+      gallery: ['b1.png', 'b2.png', 'b3.png', 'b4.png', 'b5.png', 'b6.png', 'b7.png', 'b8.png', 'b9.png', 'b10.png'],
       skills: ['Amazon Web Services', 'Swift', 'Xcode', 'Python', 'Javascript/JQuery', 'JSON'],
       documents: ['2018-Taillardat-Elie-BilanStage4A-18', '2018-Taillardat-Elie-PosterStage4A_2018'],
       md_file: 'beenetic_internship',
@@ -133,37 +169,37 @@ export class ProfileService {
       id: 3,
       img: 'nxp.png',
       date: '2017 - 2018',
-      duration: '5 months',
-			title: "Participation in the NXP Cup (Toulouse/Grenoble)",
-      description: 'Autonomous car competition on track',
+      duration: '5 mois',
+			title: "Participation à la NXP Cup (Toulouse/Grenoble)",
+      description: 'Compétition de voiture autonome sur circuit',
       gallery: [],
       skills: ['C', 'Peripheral prog.'],
       documents: [],
-      md_file: 'nxp_cup.md'
+      md_file: 'nxp_cup'
     },
     {
       id: 2,
       img: 'allette.png',
-      date: 'July - August 2017',
-      duration: '10 weeks',
-			title: "Internship at Allette Systems (Sydney - Australie)",
-      description: "Design of a Web application for documents management",
-      gallery: [],
+      date: 'Juillet - Août 2017',
+      duration: '10 semaines',
+			title: "Stage chez Allette Systems (Sydney - Australie)",
+      description: "Design d'une application web et de ses outils pour la gestion de documents",
+      gallery: ['a1.jpg', 'a2.jpg', 'a3.jpg', 'a4.jpg', 'a5.jpg', 'a6.jpg', 'a7.jpg', 'a8.jpg', 'a9.jpg', 'a10.jpg'],
       skills: ['Javascript/JQuery', 'HTML', 'CSS', 'Foundation', 'XSLT', 'XPath', 'Java', 'JSON'],
       documents: [],
-      md_file: 'allette_internship.md'
+      md_file: 'allette_internship'
     },
     {
       id: 1,
       img: 'thales.png',
       date: 'June 2015',
       duration: '5 weeks',
-			title: "Worker internship at Thales Alenia Space (Toulouse - 31)",
-      description: 'Data transfer to a new management database',
+			title: "Stage ouvrier chez Thales Alenia Space (Toulouse - 31)",
+      description: 'Transfert de données vers une base de gestion automatique',
       gallery: [],
       skills: ['Excel'],
-      documents: [],
-      md_file: 'thales_internship.md'
+      documents: ['Rapport_Stage_THALES', 'Rapport_Stage_INSA_version'],
+      md_file: 'thales_internship'
 		}
   ];
   
@@ -171,20 +207,20 @@ export class ProfileService {
 		{
       img: 'insa.png',
 			date: '2014 - 2018',
-			title: "Engineering student in 5th year at INSA de Toulouse",
-			description: 'Automation & Electronic Engineering - Embedded Systems - Speciality Innovative Smart System (IoT domain)'
+			title: "Élève ingénieur 5ème année à l'INSA de Toulouse",
+			description: 'Génie Électronique et Informatique - Systèmes Embarqués - Spécialité Innovative Smart System (IoT)'
 		},
 		{
       img: 'ul.png',
 			date: '2016',
-			title: "Erasmus exchange semester in Limerick (Ireland)",
-			description: 'Enrichment of the English language and cultural opening'
+			title: "Semestre d'échange Erasmus à Limerick (Irlande)",
+			description: 'Enrichissement de la langue anglaise et ouverture culturelle'
 		},
 		{
       img: 'cdg.png',
 			date: '2014',
-			title: "General Bachelor's Degree Serie S",
-			description: "Engineering Science (SI) - Speciality Mathematics - with Highest honour and Jury's congratulations - 19.31/20"
+			title: "Baccalauréat Général Série S",
+			description: "Sciences de l'Ingénieure (SI) - Spécialité Mathématiques - avec les Félicitations du Jury - 19.31/20"
 		}
   ];
 
@@ -192,64 +228,60 @@ export class ProfileService {
     {
       iid: 1,      
       img: 'play_logo.png',
-			date: '2015 - Today',
-			title: "Android Games development at WhileOne Studios",
-      description: '3 games published on the Google PlayStore (+7000 downloads): Lord of Yams • Master Code • O.B.I. • Crunch it! (bêta) - Website creation : www.whileone-studios.com',
+			date: "2015 - Aujourd'hui",
+			title: "Développement de Jeux Android chez WhileOne Studios",
+      description: '3 jeux publiés sur le Google PlayStore (+7000 downloads): Lord of Yams • Master Code • O.B.I. • Crunch it! (bêta) - Website : www.whileone-studios.com',
       gallery: [],
       skills: ['Android Studio', 'Java'],
-      documents: [],
-      md_file: ''
+      md_file: 'whileone_studios'
     },
     {
       iid: 2,      
       img: 'logo_forum.png',
 			date: '2018',
-			title: "Volunteer in Web development for Forum by INSA",
-      description: 'Responsible for the creation and management of the new features for this edition',
+			title: "Bénévole en développement Web pour Forum by INSA",
+      description: 'Responsable de la création et de la maintenance des nouvelles fonctionnalités pour cette édition',
       gallery: [],
       skills: ['Bootstrap', 'HTML', 'CSS', 'Javascript/JQuery'],
-      documents: [],
-      md_file: ''
+      md_file: 'forum_by_insa'
     },
     {
       iid: 3,      
       img: 'logo_amicale.png',
 			date: '2017 - 2018',
-			title: "Volunteer at Amicale INSA Toulouse as 'Technic' manager",
-      description: "Creation of a Web platform for club's equipments sharing",
+			title: "Bénévole à l'Amicale INSA Toulouse comme 'Responsable Technique'",
+      description: "Création d'une plateforme Web pour le partage d'équipements entre clubs",
       gallery: [],
       skills: ['PHP', 'SQL', 'Bootstrap', 'HTML', 'CSS', 'Javascript/JQuery'],
-      documents: [],
-      md_file: ''
+      md_file: 'club_insa_sharing'
     },
     {
       iid: 4,      
       img: 'soccer_player.png',
-			date: '2003/2006 - Today',
-			title: "Football Player - Center Midfielder",
-      description: 'High Level Athlete equivalent status (2015) - Experience as a captain',
+			date: "2003/2006 - Aujourd'hui",
+			title: "Joueur de Football - Milieu relayeur",
+      description: 'Sportif de Haut Niveau assimilé (2015) - Expérience de capitaine',
       gallery: [],
       skills: [],
-      documents: [],
-      md_file: ''
+      md_file: 'football'
 		},
   ];
   
   private languages = [
     {
       id: 1,
-      name: 'English',
+      name: 'Anglais',
       wr_level: 'C1',
       s_level: 'C1',
       level: '90%',
       degree: 'TOEIC: 910/990',
       color: '#00427e',
       icon: 'united-kingdom',
-      examples: "Semestre d'études à Limerick (Irlande) - Internship de 10 semaines à Sydney (Australie) - PTP ISS dispensé en Anglais"
+      examples: "Semestre d'études à Limerick (Irlande) - Stage de 10 semaines à Sydney (Australie) - PTP ISS dispensé en Anglais"
     },
     {
       id: 2,
-      name: 'Spanish',
+      name: 'Espagnol',
       wr_level: 'B2',
       s_level: 'B2',
       level: '65%',
@@ -260,7 +292,7 @@ export class ProfileService {
     }
   ];
 
-  public aptitudes = ["Self-learning", "Meticulous", "Organized", "Autonomous"];
+  public aptitudes = ["Auto-apprentissage", "Méticuleux", "Persévérant", "Organisé", "Autonome"];
     
   public softwares = [
     // Programmation Objet

@@ -12,17 +12,31 @@ export class RestProjectComponent implements OnInit {
   consoleLogs: string[] = [];
   showSpinner: boolean;
 
-  extTemp: any;
-  heaterState: any;
+  data = {
+    'ext_temp': 7,
+    'int_temp': 21,
+    'illumin': 600,
+    'presence': false,
+    'opening_hour': '06:00',
+    'closing_hour': '22:30',
+    'heater_threshold': 10,
+    'illumin_threshold': 250,
+    'heater_state': false,
+    'lights_state': false,
+    'doors_state': false,
+    'alarm_state': false,
+  }
 
   formValue = new FormControl(null, Validators.required);
 
   constructor(private restService: RestService) { 
-    this.showSpinner = false;
-    this.heaterState = false;
     setInterval(() => {
       this.currentTime = new Date().toLocaleTimeString();
     }, 1000);
+
+    setInterval(() => {
+      this.getRequest('alarm_state');
+    }, 5000);
   }
 
   ngOnInit() {
@@ -33,15 +47,13 @@ export class RestProjectComponent implements OnInit {
     this.restService.GET(src)
     .subscribe(
       data => {
-        console.log(data.toString())
         this.showSpinner = false;
         this.addLog("GET", src, data.toString());
-        this.heaterState = data;
-        this.extTemp = Number(data).toFixed(1);
+        this.data[src] = data;
       },
       err => {
         this.showSpinner = false;
-        console.log("Error occured." + err.message)
+        this.addLog("GET", src, err.message);
       }
     );
   }
@@ -49,6 +61,7 @@ export class RestProjectComponent implements OnInit {
   postRequest(src: any) {
     this.showSpinner = true;
     const val = this.formValue.value;
+    console.log(val);
     this.restService.POST(src, val)
     .subscribe(
       () => {
@@ -57,13 +70,9 @@ export class RestProjectComponent implements OnInit {
       },
       err => {
         this.showSpinner = false;
-        console.log("Error occured." + err.message);
+        this.addLog("POST", src, err.message);
       }
     );
-  }
-
-  updateValue(data: any) {
-    
   }
 
   addLog(requestType: string, sensor: string, value: string) {
@@ -78,6 +87,18 @@ export class RestProjectComponent implements OnInit {
     } else {
       return "OFF";
     }
+  }
+
+  getPresence(state: number): string {
+    if (state) {
+      return "AHHH!"
+    } else {
+      return "Cool";
+    }
+  }
+
+  roundData(data: any) {
+    return Number(data).toFixed(1);
   }
 
 }

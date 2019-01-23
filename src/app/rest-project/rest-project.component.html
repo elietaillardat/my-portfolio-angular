@@ -17,7 +17,7 @@
         <div class="col border rounded logs mx-3 p-3">
           <h5>Dernières actions</h5>
           <div class="spinner" [hidden]="!showSpinner"><fa name="spinner" size="2x" animation="spin"></fa></div>
-          <div *ngFor="let log of consoleLogs;">{{ log }}</div>
+          <div *ngFor="let log of consoleLogs;">{{ log }}<hr class="log"></div>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">°C</span>
           </div>
-          <input type="text" readonly class="form-control text-center" value="{{ extTemp }}">
+          <input type="text" readonly class="form-control text-center" value="{{ roundData(data['ext_temp']) }}">
           <div class="input-group-append">
             <button type="button" class="btn btn-outline-info" data="ext_temp" (click)="getRequest('ext_temp')"><fa name="refresh"></fa></button>
           </div>
@@ -42,9 +42,9 @@
           <div class="input-group-prepend">
             <span class="input-group-text">°C</span>
           </div>
-          <input type="text" readonly class="form-control text-center" value="14">
+          <input type="text" readonly class="form-control text-center" value="{{ roundData(data['int_temp']) }}">
           <div class="input-group-append">
-            <button type="button" class="btn btn-outline-info" data="int_temp" (click)="getRequest($event)"><fa name="refresh"></fa></button>
+            <button type="button" class="btn btn-outline-info" data="int_temp" (click)="getRequest('int_temp')"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
@@ -55,9 +55,9 @@
           <div class="input-group-prepend">
             <span class="input-group-text">lx</span>
           </div>
-          <input type="text" readonly class="form-control text-center" value="632">
+          <input type="text" readonly class="form-control text-center" value="{{ roundData(data['illumin']) }}">
           <div class="input-group-append">
-            <button type="button" class="btn btn-outline-info" data="illumin" (click)="getRequest($event)"><fa name="refresh"></fa></button>
+            <button type="button" class="btn btn-outline-info" data="illumin" (click)="getRequest('illumin')"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
@@ -68,9 +68,9 @@
           <div class="input-group-prepend">
             <span class="input-group-text"><fa name="user-secret"></fa></span>
           </div>
-          <input type="text" readonly class="form-control text-center" value="TRUE">
+          <input type="text" readonly class="form-control text-center" value="{{ getPresence(data['presence']) }}">
           <div class="input-group-append">
-            <button type="button" class="btn btn-outline-info" data="presence" (click)="getRequest($event)"><fa name="refresh"></fa></button>
+            <button type="button" class="btn btn-outline-info" data="presence" (click)="getRequest('presence')"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
@@ -79,9 +79,9 @@
         <h6 for="heaterState" class="col-lg-6 text-left col-form-label">Heater state:</h6>
         <div class="input-group col-lg-6 text-right">
           <div class="input-group-prepend power-on">
-            <span class="input-group-text"><fa name="power-off"></fa></span>
+            <button type="button" [ngClass]="{ 'btn': true, 'btn-outline-success': data['heter_state'], 'btn-outline-danger': !data['heater_state'] }" (click)="postRequest('heater_state')"><fa name="power-off"></fa></button>
           </div>
-          <input type="text" class="form-control text-center" [value]="getState(heaterState)">
+          <input type="text" class="form-control text-center" value="{{ getState(data['heater_state']) }}">
           <div class="input-group-append">
             <button type="button" class="btn btn-outline-info" data="heater_state" (click)="getRequest('heater_state')"><fa name="refresh"></fa></button>
           </div>
@@ -90,24 +90,24 @@
       <div class="form-group row">
         <h6 for="lightState" class="col-lg-6 text-left col-form-label">Lights state:</h6>
         <div class="input-group col-lg-6 text-right">
-          <div class="input-group-prepend power-off">
-            <span class="input-group-text"><fa name="power-off"></fa></span>
+          <div class="input-group-prepend">
+            <button type="button" [ngClass]="{ 'btn': true, 'btn-outline-success': data['lights_state'], 'btn-outline-danger': !data['lights_state'] }" (click)="postRequest('lights_state')"><fa name="power-off"></fa></button>
           </div>
-          <input type="text" readonly class="form-control text-center" value="OFF">
+          <input type="text" readonly class="form-control text-center" value="{{ getState(data['lights_state']) }}">
           <div class="input-group-append">
-            <button type="button" class="btn btn-outline-info" data="lights_state" (click)="getRequest($event)"><fa name="refresh"></fa></button>
+            <button type="button" class="btn btn-outline-info" data="lights_state" (click)="getRequest('lights_state')"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
       <div class="form-group row">
         <h6 for="doorsState" class="col-lg-6 text-left col-form-label">Doors state:</h6>
         <div class="input-group col-lg-6 text-right">
-          <div class="input-group-append power-on">
-            <span class="input-group-text"><fa name="check"></fa></span>
+          <div class="input-group-prepend">
+            <button type="button" [ngClass]="{ 'btn': true, 'btn-outline-success': data['doors_state'], 'btn-outline-danger': !data['doors_state'] }" (click)="postRequest('doors_state')"><fa name="power-off"></fa></button>
           </div>
-          <input type="text" readonly class="form-control text-center" value="OPEN">
+          <input type="text" readonly class="form-control text-center" value="{{ getState(data['doors_state']) }}">
           <div class="input-group-append">
-            <button type="button" class="btn btn-outline-info" data="doors_state" (click)="getRequest($event)"><fa name="refresh"></fa></button>
+            <button type="button" class="btn btn-outline-info" data="doors_state" (click)="getRequest('doors_state')"><fa name="refresh"></fa></button>
           </div>
         </div>
       </div>
@@ -115,28 +115,28 @@
     <div class="col-lg-4">
       <h3>Room settings</h3>
       <h5>Day/Night hours</h5>
-      <form class="mb-2" data="opening_hour" (ngSubmit)="postRequest($event)">
+      <form class="mb-2" (ngSubmit)="postRequest('opening_hour')">
         <div class="form-group row">
           <label class="col-lg-5 col-form-label">Opening hour:</label>
           <div class="input-group col-lg-7">
             <div class="input-group-prepend">
               <span class="input-group-text"><fa name="sun-o"></fa></span>
             </div>
-            <input type="time" class="form-control text-center" [formControl]="formValue">
+            <input type="time" class="form-control text-center" [formControl]="formValue" value="{{ data['opening_hour'] }}">
             <div class="input-group-append">
               <button type="submit" class="btn btn-outline-success"><fa name="check"></fa></button>
             </div>
           </div>
         </div>
       </form>
-      <form class="mb-2" data="closing_hour" (ngSubmit)="postRequest($event)">
+      <form class="mb-2" (ngSubmit)="postRequest('closing_hour')">
         <div class="form-group row">
           <label class="col-lg-5 col-form-label">Closing hour:</label>
           <div class="input-group col-lg-7">
             <div class="input-group-prepend">
               <span class="input-group-text"><fa name="moon-o"></fa></span>
             </div>
-            <input type="time" class="form-control text-center" [formControl]="formValue">
+            <input type="time" class="form-control text-center" [formControl]="formValue" value="{{ data['closing_hour'] }}">
             <div class="input-group-append">
               <button type="submit" class="btn btn-outline-success"><fa name="check"></fa></button>
             </div>
@@ -152,7 +152,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">°C</span>
             </div>
-            <input type="number" class="form-control text-center" [formControl]="formValue">
+            <input type="number" class="form-control text-center" [formControl]="formValue" value="{{ data['heater_threshold'] }}">
             <div class="input-group-append">
               <button type="submit" class="btn btn-outline-success"><fa name="check"></fa></button>
             </div>
@@ -161,14 +161,14 @@
       </form>
       <hr>
       <h5>Illuminance</h5>
-      <form class="mb-3" data="illumin_threshold" (ngSubmit)="postRequest($event)">
+      <form class="mb-3" data="illumin_threshold" (ngSubmit)="postRequest('illumin_threshold')">
         <div class="form-group row">
           <label class="col-lg-5 col-form-label">Light threshold:</label>
           <div class="input-group col-lg-7">
             <div class="input-group-prepend">
               <span class="input-group-text">lx</span>
             </div>
-            <input type="number" class="form-control text-center" [formControl]="formValue">
+            <input type="number" class="form-control text-center" [formControl]="formValue" value="{{ data['illumin_threshold'] }}">
             <div class="input-group-append">
               <button type="submit" data="illumin_threshold" class="btn btn-outline-success"><fa name="check"></fa></button>
             </div>
@@ -177,7 +177,7 @@
       </form>
       <hr>
       <div class="row align-items-center mt-5">
-        <div class="col-lg-12 text-center">
+        <div class="col-lg-12 text-center" [hidden]="!data['alarm_state']">
           <img src="./assets/images/warning.png" width="40" height="40"/>
           <h4>Alarm ON!</h4>
         </div>

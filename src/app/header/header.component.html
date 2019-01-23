@@ -18,7 +18,7 @@
         <a class="nav-link" routerLink="home">Home</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" routerLink="profile">Profile - CV</a>
+        <a class="nav-link" routerLink="profile">Profil - CV</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" routerLink="portfolio">Portfol.<span class="io">io</span></a>
@@ -49,9 +49,10 @@
     </ul>
   </div>
   <app-sub-nav id="sub-nav" [ngClass]="{'hidden': router.url !== '/profile'}"></app-sub-nav>
-  <!--<app-sub-nav-iss id="sub-nav-iss" (mouseover)="print()" 
-                   [ngClass]="{'hidden': 
+  <app-sub-nav-iss hidden id="sub-nav-iss">
+  </app-sub-nav-iss>
+  
+                   <!--[ngClass]="{'hidden': 
                    router.url != '/portfolio/ptp-iss' ||
-                   router.url.includes('portfolio/ptp-iss/mdware-services/rest-project')}">
-  </app-sub-nav-iss>-->
+                   router.url.includes('portfolio/ptp-iss/mdware-services/rest-project')}"-->
 </nav>

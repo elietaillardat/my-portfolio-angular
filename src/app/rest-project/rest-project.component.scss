@@ -2,18 +2,14 @@
   background-color: white;
 }
 
-.power-on span {
-  color: rgb(0, 110, 74);
-}
-
-.power-off span {
-  color: rgb(145, 0, 0);
+hr.log {
+  margin: 0.5rem;
 }
 
 img.scenario {
   margin: 0 auto;
   width: 100%;
-  max-width: 400px;
+  max-width: 600px;
 }
 
 .logs {
