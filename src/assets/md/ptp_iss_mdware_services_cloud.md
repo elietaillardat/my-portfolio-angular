@@ -40,14 +40,17 @@ Cette partie m'a permis de **mieux cerner les concepts clefs** du module et d'at
 
 Encore une fois, le langage Java était indispensable et j'ai découvert une nouvelle API. Une bonne compréhension des notions était nécessaire pour coder les diverses étapes du TP.
 Voici le lien Github de notre projet :
+[github.com/elietaillardat/proxmox-app-base](https://github.com/elietaillardat/proxmox-app-base)
+
+La dernière partie du TP quand à elle était vraiment très intéressante et m'a permis de découvrir plusieurs plateforme cloud comme **Google Cloud Platform, Cloud Foundry ou Jelastic**. Cependant les tâches demandées et le temps imparti n'étaient pas du tout en adéquation.
 
 ##### Synthèse et bilan
 
-Cette partie nous a permis de cerner un peu mieux ce que nous avions pu voir durant la première phase du TP, mais un peu plus de temps aurait le bien venu pour finir parfaitement cette phase du TP.
+Cette partie nous a permis de cerner un peu mieux ce que nous avions pu voir durant la première phase du TP, mais un peu plus de temps aurait le bien venu pour finir parfaitement les dernières parties.
 
 </br>
 
-#### **C. Rapport de projet**
+#### **C. Rapport de TP**
 
 </br>
 

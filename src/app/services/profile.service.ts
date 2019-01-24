@@ -116,7 +116,7 @@ export class ProfileService {
       id: 300,
       img: '',
       date: 'Décembre 2018 - Janvier 2019',
-      duration: '2 mois',
+      duration: '31 h',
 			title: "Architecture Orientée Services",
       description: "Apprendre à déployer et configurer une SOA en utilisant des API REST/SOAP → Projet Salles de classes autonomes",
       gallery: [],
@@ -128,7 +128,7 @@ export class ProfileService {
       id: 301,
       img: '',
       date: 'Décembre 2018 - Janvier 2019',
-      duration: '2 mois',
+      duration: '14,75 h',
 			title: "Intergiciel pour l'IoT",
       description: "Découvrir le standard OM2M et implémenter une architecture à base de service REST & IoT",
       gallery: [],
@@ -140,13 +140,49 @@ export class ProfileService {
       id: 302,
       img: '',
       date: 'Décembre 2018 - Janvier 2019',
-      duration: '2 mois',
+      duration: '16,25 h',
 			title: "Adaptabilité Cloud et gestion autonomique",
       description: "Découvrir le standard OM2M et implémenter une architecture à base de service REST & IoT",
       gallery: [],
       skills: ['Java', 'Eclipse', 'Proxmox'],
       documents: ['Cloud_computing_autonomic_management'],
       md_file: 'ptp_iss_mdware_services_cloud'
+    },
+    {
+      id: 400,
+      img: '',
+      date: 'Octobre - Novembre 2018',
+      duration: '6,25 h',
+			title: "Ingénierie logicielle",
+      description: "",
+      gallery: [],
+      skills: [],
+      documents: ['Management_Methods'],
+      md_file: 'ptp_iss_analysis_data_soft'
+    },
+    {
+      id: 401,
+      img: '',
+      date: 'Novembre 2018',
+      duration: '8 h',
+			title: "Données Sémantique",
+      description: "",
+      gallery: [],
+      skills: [],
+      documents: ['Web_Semantic_TP_Report'],
+      md_file: 'ptp_iss_analysis_data_semantic'
+    },
+    {
+      id: 402,
+      img: '',
+      date: 'Novembre - Décembre 2018',
+      duration: '15 h',
+			title: "Big Data",
+      description: "",
+      gallery: [],
+      skills: [],
+      documents: ['FIFA_Study_Report'],
+      md_file: 'ptp_iss_analysis_data_big'
     }
   ]
 

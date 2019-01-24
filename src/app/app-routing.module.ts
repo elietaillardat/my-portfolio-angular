@@ -38,6 +38,7 @@ const routes: Routes = [
   { path: 'portfolio/ptp-iss/smart-devices/:id', component: SingleProjectComponent },
   { path: 'portfolio/ptp-iss/communication/:id', component: SingleProjectComponent },
   { path: 'portfolio/ptp-iss/mdware-services/:id', component: SingleProjectComponent },
+  { path: 'portfolio/ptp-iss/analysis-data/:id', component: SingleProjectComponent },
 
   { path: 'not-found', component: FourOhFourComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
