@@ -30,7 +30,7 @@ Nous avons pu mettre en pratique la méthode Scrum à l’aide du logiciel de ge
 
 <div class="row pb-3">
   <div class="col text-center">
-    <img src="./assets/images/md/ptp/icescrum.png" alt="ihm soa project" width="30%"/>
+    <img src="./assets/images/md/ptp/icescrum.png" alt="ihm soa project" width="20%"/>
   </div>
 </div>
 

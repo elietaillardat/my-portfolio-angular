@@ -154,7 +154,7 @@ export class ProfileService {
       date: 'Octobre - Novembre 2018',
       duration: '6,25 h',
 			title: "Ingénierie logicielle",
-      description: "",
+      description: "S'approprier les méthodes de management dans le cycle de vie des projets logiciels",
       gallery: [],
       skills: [],
       documents: ['Management_Methods'],
@@ -166,10 +166,10 @@ export class ProfileService {
       date: 'Novembre 2018',
       duration: '8 h',
 			title: "Données Sémantique",
-      description: "",
+      description: "Appréhender le Web sémantique et manipuler une ontologie sur le logiciel Protégé",
       gallery: [],
-      skills: [],
-      documents: ['Web_Semantic_TP_Report'],
+      skills: ['Java'],
+      documents: ['Web_Semantic_Report'],
       md_file: 'ptp_iss_analysis_data_semantic'
     },
     {
@@ -178,9 +178,9 @@ export class ProfileService {
       date: 'Novembre - Décembre 2018',
       duration: '15 h',
 			title: "Big Data",
-      description: "",
+      description: "Apprentissage du langage R et réalisation de l'étude d'un dataset",
       gallery: [],
-      skills: [],
+      skills: ['R'],
       documents: ['FIFA_Study_Report'],
       md_file: 'ptp_iss_analysis_data_big'
     }
