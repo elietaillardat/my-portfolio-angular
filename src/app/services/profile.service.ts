@@ -69,14 +69,48 @@ export class ProfileService {
     {
       id: 100,
       img: '',
-      date: 'Décembre 2018 - Janvier 2019',
-      duration: '2 mois',
+      date: 'Décembre 2018',
+      duration: '18,75 h',
+			title: "Introduction aux capteurs",
+      description: "Réalisation d'un capteur de gaz à nanoparticules en salle blanche.",
+      gallery: ['aime1.jpg', 'aime2.jpg', 'aime3.jpg', 'aime4.jpg', 'aime5.jpg', 'aime6.jpg', 'aime7.jpg', 'aime8.jpg', 'aime9.jpg', 'aime10.jpg'],
+      skills: [],
+      documents: ['datasheet'],
+      md_file: 'ptp_iss_smart_devices_sensors'
+    },
+    {
+      id: 101,
+      img: '',
+      date: 'Octobre - Décembre 2018',
+      duration: '41,5 h',
 			title: "Microcontrôleurs et Open-Source Hardware",
-      description: "",
+      description: "Réalisation 'from scratch' d'un capteur de gaz connecté via LoRa pour alerter l'utilisateur de la présence anormale d'un gaz.",
+      gallery: [],
+      skills: ['C', 'Arduino', 'NodeRED', 'The Things Network'],
+      md_file: 'ptp_iss_smart_devices_mosh'
+    },
+    {
+      id: 200,
+      img: '',
+      date: 'Octobre - Décembre 2018',
+      duration: '56,25 h',
+			title: "Protocoles et Communication",
+      description: "Communications numériques sans-fil, énergie (récupération, transfert), réseaux émergeants (SDN, NGN)",
       gallery: [],
       skills: [],
-      documents: [],
-      md_file: 'ptp_iss_smart_devices_mosh'
+      documents: ['Exercice_Zigbee', '5G_Smart_City', 'MAC_Layers', 'NB_IoT', 'NB_IoT_Presentation', 'SDR_Report'],
+      md_file: 'ptp_iss_communication_proto'
+    },
+    {
+      id: 201,
+      img: '',
+      date: 'Janvier 2019',
+      duration: '7,5 h',
+			title: "Sécurité pour les réseaux IoT",
+      description: "Comprendre l’impact d’une sécurité informatique négligée",
+      gallery: [],
+      skills: [],
+      md_file: 'ptp_iss_communication_security'
     },
     {
       id: 300,
@@ -137,20 +171,20 @@ export class ProfileService {
 			title: "Projet d'innovation Ultra Ordinaire (Toulouse - 31)",
       description: "Création d'une application cross-platform pour design de mobilier, et recherche de solutions pour créer une lampe auto-alimentée",
       gallery: ['u1.jpg', 'u2.jpg', 'u3.jpg', 'u4.jpg', 'u12.jpg', 'u11.jpg', 'u5.jpg', 'u6.jpg', 'u7.jpg', 'u8.jpg', 'u9.jpg', 'u10.jpg'],
-      skills: ['Angular', 'Ionic', 'HTML', 'CSS', 'Typescript', 'Firebase'],
-      documents: ['Ultra_Ordinaire_Presentation', 'Ultra_Ordinaire_Project_Report'],
+      skills: ['Angular', 'Ionic', 'HTML', 'CSS', 'Typescript', 'Firebase', 'JSON', 'API REST'],
+      documents: ['Ultra_Ordinaire_Presentation', 'Ultra_Ordinaire_Project_Report', 'Autonomous_Lamp_State_Of_The_Art'],
       md_file: 'ultra_ordinaire_project'
     },
     {
       id: 5,
-      img: 'pulpito.png',
+      img: 'banyuls.png',
       date: 'Novembre 2018',
       duration: '2 jours',
 			title: "Participation au Hackathon (Banyuls - 66)",
       description: "Développement d'un système logiciel pour créer des visites ludiques de l'aquarium",
       gallery: [],
-      skills: [],
-      documents: [''],
+      skills: ['C', 'C++', 'Arduino'],
+      documents: ['hackathon_presentation'],
       md_file: 'hackathon_banyuls'
     },
 		{
@@ -490,6 +524,10 @@ export class ProfileService {
     {
       color:'#EE7E0C',
       name: 'Firebase'
+    },
+    {
+      color:'#006DB6',
+      name: 'The Things Network'
     },
     
   ];

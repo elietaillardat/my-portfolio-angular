@@ -22,12 +22,14 @@
       &nbsp;<fa name="file-pdf-o"></fa>&nbsp; {{ doc }}.pdf&nbsp; |
     </a>
   </div>
-  <hr class="my-1">
-  <h6 class="exp-description mt-2 mb-3"><b>Notions clefs :&nbsp; </b></h6>
-  <app-skill-tag  *ngFor="let i of indexes;"
-                  [color]="tags[i].color"
-                  [skillName]="tags[i].name">
-  </app-skill-tag>
+  <div *ngIf="indexes.length != 0">
+    <hr class="my-1">
+    <h6 class="exp-description mt-2 mb-3"><b>Notions clefs :&nbsp; </b></h6>
+    <app-skill-tag  *ngFor="let i of indexes;"
+                    [color]="tags[i].color"
+                    [skillName]="tags[i].name">
+    </app-skill-tag>
+  </div>
   <div markdown id="md-content" class="rounded border py-3 px-4 mt-1" [src]="'./assets/md/'+ md_file + '.md'"></div> 
   <div class="gallery mt-4" id="gallery">
     <figure class="mb-3 border"  *ngFor="let img of gallery;">
@@ -36,5 +38,6 @@
       </a>
     </figure>
   </div>
+  <div markdown *ngIf="route.snapshot.params['id'] == 101" id="md-content2" class="rounded border py-3 px-4 mt-1" src="./assets/md/mosh_lora.md"></div> 
 
 </div>

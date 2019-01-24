@@ -1,70 +1,45 @@
 ### Contexte
 
- Le but de ce projet était de réaliser, en binôme et dans un contexte open-source, un capteur de gaz communiquant. Ce capteur mesure la concentration de gaz dans l'air et la transmet, via le réseau LoRa, à un compte TTN (The Things Network). Ces données sont récupérées par une interface graphique (réalisée avec Node-RED et Freeboard.io) qui permet à l'utilisateur de lire les données et d'interagir avec le capteur. Pour la cohérence du projet et la facilité d'utilisation, l'ensemble des composants électronique ont été assemblés sur un shield Arduino.
+Durant cet enseignement, nous avons pu appréhender les différentes **familles de capteurs**, les éléments physiques liés, leurs caractéristiques métrologiques et les montages conditionneurs associés. Finalement, nous avons appris comment concevoir une chaîne de mesure et avons effectué quelques **exercices d’application** en Travaux Dirigés.
 
-  La partie capteur est traitée dans Introduction aux capteurs. Ici, nous traitons des technologies associées à ce capteur pour le rendre communiquant et de l'interface utilisateur.
-
-Nous avions quatre problématiques à résoudre :
-
-Tout d'abord, la première problématique était de conditionner le signal du capteur afin de le rendre exploitable par le microcontrôleur. En effet, le courant de sortie du capteur est très faible, de l'ordre de 100 nA, et n'est pas proportionnel à la tension de sortie (effet tunnel). Avec les caractéristiques de l'Arduino UNO (résolution de 10 bits sur son ADC, pleine échelle de 1.1 V à 5.0 V, impédance de source 10 kOhm et fréquence d'échantillonage de 15 kHz maximum), il n'était pas possible de mesurer directement le courant de sortie.
-Ensuite, la seconde problématique était de connecter le capteur pour le rendre intelligent et communiquant. Une solution open-source était préconisée.
-La troisième problématique consistait à faciliter la manipulation du montage, donc à assembler les précedents élements sur un shield Arduino, et à en designer le PCB.
-Enfin, la dernière problématique était de récupérer les données transmises au réseau, les analyser et fournir un tableau de bord ergonomique et intuitif à l'utilisateur.
+Dans un seond temps, une semaine a été consacrée pour la réalisation d'un nouveau **stage à l’AIME** (en salle blanche, j'en avais déjà effectué un en 2ème année IMACS) pour concevoir un capteur de gaz à base de nanoparticules (technologie assez récente et non déployée à grande échelle pour le moment).
 
 ### Ma fonction
 
-Durant le projet de simulation d'automatisation des salles de classes de l'INSA (ouverture des portes, extinction des lumières, allumage du chauffage... en fonction des données de capteurs et de différents scénarios), j'ai eu un rôle très important dans plusieurs aspects :
+J'ai dans un premier temps réalisé les différents exercices avec mes camarades en cours, puis réaliser avec mon trinôme en salle blanche ce fameux capteur. Une **datasheet** a ensuite été réalisée et est disponible sur cette page. J'ai donc pu apprendre les différentes étapes de conception et testé notre capteur pour être capable de rédiger sa datasheet.
 
-- Création des **scénarios** et de l'architecture
-- Participation à la mise en place de notre **plugin OM2M** pour générer les ressources nécessaires
-- Développement du **Client** et des **services Web** en Java
-- Développement complet d'une **interface utilisateur** en Angular
-
-</br>
-<hr>
-
-#### **A. Comprendre, définir et implémenter une Architecture Orientée Service (SOA)**
+#### A. Comprendre les notions de base des capteurs
 
 ##### Résolution du problème
 
-Les premiers cours et TDs nous ont permis d'appréhender la notion d'architecture logicielle orientée service, et de développer nos premiers petits services web, ce qui nous a été très utile après avec mon binôme pour le projet final (documents attachés en haut de page). Durant ces Travaux Dirigés, nous avons en effet implémenté des services **SOAP (Simple Access Object Protocol)** dans les deux configurations possibles (top-down et bottum-up), puis **REST (Representational State Transfer)**, afin d'avoir une vision globale de ces deux méthodes. De même, il est important de rajouter que ces cours étaient présentés à chaque fois par des étudiants, et que nous devions préparer les cours, comme nous l'avons fait par exemple pour l'introduction aux Applications distribuées (cf. PDF attaché en haut de page).
+Grâce aux cours et aux exercices d'application, j'ai une une bonne vue d'ensembles des notions clefs liées aux capteurs.
 
-##### Compétences mobilisées
+##### Synthèse et bilan
 
-La réalisation du projet m'a demandé de mobiliser mes compétences en Java, en architecture OM2M (que nous avions déjà sollicitées pour le module Intergiciel pour l'IoT). J'ai de même pu me servir des notions que j'avais assimilées durant **[mon stage à Sydney en 2017 à Allette Systems](/#/profile/experiences/2)**, pour mieux implémenter nos services REST et le traitement des réponses en XML ou JSON. En outre, j'ai pu utiliser Angular et le module `HttpClient` pour coder notre interface utilisateur permettant de réaliser les fonctions `GET` et `POST` et dérouler nos scénarios de manière visuelle.
-</br></br>
-L'IHM est disponible en suivant ce [lien](/#/portfolio/ptp-iss/mdware-services/rest-project).
+Ces exercices ont permis une **bonne approche des capteurs et leurs enjeux** dans le monde l'IoT, et nous a préparé pour la semain à l'AIME.
+
+#### B. Développer un capteur à nanoparticules en salle blanche
+
+##### Résolution du problème
+
+Pour créer ce capteur, il faut d’abord obtenir un composant à partir d’une plaque de silicium en effectuant une **photogravure**. Il faut ensuite monter le composant. Finalement, il faut synthétiser chimiquement les nanoparticules et les déposer sur un **peigne** du composant (en le plaçant sous un champ magnétique).
+La photo suivante réalisée par mon camarade montre bien ce dépôt où l’on voit bien que l’un des deux peignes a reçu les nanoparticules :
 
 <div class="row pb-3">
   <div class="col text-center">
-    <img src="./assets/images/md/ptp/IHM.PNG" alt="ihm soa project" width="100%"/>
+    <img src="./assets/images/md/ptp/aime.jpg" alt="ihm soa project" width="30%"/>
   </div>
 </div>
 
-##### Synthèse et bilan
-
-Ce module a été très bénéfique par l'implémentation de services REST et la nouvelle utilisation d'OM2M, qui nous a permis d'améliorer notre vision de cet outil puissant pour le secteur de l'IoT. Le projet était **très formateur**, par la première étape de création de l'architecture globale de notre système, puis par l'implémentation un à un de nos services et fonctions.
-
-</br>
-
-#### **B. Plannification et gestion d'un projet : l'outils IceScrum**
-
-##### Résolution du problème
-
-Ce module était lié avec les méthodes de **management de projet**, sur lesquelles nous avions fait un rapide état de l'art pour le module [Ingénierie Logicielle](/#/portfolio/ptp-iss/mdware-services/), en particulier la méthode **Agile et Scrum**, maintenant très utilisée en entreprise, et consistant en sprints à réaliser à intervalles courts et mesurés. L'utilisation d'**IceScrum**, un outil spécialement conçu pour la gestion de projet en équipe, nous a permis avec mon binôme de gérer les étapes de ce projet (conception de l'architecture, implémentation des service, création de l'IHM, ...) en temps et en répartition.
-
 ##### Compétences mobilisées
 
-J'ai usé de ma force d'**organisation**, mais aussi de **leadership** (rôle que j'avais aussi durant le projet d'innovation de ce PTP) afin d'arriver au mieux au terme du projet dans le peu de temps que nous avions en fin de semestre.
+Il a fallu écouter attentivement les explications de processus car nous devions bien les reproduire. Certaines explications étaient quand même assez complexes.
+Enfin, il a fallu faire preuve de beaucoup de **dextérité et minutie**.
 
 ##### Synthèse et bilan
 
-L'utilisation d'outils de gestion de projet a permis de bien cerner les étapes en début de projet, et a du coup permis une **meilleure gestion du temps**, même si une séance de TP en plus n'aurait pas été de refus pour bien finir de gérer nos scénarios.
+Cette semaine a encore été une **bonne expérience**, changeant de notre rythme de cours habituel. Nous avons découvert et appris de nouveaux procédés, et même si je n'aurai certainement pas besoin de ces savoirs plus tard, c'est toujours très intéressant d'avoir une vue d'ensemble sur une conception, et j'ai beacoup aimé des créneaux.
 
-</br>
+#### C. Datasheet de notre capteur
 
-#### **C. Rapport de projet**
-
-</br>
-
-<iframe src="./assets/files/ptp_iss_mdware_services/SOA_REST_Project.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_smart_devices/datasheet.pdf" style="width: 100%; height: 95vh;"></iframe>

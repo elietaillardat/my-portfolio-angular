@@ -9,6 +9,7 @@ Et venue ensuite la phase pratique avec ses différentes étapes :
 
 - Gestion avec l'**interface Proxmox** de conteneurs sur nos serveurs
 - Utilisation des **API Proxmox** pour reproduire via un projet  Java ces fonctions, à savoir création, lancement, migration de conteneurs, en fonction de diverses spécifications
+- Apercevoir les outils de Cloud pour héberger une application HelloWorld
 
 </br>
 <hr>
@@ -33,9 +34,16 @@ Cette partie m'a permis de **mieux cerner les concepts clefs** du module et d'at
 
 ##### Résolution du problème
 
+À travers d'un projet **Eclipse**, j'ai implémenté les fonctions nécessaires à la gestion de conteneurs sur nos serveurs Proxmox, avec les fonctions données par son **API Java**.
+
 ##### Compétences mobilisées
 
+Encore une fois, le langage Java était indispensable et j'ai découvert une nouvelle API. Une bonne compréhension des notions était nécessaire pour coder les diverses étapes du TP.
+Voici le lien Github de notre projet :
+
 ##### Synthèse et bilan
+
+Cette partie nous a permis de cerner un peu mieux ce que nous avions pu voir durant la première phase du TP, mais un peu plus de temps aurait le bien venu pour finir parfaitement cette phase du TP.
 
 </br>
 

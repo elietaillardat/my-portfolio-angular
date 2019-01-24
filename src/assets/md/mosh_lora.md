@@ -26,13 +26,21 @@ The shield is composed of :
 
 ### Schematics
 
-![](../images/md/beenetic/Schematic.PNG)
+<div class="row pb-3">
+  <div class="col text-center">
+    <img src="./assets/images/md/ptp/Schematic.PNG" alt="arduino board" width="60%"/>
+  </div>
+</div>
 
 ### PCB Layout
 
-![](../images/md/beenetic/PCBLayout.PNG)
+<div class="row pb-3">
+  <div class="col text-center">
+    <img src="./assets/images/md/ptp/PCBLayout.PNG" alt="arduino board" width="60%"/>
+  </div>
+</div>
 
-These parameters have been respected to respect the INSA PCB production capacity : 
+These parameters have been respected to respect the INSA PCB production capacity :
 
  - Isolation : 0.4
  - Largeur piste : 0.8
@@ -41,7 +49,11 @@ These parameters have been respected to respect the INSA PCB production capacity
 
 ### 3D Visualization
 
-![](../images/md/beenetic/3D.JPG)
+<div class="row pb-3">
+  <div class="col text-center">
+    <img src="./assets/images/md/ptp/3D.JPG" alt="arduino board" width="60%"/>
+  </div>
+</div>
 
 ## Arduino Board & Code
 We have done a **prototype** using a Grove gas sensor to measure the gas concentration in the air.
@@ -56,7 +68,7 @@ The elements in this project are :
 
 <div class="row pb-3">
   <div class="col text-center">
-    <img src="./assets/images/md/beenetic/arduino.jpg" alt="arduino board" width="50%"/>
+    <img src="./assets/images/md/ptp/arduino.jpg" alt="arduino board" width="50%"/>
   </div>
 </div>
 
@@ -155,12 +167,20 @@ And the result for a simulated uplink payload on port 1: ``` 02 BE 01 F5 `
 ### Node-RED
 Once the payload is well interpreted in TTN, we use the tool **Node-RED** built on Node.js, to deal with our data and then display them in a dashboard for user consultation.
 
-![](../images/md/beenetic/node-red.png)
+<div class="row pb-3">
+  <div class="col text-center">
+    <img src="./assets/images/md/ptp/node-red.png" alt="arduino board" width="50%"/>
+  </div>
+</div>
 
 We use a ``` ttn uplink ``` node linked to our application (```App ID: 20079652```) and registered device (```Device ID: arduino_gaz_sensor```). When a data is received, we can observe in the **debug** console the ```json``` payload received (output of the debug node, cf. picture above in the right panel). Therefore we received the payload as expected.
 The dashboard compiled is shown below:
 
-![](../images/md/beenetic/dashboard.gif)
+<div class="row pb-3">
+  <div class="col text-center">
+    <img src="./assets/images/md/ptp/dashboard.gif" alt="arduino board" width="50%"/>
+  </div>
+</div>
 
 As we can see, **we add a switch to control the state of the gas sensor remotely**.
 When switched off for example, the payload sent in the ```ttn downlink``` node looks like:
@@ -185,6 +205,7 @@ function Encoder(object, port) {
 
 When we simulate this behavior in real time, we can see the expected result on the TTN console output, and the LED switched off on our Arduino board:
 
+
 ![](../images/md/beenetic/ttn.png)
 
 > Here, we can see that when switched off, the Arduino board stops sending data and is in a *waiting* mode. Once we switched on, the data are sent and received again.
@@ -198,7 +219,11 @@ https://freeboard.io/board/Wauqxs**
 
 > The curve allows the user to interpret the Gas ratio, and obtain a value in **ppm** of the gas concentration.
 
-![](../images/md/beenetic/freeboard.gif)
+<div class="row pb-3">
+  <div class="col text-center">
+    <img src="./assets/images/md/ptp/freeboard.gif" alt="arduino board" width="50%"/>
+  </div>
+</div>
 
 
 ## Contact

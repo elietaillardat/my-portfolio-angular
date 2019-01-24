@@ -22,7 +22,7 @@ export class SingleProjectComponent implements OnInit {
   indexes: number[];
 
   constructor(private profileService: ProfileService,
-              private route: ActivatedRoute) { }
+              public route: ActivatedRoute) { }
 
   ngOnInit() {
     const path = this.route.snapshot.routeConfig.path;
