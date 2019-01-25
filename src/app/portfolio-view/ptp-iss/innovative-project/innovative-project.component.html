@@ -1,46 +1,59 @@
 <div class="container mt-5 mb-5">
   <h2><fa name="lightbulb-o"></fa>&nbsp; Projet innovant</h2>
   <hr>
+  <div class="row mb-3">
+    <div class="col">
+      Ce projet innovant était au <b>coeur de la formation ISS</b>.
+      Le lien vers tous les détails de ce projet se trouve ici :<br>
+      <a routerLink="/profile/experiences/7"><b>Projet Ultra Ordinaire</b></a>
+      <br><br>
+      On retrouve la grille des compétences ci-dessous avec les niveau d'acquis et évaluations.
+    </div>
+  </div>
   <table datatable [dtOptions]="dtOptions" class="row-border stripe hover">
     <thead>
       <tr>
-        <th>Skills</th>
-        <th>Level</th>
-        <th>Evaluation</th>
-        <th>Details</th>
+        <th>Compétence</th>
+        <th>Niveau</th>
+        <th>Évaluation</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Analyse a real-life problem</td>
-        <td>4</td>
-        <td>Report/Presentation</td>
-        <td></td>
+        <td class="dt-center">4</td>
+        <td class="dt-center" rowspan="2">Rapport/Présentation<br>Projet innovant<br>Stage de 4A</td>
       </tr>
       <tr>
         <td>Suggest a technological solution to a problem</td>
-        <td>4</td>
-        <td>Report/Presentation</td>
-        <td></td>
+        <td class="dt-center">4</td>
       </tr>
       <tr>
         <td>Implement a prototype to solve the problem</td>
-        <td>4</td>
-        <td>Prototype</td>
-        <td></td>
+        <td class="dt-center">4</td>
+        <td class="dt-center">Prototype du projet</td>
       </tr>
       <tr>
         <td>Present and debate (in English) the technical choice made</td>
-        <td>4</td>
-        <td>Presentation</td>
-        <td></td>
+        <td class="dt-center">4</td>
+        <td class="dt-center">Présentation du projet innovant</td>
       </tr>
       <tr>
         <td>Produce a report (in English) for the developed project </td>
-        <td>4</td>
-        <td>Report</td>
-        <td></td>
+        <td class="dt-center">4</td>
+        <td class="dt-center">Rapport du projet innovant</td>
       </tr>
     </tbody>
   </table>
+  <div class="row mt-3">
+    <div class="col">
+      <i>Légende :</i>
+      <ul>
+        <li><b>1</b> = niveau d'application (suivre des instructions ou méthodes)</li>
+        <li><b>2</b> = niveau d'analyse (amélioration ou optimisation des solutions ou propositions)</li>
+        <li><b>3</b> = niveau de maîtrise (conception de programmes ou définition de cahier des charges)</li>
+        <li><b>4</b> = niveau d'expertise (définition de directives ou de stratégies)</li>
+      </ul>
+    </div>
+  </div>
 </div>

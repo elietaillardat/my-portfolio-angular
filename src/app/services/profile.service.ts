@@ -183,6 +183,18 @@ export class ProfileService {
       skills: ['R'],
       documents: ['FIFA_Study_Report'],
       md_file: 'ptp_iss_analysis_data_big'
+    },
+    {
+      id: 500,
+      img: '',
+      date: 'Octobre 2018 - Janvier 2019',
+      duration: '95,5 h',
+			title: "Innovation & Humanité",
+      description: "Innovation, Acceptabilité sociale et Business développement, Méthodes de créativité, méthode TRIZ, Management d'équipe",
+      gallery: [],
+      skills: [],
+      documents: ['method_TRIZ'],
+      md_file: 'ptp_iss_innovation_humanity'
     }
   ]
 

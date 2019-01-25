@@ -7,7 +7,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HomeViewComponent } from './home-view/home-view.component';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
-import { PortfolioViewComponent } from './portfolio-view/portfolio-view.component';
 import { PtpIssComponent } from './portfolio-view/ptp-iss/ptp-iss.component';
 import { SingleProjectComponent } from './single-project/single-project.component';
 import { MdwareServicesComponent } from './portfolio-view/ptp-iss/mdware-services/mdware-services.component';
@@ -39,6 +38,8 @@ const routes: Routes = [
   { path: 'portfolio/ptp-iss/communication/:id', component: SingleProjectComponent },
   { path: 'portfolio/ptp-iss/mdware-services/:id', component: SingleProjectComponent },
   { path: 'portfolio/ptp-iss/analysis-data/:id', component: SingleProjectComponent },
+  { path: 'portfolio/ptp-iss/innovation-humanity/:id', component: SingleProjectComponent },
+  { path: 'portfolio/ptp-iss/innovative-project/:id', component: SingleProjectComponent },
 
   { path: 'not-found', component: FourOhFourComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },

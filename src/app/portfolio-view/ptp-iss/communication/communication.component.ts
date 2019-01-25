@@ -22,10 +22,6 @@ export class CommunicationComponent implements OnInit {
           targets: [1, 2],
           className: 'dt-center'
         },
-        {
-          targets: [-1],
-          className: 'dt-right'
-        }
       ]
     };
   }
