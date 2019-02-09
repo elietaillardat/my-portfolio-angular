@@ -76,7 +76,7 @@ export class ProfileService {
       gallery: ['aime1.jpg', 'aime2.jpg', 'aime3.jpg', 'aime4.jpg', 'aime5.jpg', 'aime6.jpg', 'aime7.jpg', 'aime8.jpg', 'aime9.jpg', 'aime10.jpg'],
       skills: [],
       documents: ['datasheet'],
-      md_file: 'ptp_iss_smart_devices_sensors'
+      md_file: 'ptp_iss_smart_devices_sensors',
     },
     {
       id: 101,
@@ -121,7 +121,7 @@ export class ProfileService {
       description: "Apprendre à déployer et configurer une SOA en utilisant des API REST/SOAP → Projet Salles de classes autonomes",
       gallery: [],
       skills: ['SOA', 'API REST', 'OM2M', 'Java', 'XML', 'JSON' , 'Eclipse', 'Angular', 'Bootstrap', 'HTML', 'CSS'],
-      documents: ['SOA_REST_Project', 'Distributed_Applications'],
+      documents: ['SOA_REST_Project', 'SOA_REST_Project_scenario', 'Distributed_Applications'],
       md_file: 'ptp_iss_mdware_services_soa'
     },
     {
