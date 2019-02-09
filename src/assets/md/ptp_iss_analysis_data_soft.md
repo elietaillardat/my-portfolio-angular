@@ -19,7 +19,7 @@ L’organisation du travail en **équipe** est un des points fondamentaux, et do
 
 En ce qui concerne les **méthodes de gestion de projet**, j'ai réalisé un petit état de l'art sur ces méthodes pour préparer le cours correspondant avec mon binôme :
 
-<iframe src="./assets/files/ptp_iss_analysis_data/Management_Methods.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_analysis_data_soft/Management_Methods.pdf" style="width: 100%; height: 95vh;"></iframe>
 </br></br>
 
 #### **A. Utilisation de la méthode Scrum/Agile**

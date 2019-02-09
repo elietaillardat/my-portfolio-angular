@@ -6,29 +6,29 @@ Ce module est divisé en 4 parties distinctes, et nous avons réalisé en binôm
 
 Dans cette partie, nous avons étudié les différents types de protocoles : **NB-IoT**, LoRa, ZigBee, Sigfox et BLE. J’ai d’ailleurs effectué un travail de recherche et de présentation sur le protocole Nb-IoT, et le cours a permis de comparer suite à nos présentations les diverses technologies citées précédemment. Voici le rapport, la présentation est disponible en haut de page avec les documents attachés.
 
-<iframe src="./assets/files/ptp_iss_communication/NB_IoT.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_communication_proto/NB_IoT.pdf" style="width: 100%; height: 95vh;"></iframe>
 </br></br>
 
 Ensuite, nous avons étudié la **couche MAC** des protocoles, la différence qu'il y avait entre chaque type, et pourquoi certains étaient plus orientés **vers le monde de l'IoT**. Voici mon rapport sur ces technologies :
 
-<iframe src="./assets/files/ptp_iss_communication/MAC_Layers.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_communication_proto/MAC_Layers.pdf" style="width: 100%; height: 95vh;"></iframe>
 </br></br>
 
 Enfin, nous avons étudié **la 5G et ses enjeux** à travers plusieurs thématiques, et plus particulièrement  pour moi le cas des villes connectées ou Smart Cities. Voici la présentation réalisée avec mon binôme :
 
-<iframe src="./assets/files/ptp_iss_communication/5G_Smart_City.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_communication_proto/5G_Smart_City.pdf" style="width: 100%; height: 95vh;"></iframe>
 </br></br>
 
 #### **B. Communications numériques sans-fil pour les objets connectés**
 
 Au travers de cet enseignement, nous avons tout d’abord travaillé sur les techniques de **modulation, de démodulation et d’encodage** de l’information. Nous avons réalisé un exercice par petits groupes pour comprendre les problèmes liés aux interférences dans les communications sans-fil :
 
-<iframe src="./assets/files/ptp_iss_communication/Exercice_Zigbee.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_communication_proto/Exercice_Zigbee.pdf" style="width: 100%; height: 95vh;"></iframe>
 </br></br>
 
 La grosse partie a été enfin les TPs de **SDR (software defined radio)** au cours desquels il s’agissait d’utiliser un système transmetteur-récepteur RF et de réaliser un traitement du signal. Un rapport très complet et détaillé est disponible ci-dessous :
 
-<iframe src="./assets/files/ptp_iss_communication/SDR_Report.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_communication_proto/SDR_Report.pdf" style="width: 100%; height: 95vh;"></iframe>
 </br></br>
 
 #### **C. Énergie pour les objets connectés**

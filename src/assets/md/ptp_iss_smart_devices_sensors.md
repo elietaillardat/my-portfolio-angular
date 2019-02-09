@@ -42,4 +42,4 @@ Cette semaine a encore été une **bonne expérience**, changeant de notre rythm
 
 #### C. Datasheet de notre capteur
 
-<iframe src="./assets/files/ptp_iss_smart_devices/datasheet.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_smart_devices_sensors/datasheet.pdf" style="width: 100%; height: 95vh;"></iframe>

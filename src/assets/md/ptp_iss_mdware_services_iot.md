@@ -35,4 +35,4 @@ Lors de ces TPs j'ai pu réaliser une architecture IoT basée sur le standard On
 
 </br>
 
-<iframe src="./assets/files/ptp_iss_mdware_services/Middleware_for_IOT.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_mdware_services_iot/Middleware_for_IOT.pdf" style="width: 100%; height: 95vh;"></iframe>

@@ -40,4 +40,4 @@ J’ai fortement apprécié le format de cet enseignement et la liberté donnée
 
 #### **B. Rapport de l'étude du dataset choisi**
 
-<iframe src="./assets/files/ptp_iss_analysis_data/FIFA_Study_Report.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_analysis_data_big/FIFA_Study_Report.pdf" style="width: 100%; height: 95vh;"></iframe>

@@ -30,4 +30,4 @@ Tous les problèmes soulevés durant les TP permettent de comprendre facilement 
 
 #### **B. Rapport de TP**
 
-<iframe src="./assets/files/ptp_iss_analysis_data/Web_Semantic_Report.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_analysis_data_semantic/Web_Semantic_Report.pdf" style="width: 100%; height: 95vh;"></iframe>

@@ -54,4 +54,4 @@ Cette partie nous a permis de cerner un peu mieux ce que nous avions pu voir dur
 
 </br>
 
-<iframe src="./assets/files/ptp_iss_mdware_services/Cloud_computing_autonomic_management.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_mdware_services_cloud/Cloud_computing_autonomic_management.pdf" style="width: 100%; height: 95vh;"></iframe>

@@ -58,4 +58,4 @@ L'utilisation d'outils de gestion de projet a permis de bien cerner les étapes 
 
 </br>
 
-<iframe src="./assets/files/ptp_iss_mdware_services/SOA_REST_Project.pdf" style="width: 100%; height: 95vh;"></iframe>
+<iframe src="./assets/files/ptp_iss_mdware_services_soa/SOA_REST_Project.pdf" style="width: 100%; height: 95vh;"></iframe>
